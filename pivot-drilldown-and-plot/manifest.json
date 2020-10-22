@@ -1,0 +1,14 @@
+{
+  "short_name": "prototype-1",
+  "name": "DCS pivot-and-drill prototype-1",
+  "icons": [
+    {
+      "src": "dcs.ico",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
