@@ -11,6 +11,7 @@
 
     <link rel="canonical" href="http://localhost:3000/dcs-wcs-prototype-3/pages-output/areas/aberdeen-city/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700" rel="stylesheet"
           type="text/css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -39,18 +40,9 @@
     <script src="/dcs-wcs-prototype-3/js/lunrclient.js"></script>
 
     <!-- For Vega -->
-    <!--
-    <link href="http://ozviz.io/oz.svg" rel="shortcut icon" type="image/x-icon" />
-    <link href="http://ozviz.io/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="http://ozviz.io/fonts/lmroman12-regular.woff" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-    -->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.9.0" type="text/javascript"></script>
-    <!--
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
-    -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
 </head>
 <body>
@@ -148,8 +140,37 @@
                         By location <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeen-city/">Aberdeen City</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeenshire/">Aberdeenshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/angus/">Angus</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/argyll-and-bute/">Argyll and Bute</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/city-of-edinburgh/">City of Edinburgh</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/clackmannanshire/">Clackmannanshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dumfries-and-galloway/">Dumfries and Galloway</a></li>
                         <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dundee-city/">Dundee City</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-ayrshire/">East Ayrshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-dunbartonshire/">East Dunbartonshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-lothian/">East Lothian</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-renfrewshire/">East Renfrewshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/falkirk/">Falkirk</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/fife/">Fife</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/glasgow-city/">Glasgow City</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/highland/">Highland</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/inverclyde/">Inverclyde</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/midlothian/">Midlothian</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/moray/">Moray</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-ayrshire/">North Ayrshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-lanarkshire/">North Lanarkshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/orkney-islands/">Orkney Islands</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/outer-hebrides/">Outer Hebrides</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/perth-and-kinross/">Perth and Kinross</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/renfrewshire/">Renfrewshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/scottish-borders/">Scottish Borders</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/shetland-islands/">Shetland Islands</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-ayrshire/">South Ayrshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-lanarkshire/">South Lanarkshire</a></li>
                         <li><a href="/dcs-wcs-prototype-3/pages-output/areas/stirling/">Stirling</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-dunbartonshire/">West Dunbartonshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-lothian/">West Lothian</a></li>
                     </ul>
                 </li>
 
@@ -224,9 +245,67 @@
                         
                         <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeen-city/">Aberdeen City</a></li>
                         
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeenshire/">Aberdeenshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/angus/">Angus</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/argyll-and-bute/">Argyll and Bute</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/city-of-edinburgh/">City of Edinburgh</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/clackmannanshire/">Clackmannanshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dumfries-and-galloway/">Dumfries and Galloway</a></li>
+                        
                         <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dundee-city/">Dundee City</a></li>
                         
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-ayrshire/">East Ayrshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-dunbartonshire/">East Dunbartonshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-lothian/">East Lothian</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-renfrewshire/">East Renfrewshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/falkirk/">Falkirk</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/fife/">Fife</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/glasgow-city/">Glasgow City</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/highland/">Highland</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/inverclyde/">Inverclyde</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/midlothian/">Midlothian</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/moray/">Moray</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-ayrshire/">North Ayrshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-lanarkshire/">North Lanarkshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/orkney-islands/">Orkney Islands</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/outer-hebrides/">Outer Hebrides</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/perth-and-kinross/">Perth and Kinross</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/renfrewshire/">Renfrewshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/scottish-borders/">Scottish Borders</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/shetland-islands/">Shetland Islands</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-ayrshire/">South Ayrshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-lanarkshire/">South Lanarkshire</a></li>
+                        
                         <li><a href="/dcs-wcs-prototype-3/pages-output/areas/stirling/">Stirling</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-dunbartonshire/">West Dunbartonshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-lothian/">West Lothian</a></li>
                         
                         <li><a href="/dcs-wcs-prototype-3/pages-output/hands-on/how-to-build-a-graph-showing-etc/">How to build a graph showing...</a></li>
                         
@@ -287,7 +366,7 @@
     
     <div class="admonitionblock caution"><table><tr><td class="icon"><div class="title">Caution</div></td><td class="content">
 Placeholder content.
-</td></tr></table></div><div class="sect1"><h2 id="_map">Map</h2><div class="sectionbody"><div class="paragraph"><p>Info about waste and Aberdeen City!</p></div><div class="imageblock"><div class="content"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Aberdeen_council.PNG" alt="Aberdeen council" /></div></div></div></div>
+</td></tr></table></div><div class="paragraph"><p>Information about waste for Aberdeen City.</p></div><div class="imageblock"><div class="content"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Aberdeen_council.PNG" alt="img" width="150" height="300" /></div></div><div class="sect3"><h4 id="_carbon_impact_from_household_waste">Carbon impact from household waste</h4><table class="tableblock frame-all grid-all stretch"><colgroup><col style="width: 33.3333%;"></col><col style="width: 33.3333%;"></col><col style="width: 33.3334%;"></col></colgroup><thead><tr><th class="tableblock halign-left valign-top">year</th><th class="tableblock halign-left valign-top">CO2e tonnes</th><th class="tableblock halign-left valign-top">Co2e tonnes per citizen</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2018</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">198518.12</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.8723770434171207</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2017</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">198579.67</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.8679181381118881</p></td></tr></tbody></table></div><div class="sect3"><h4 id="_end_state_amounts_from_household_waste">End-state amounts from household waste</h4><table class="tableblock frame-all grid-all stretch"><colgroup><col style="width: 33.3333%;"></col><col style="width: 33.3333%;"></col><col style="width: 33.3334%;"></col></colgroup><thead><tr><th class="tableblock halign-left valign-top">year</th><th class="tableblock halign-left valign-top">end-state</th><th class="tableblock halign-left valign-top">tonnes per citizen</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2018</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.177900333977852</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2018</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.12057479346106521</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2018</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.07742133942696432</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2017</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.16856643356643355</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2017</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.07689685314685314</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2017</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.1382167832167832</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2016</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.1631482770623042</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2016</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.0026279150713539854</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2016</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.25244082840236687</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2015</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.15923160408074669</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2015</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.0017668764922943348</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2015</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.25246364228348167</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2014</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.1605014852350166</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2014</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.0012493447492573826</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2014</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.2581775292678665</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2013</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.15394371779627428</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2013</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">4.800281851411459E-4</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2013</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.2600563702822918</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2012</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.16114001156017962</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2012</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.0</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2012</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.27116624427548797</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.15581228085948035</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.0</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.2810482783421739</p></td></tr></tbody></table></div>
 
     <div id="prev-next">
         
@@ -297,7 +376,7 @@ Placeholder content.
         ||
         
         
-        <a href="/dcs-wcs-prototype-3/pages-output/areas/dundee-city/">Dundee City &raquo;</a>
+        <a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeenshire/">Aberdeenshire &raquo;</a>
         
     </div>
 </div>

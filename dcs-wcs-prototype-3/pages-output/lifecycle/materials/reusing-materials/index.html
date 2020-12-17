@@ -11,6 +11,7 @@
 
     <link rel="canonical" href="http://localhost:3000/dcs-wcs-prototype-3/pages-output/lifecycle/materials/reusing-materials/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700" rel="stylesheet"
           type="text/css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -39,18 +40,9 @@
     <script src="/dcs-wcs-prototype-3/js/lunrclient.js"></script>
 
     <!-- For Vega -->
-    <!--
-    <link href="http://ozviz.io/oz.svg" rel="shortcut icon" type="image/x-icon" />
-    <link href="http://ozviz.io/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="http://ozviz.io/fonts/lmroman12-regular.woff" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-    -->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.9.0" type="text/javascript"></script>
-    <!--
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
-    -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
 </head>
 <body>
@@ -148,8 +140,37 @@
                         By location <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeen-city/">Aberdeen City</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeenshire/">Aberdeenshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/angus/">Angus</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/argyll-and-bute/">Argyll and Bute</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/city-of-edinburgh/">City of Edinburgh</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/clackmannanshire/">Clackmannanshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dumfries-and-galloway/">Dumfries and Galloway</a></li>
                         <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dundee-city/">Dundee City</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-ayrshire/">East Ayrshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-dunbartonshire/">East Dunbartonshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-lothian/">East Lothian</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-renfrewshire/">East Renfrewshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/falkirk/">Falkirk</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/fife/">Fife</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/glasgow-city/">Glasgow City</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/highland/">Highland</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/inverclyde/">Inverclyde</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/midlothian/">Midlothian</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/moray/">Moray</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-ayrshire/">North Ayrshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-lanarkshire/">North Lanarkshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/orkney-islands/">Orkney Islands</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/outer-hebrides/">Outer Hebrides</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/perth-and-kinross/">Perth and Kinross</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/renfrewshire/">Renfrewshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/scottish-borders/">Scottish Borders</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/shetland-islands/">Shetland Islands</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-ayrshire/">South Ayrshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-lanarkshire/">South Lanarkshire</a></li>
                         <li><a href="/dcs-wcs-prototype-3/pages-output/areas/stirling/">Stirling</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-dunbartonshire/">West Dunbartonshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-lothian/">West Lothian</a></li>
                     </ul>
                 </li>
 
@@ -224,9 +245,67 @@
                         
                         <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeen-city/">Aberdeen City</a></li>
                         
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeenshire/">Aberdeenshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/angus/">Angus</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/argyll-and-bute/">Argyll and Bute</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/city-of-edinburgh/">City of Edinburgh</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/clackmannanshire/">Clackmannanshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dumfries-and-galloway/">Dumfries and Galloway</a></li>
+                        
                         <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dundee-city/">Dundee City</a></li>
                         
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-ayrshire/">East Ayrshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-dunbartonshire/">East Dunbartonshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-lothian/">East Lothian</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-renfrewshire/">East Renfrewshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/falkirk/">Falkirk</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/fife/">Fife</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/glasgow-city/">Glasgow City</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/highland/">Highland</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/inverclyde/">Inverclyde</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/midlothian/">Midlothian</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/moray/">Moray</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-ayrshire/">North Ayrshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-lanarkshire/">North Lanarkshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/orkney-islands/">Orkney Islands</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/outer-hebrides/">Outer Hebrides</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/perth-and-kinross/">Perth and Kinross</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/renfrewshire/">Renfrewshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/scottish-borders/">Scottish Borders</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/shetland-islands/">Shetland Islands</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-ayrshire/">South Ayrshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-lanarkshire/">South Lanarkshire</a></li>
+                        
                         <li><a href="/dcs-wcs-prototype-3/pages-output/areas/stirling/">Stirling</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-dunbartonshire/">West Dunbartonshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-lothian/">West Lothian</a></li>
                         
                         <li><a href="/dcs-wcs-prototype-3/pages-output/hands-on/how-to-build-a-graph-showing-etc/">How to build a graph showing...</a></li>
                         

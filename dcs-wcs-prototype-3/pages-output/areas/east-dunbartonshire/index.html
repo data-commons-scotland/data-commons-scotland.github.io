@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Waste Commons Scotland: East Dunbartonshire</title>
+    
+
+<meta property="og:url" content="http://localhost:3000/dcs-wcs-prototype-3/pages-output/areas/east-dunbartonshire/" />
+<meta property="og:title" content="East Dunbartonshire" />
+<meta property="og:type" content="article" />
+
+    <link rel="canonical" href="http://localhost:3000/dcs-wcs-prototype-3/pages-output/areas/east-dunbartonshire/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700" rel="stylesheet"
+          type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+
+    <!-- For asciidoctor skins, see: https://darshandsoni.com/asciidoctor-skins/screenshots/ -->
+    <!--
+    {  % style "css/screen.css" %}
+    {  % style "css/asciidoctor.css" %}
+    -->
+    <!--
+    {  % style "css/asciidoctor-skin-material-teal.css" %}
+    {  % style "css/asciidoctor-skin-notebook.css" %}
+    {  % style "css/asciidoctor-skin-gazette.css" %}
+    {  % style "css/asciidoctor-skin-clean.css" %}
+    {  % style "css/asciidoctor-skin-tufte.css" %}
+    {  % style "css/asciidoctor-skin-medium.css" %}
+    -->
+    <link href="/dcs-wcs-prototype-3/css/asciidoctor-skin-clean.css" rel="stylesheet" type="text/css" />
+    <link href="/dcs-wcs-prototype-3/css/screen.css" rel="stylesheet" type="text/css" />
+
+    <!-- For Lunr -->
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/dcs-wcs-prototype-3/js/index/lunr_index.js"></script>
+    <script src="/dcs-wcs-prototype-3/js/lunrclient.js"></script>
+
+    <!-- For Vega -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+
+    <!-- Logo and strap-line -->
+    <div class="container">
+        <div class="navbar-header" style="float: left">
+                <img src="/dcs-wcs-prototype-3/img/dcs-circle.png"/>
+                <font>Discover and learn from the data about waste in Scotland.</font>
+        </div>
+    </div>
+
+    <!--- Search form -->
+    <div class="container">
+        <div class="navbar-header" style="float: right">
+            <div>
+                <form id="lunrSearchForm" name="lunrSearchForm" action="/dcs-wcs-prototype-3/">
+                    <input class="search-input" name="q" placeholder="Enter search term" type="text">
+                    <input class="button nopadding" type="submit" value="Search">
+                </form>
+                <!--
+                <div class="loading" id="loading-div">
+                    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                    <span class="sr-only">Loading...</span>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Title and main menu -->
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/dcs-wcs-prototype-3/">Waste Commons Scotland<sup>prototype-3</sup></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+
+                <!--
+                <li ><a href="/dcs-wcs-prototype-3/">Home</a></li>
+                <li
+                ><a href="/dcs-wcs-prototype-3/archives/">Archives</a></li>
+                
+                <li><a href="/dcs-wcs-prototype-3/feed.xml">RSS</a></li>
+                -->
+
+                <!-- News -->
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        News <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        
+                        <li><a href="/dcs-wcs-prototype-3/news-output/2020-12-15-new-in-the-open-data-community/">Here&#39;s some news from the open data community</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/news-output/2020-12-14-new-dataset-on-this-site/">Announcing a new datset on this site!</a></li>
+                        
+                    </ul>
+                </li>
+                
+
+                <!-- Generation to disposal -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        Generation to disposal <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Origins</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/origins/household-generated/">Household</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Shops, schools, hospitals &amp; similar</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Industry</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Materials</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Classification</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/materials/reusing-materials/">Reusing waste materials</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">End-states and their consequences</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Recycled <i>vs.</i> landfilled <i>vs.</i> other</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Pros &amp; cons of incineration </a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/end-states-and-consequences/carbon-impact/">Carbon impact</a></li>
+                    </ul>
+                </li>
+
+                <!-- By location -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        By location <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeen-city/">Aberdeen City</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeenshire/">Aberdeenshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/angus/">Angus</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/argyll-and-bute/">Argyll and Bute</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/city-of-edinburgh/">City of Edinburgh</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/clackmannanshire/">Clackmannanshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dumfries-and-galloway/">Dumfries and Galloway</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dundee-city/">Dundee City</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-ayrshire/">East Ayrshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-dunbartonshire/">East Dunbartonshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-lothian/">East Lothian</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-renfrewshire/">East Renfrewshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/falkirk/">Falkirk</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/fife/">Fife</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/glasgow-city/">Glasgow City</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/highland/">Highland</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/inverclyde/">Inverclyde</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/midlothian/">Midlothian</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/moray/">Moray</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-ayrshire/">North Ayrshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-lanarkshire/">North Lanarkshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/orkney-islands/">Orkney Islands</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/outer-hebrides/">Outer Hebrides</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/perth-and-kinross/">Perth and Kinross</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/renfrewshire/">Renfrewshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/scottish-borders/">Scottish Borders</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/shetland-islands/">Shetland Islands</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-ayrshire/">South Ayrshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-lanarkshire/">South Lanarkshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/stirling/">Stirling</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-dunbartonshire/">West Dunbartonshire</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-lothian/">West Lothian</a></li>
+                    </ul>
+                </li>
+
+                <!-- Data -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        Data <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Datasets</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Areas</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Population</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Household counts</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Solid-waste end-states</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Solid-waste materials</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Household solid-waste quantities</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Household carbon impact estimates</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Waste depositing sites</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Embodied carbon</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Stirling bin-route quantities</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Hands-on</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/hands-on/how-to-build-a-graph-showing-etc/">How to build a graph showing...</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">A walk-through uploading a new dataset</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">This site's data services</li>
+                        <li><a href="https://waste-commons-scotland.wiki.opencura.com/query/">Execute queries against the data (SPARQL)</a></li>
+                        <li><a href="https://waste-commons-scotland.wiki.opencura.com">Browse individual data records (Wikibase)</a></li>
+                    </ul>
+                </li>
+
+                <!-- About -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        About <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Interpreting this site</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/reliability-indicator/">What does the reliability indicator mean?</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/missing-data/">What data is missing and why?</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Background</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/purpose/">Purpose of this site</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/tech-stack/">Tech behind this site</a></li>
+                        <li><a href="https://campuspress.stir.ac.uk/datacommonsscotland/">About the encompassing project</a></li>
+                        <li><a href="https://github.com/data-commons-scotland">GitHub repositories</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/dcs-wcs-prototype-3/feed.xml">RSS feed of this site</a></li>
+                    </ul>
+                </li>
+
+                <!-- The original More dropdown
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        More <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Links</li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/origins/who-generates-the-waste/">Who generates the waste?</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/origins/household-generated/">Generation and disposal</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/materials/what-enters-the-waste-stream/">What enters the waste stream?</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/origins/bin-collection/">Bin collection</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/materials/reusing-materials/">Reusing waste materials</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/end-states-and-consequences/where-does-waste-end-up/">Where does waste end up?</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/end-states-and-consequences/carbon-impact/">Carbon impact</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/by-location/">By location</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeen-city/">Aberdeen City</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeenshire/">Aberdeenshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/angus/">Angus</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/argyll-and-bute/">Argyll and Bute</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/city-of-edinburgh/">City of Edinburgh</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/clackmannanshire/">Clackmannanshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dumfries-and-galloway/">Dumfries and Galloway</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dundee-city/">Dundee City</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-ayrshire/">East Ayrshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-dunbartonshire/">East Dunbartonshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-lothian/">East Lothian</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-renfrewshire/">East Renfrewshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/falkirk/">Falkirk</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/fife/">Fife</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/glasgow-city/">Glasgow City</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/highland/">Highland</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/inverclyde/">Inverclyde</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/midlothian/">Midlothian</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/moray/">Moray</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-ayrshire/">North Ayrshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-lanarkshire/">North Lanarkshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/orkney-islands/">Orkney Islands</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/outer-hebrides/">Outer Hebrides</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/perth-and-kinross/">Perth and Kinross</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/renfrewshire/">Renfrewshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/scottish-borders/">Scottish Borders</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/shetland-islands/">Shetland Islands</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-ayrshire/">South Ayrshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-lanarkshire/">South Lanarkshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/stirling/">Stirling</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-dunbartonshire/">West Dunbartonshire</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-lothian/">West Lothian</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/hands-on/how-to-build-a-graph-showing-etc/">How to build a graph showing...</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/understanding-this-site/">Understanding this site</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/reliability-indicator/">What does the reliability indicator mean?</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/missing-data/">What data is missing and why?</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/purpose/">Purpose of this site</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/tech-stack/">Tech stack of this site</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">ToDo</a></li>
+                        
+
+                        
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Recent Posts</li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/news-output/2020-12-15-new-in-the-open-data-community/">Here&#39;s some news from the open data community</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/news-output/2020-12-14-new-dataset-on-this-site/">Announcing a new datset on this site!</a></li>
+                        
+                        
+
+                        
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Tags</li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/tags-output/news/">news</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/tags-output/community/">community</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/tags-output/open/">open</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/tags-output/new/">new</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                -->
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="resultCount" id="resultCount"></div>
+            <div id="content">
+                
+<div id="custom-page">
+    <div id="page-header">
+        <h2>East Dunbartonshire</h2>
+    </div>
+    
+    <div class="admonitionblock caution"><table><tr><td class="icon"><div class="title">Caution</div></td><td class="content">
+Placeholder content.
+</td></tr></table></div><div class="paragraph"><p>Information about waste for East Dunbartonshire.</p></div><div class="sect3"><h4 id="_carbon_impact_from_household_waste">Carbon impact from household waste</h4><table class="tableblock frame-all grid-all stretch"><colgroup><col style="width: 33.3333%;"></col><col style="width: 33.3333%;"></col><col style="width: 33.3334%;"></col></colgroup><thead><tr><th class="tableblock halign-left valign-top">year</th><th class="tableblock halign-left valign-top">CO2e tonnes</th><th class="tableblock halign-left valign-top">Co2e tonnes per citizen</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2018</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">111395.06</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">1.0282937321148342</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2017</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">130754.58</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">1.20923499491353</p></td></tr></tbody></table></div><div class="sect3"><h4 id="_end_state_amounts_from_household_waste">End-state amounts from household waste</h4><table class="tableblock frame-all grid-all stretch"><colgroup><col style="width: 33.3333%;"></col><col style="width: 33.3333%;"></col><col style="width: 33.3334%;"></col></colgroup><thead><tr><th class="tableblock halign-left valign-top">year</th><th class="tableblock halign-left valign-top">end-state</th><th class="tableblock halign-left valign-top">tonnes per citizen</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2018</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.26043570571402197</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2018</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.09225514631219423</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2018</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.1239822763777347</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2017</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.2500971053361694</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2017</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.05821696106538426</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2017</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.21369647646351614</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2016</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.2518597731076809</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2016</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.05494699646643109</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2016</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.21255346847684584</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2015</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.25667539267015704</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2015</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.04147344801795064</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2015</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.20849850411368737</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2014</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.2205322837597226</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2014</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.05877612220035611</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2014</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.21640895886046294</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2013</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.22073885109599395</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2013</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.031131897203325775</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2013</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.23941798941798942</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2012</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.20181337363052512</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2012</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.0</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2012</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.31984321873819416</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Recycled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.21205714285714286</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.0</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Landfilled</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0.34981904761904764</p></td></tr></tbody></table></div>
+
+    <div id="prev-next">
+        
+        <a href="/dcs-wcs-prototype-3/pages-output/areas/east-ayrshire/">&laquo; East Ayrshire</a>
+        
+        
+        ||
+        
+        
+        <a href="/dcs-wcs-prototype-3/pages-output/areas/east-lothian/">East Lothian &raquo;</a>
+        
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <footer>Data Commons Scotland 2020</footer>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="/dcs-wcs-prototype-3/js/highlight.pack.js" type="application/javascript"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+</body>
+</html>
+
