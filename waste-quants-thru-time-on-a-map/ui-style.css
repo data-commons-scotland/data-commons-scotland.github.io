@@ -79,6 +79,7 @@ html, body {
 }
 
 .legend {
+    min-width: 130px;
     line-height: 18px;
     color: #555;
 }
@@ -110,8 +111,8 @@ input[type=range],
 
 .map-title h2 {
     color: black;
-    /*
     text-align: center;
+    /*
     padding-left: 10px;
     padding-right: 10px;
     background: rgba(255,255,255,0.75);

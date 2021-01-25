@@ -11,7 +11,7 @@ function createUiTitle(){
     };
 
     uiTitle.update = function(){
-        this._div.innerHTML = '<h2>Household waste</h2>';
+        this._div.innerHTML = "<h2>Scotland's waste</h2>";
     };
 
     return uiTitle;
@@ -50,7 +50,7 @@ function createUiSwapper(optLabels, swapFn){
 
 // ---------------------------------------------
 
-function createUiLegend(legendPartHtml){
+function createUiLegend(legendHtml){
     var uiLegend = L.control({position: 'bottomright'});
 
     uiLegend.onAdd = function(uiMap){
@@ -60,8 +60,7 @@ function createUiLegend(legendPartHtml){
     };
 
     uiLegend.update = function(){
-        this._div.innerHTML = "<div class='qual'>Tonnes per person per year</div>";
-        this._div.innerHTML += legendPartHtml;
+        this._div.innerHTML = legendHtml;
     };
 
     return uiLegend;

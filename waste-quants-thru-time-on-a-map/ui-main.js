@@ -2,11 +2,13 @@ import * as areaData from "./area-data.js";
 import * as centreData from "./centre-data.js";
 import * as mgmtWasteData from "./hw-mgmt-data.js";
 import * as co2eWasteData from "./hw-co2e-data.js";
+import * as hvbWasteData from "./hvb-data.js";
 import * as uiMapOps from "./ui-map.js";
 import * as uiControlOps from "./ui-control.js";
 import * as uiChartOps from "./ui-chart.js";
 import * as mgmtConfig from "./mgmt-config.js";
 import * as co2eConfig from "./co2e-config.js";
+import * as hvbConfig from "./hvb-config.js";
 
 
 var highlightedFeature = null;
@@ -27,7 +29,7 @@ const getUiSlider = () => uiSlider;
 
 var uiMap = uiMapOps.createUiMap(areaData.geoJson, getUiDetail, setHighlightedFeature);
 uiControlOps.createUiTitle().addTo(uiMap);
-uiControlOps.createUiSwapper(["Managed solid waste", "CO2 equivalent"], swap).addTo(uiMap);
+uiControlOps.createUiSwapper(["Household waste", "Household CO2 equivalent", "Household vs business waste"], swap).addTo(uiMap);
 
 
 function addUiSwappables(wasteData, config){
@@ -43,13 +45,13 @@ function addUiSwappables(wasteData, config){
     uiYear = uiControlOps.createUiYear(getYear);
     uiYear.addTo(uiMap);
 
-    uiDetail = uiControlOps.createUiDetail(getYear, wasteData.records, config.detailHtmlfn);
+    uiDetail = uiControlOps.createUiDetail(getYear, wasteData.records, config.detailHtmlFn);
     uiDetail.addTo(uiMap);
 
-    uiLegend = uiControlOps.createUiLegend(config.legendPartHtml);
+    uiLegend = uiControlOps.createUiLegend(config.legendHtml);
     uiLegend.addTo(uiMap);
 
-    uiCharts = uiChartOps.createUiCharts(yearInitial, uiMap, centreData.coords, wasteData.records, wasteData.maxTonnesPerYear, config.quantitiesFn, config.colours);
+    uiCharts = uiChartOps.createUiCharts(yearInitial, uiMap, centreData.coords, wasteData.records, wasteData.maxTonnesPerYear, config.quantitiesFn, config.colours, config.chartType);
 
     let dispatchUpdates = () => {
         uiChartOps.updateUiCharts(getYear, uiCharts, centreData.coords, wasteData.records, wasteData.maxTonnesPerYear, config.quantitiesFn);
@@ -82,7 +84,8 @@ function swapUiSwappables(){
 
 const targets = [
     {wasteData: mgmtWasteData, config: mgmtConfig.mgmtConfig},
-    {wasteData: co2eWasteData, config: co2eConfig.co2eConfig}
+    {wasteData: co2eWasteData, config: co2eConfig.co2eConfig},
+    {wasteData: hvbWasteData,  config: hvbConfig.hvbConfig}
 ];
 
 function swap(targetIx){

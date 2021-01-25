@@ -8,22 +8,24 @@ const co2eQuantitiesFn =
         return ix == -1 ? 0 : records[ix].tonnes;
 });
 
-const co2eDetailHtmlfn =
+const co2eDetailHtmlFn =
     (records, area, year) => {
         let s = [0].map(placeholder => {
             let ix = records.findIndex(y => (y.area == area) && (y.year == year));
             return `<dt>CO<sub>2</sub> equivalent:</dt><dd><span style="font-weight: bold; color: ${co2eColours[placeholder]}">${(ix == -1 ? '?' : records[ix].tonnes.toFixed(3))}</dd>`;
         }).join(" ");
-        return `<h4>${area} ${year}</h4><div class='qual'>Tonnes per person per year</div><dl>${s}</dl>`;
+        return `<h4>${area} ${year}</h4><div class='qual'>Tonnes per citizen per year</div><dl>${s}</dl>`;
 };
 
-const co2eLegendPartHtml = '<i style="background: brown"></i>CO<sub>2</sub> equivalent<br/>';
+const co2eLegendHtml = "<div class='qual'>Tonnes per citizen per year</div>" +
+                            '<i style="background: brown"></i>CO<sub>2</sub> equivalent<br/>';
 
 const co2eConfig = {
+    chartType: "pie",
     quantitiesFn: co2eQuantitiesFn,
-    detailHtmlfn: co2eDetailHtmlfn,
+    detailHtmlFn: co2eDetailHtmlFn,
     colours: co2eColours,
-    legendPartHtml: co2eLegendPartHtml
+    legendHtml: co2eLegendHtml
 };
 
 

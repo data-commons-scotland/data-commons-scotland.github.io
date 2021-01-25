@@ -57,8 +57,8 @@ function createUiMap(geoJson, getUiDetail, setHighlightedFeature){
     uiMap.attributionControl.setPrefix(false);
     uiMap.attributionControl.addAttribution('<a href="attributions.html">Attributions</a>');
 
-    var tiles = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}'); // Not as nice as stadiamaps (below) but no account needed for non-localhost serving
-    //var tiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {maxZoom: 20}); // Nice but needs an account for non-localhost serving
+    //var tiles = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}'); // Not as nice as stadiamaps (below) but no account needed for non-localhost serving
+    var tiles = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {maxZoom: 20}); // Nice but needs an account for non-localhost serving
     tiles.addTo(uiMap);
 
     // KEEP for now
