@@ -6,6 +6,7 @@ To access them via your web browser, use the following hyperlinks:
 * https://data-commons-scotland.github.io/choropleth-generation/choropleths.html
 * https://data-commons-scotland.github.io/dataset-into-wikidata/CO2ePerCitizen-chart.png
 * https://data-commons-scotland.github.io/dcs-wcs-prototype-3/index.html
+* https://data-commons-scotland.github.io/longannet-found-in-the-data/index.html
 * https://data-commons-scotland.github.io/pivot-drilldown-and-plot/index.html
 * https://data-commons-scotland.github.io/waste-quants-thru-time-on-a-map/index.html
 
