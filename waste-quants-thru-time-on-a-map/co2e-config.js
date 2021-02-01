@@ -21,7 +21,7 @@ const co2eLegendHtml = "<div class='qual'>Tonnes per citizen per year</div>" +
                             '<i style="background: brown"></i>CO<sub>2</sub> equivalent<br/>';
 
 const co2eConfig = {
-    chartType: "pie",
+    chartType: "polar-radius",
     quantitiesFn: co2eQuantitiesFn,
     detailHtmlFn: co2eDetailHtmlFn,
     colours: co2eColours,
