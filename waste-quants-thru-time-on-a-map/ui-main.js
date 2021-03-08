@@ -27,9 +27,17 @@ const getUiLegend = () => uiLegend;
 const getUiCharts = () => uiCharts;
 const getUiSlider = () => uiSlider;
 
+
+const searchStr = window.location.search;
+//console.log("searchStr=" + searchStr);
+var initIx = 0; // i.e. hw-mgmt
+if (searchStr.includes("hw-co2e")) { initIx = 1; }
+else if (searchStr.includes("hvb")) { initIx = 2; }
+
+
 var uiMap = uiMapOps.createUiMap(areaData.geoJson, getUiDetail, setHighlightedFeature);
 uiControlOps.createUiTitle().addTo(uiMap);
-uiControlOps.createUiSwapper(["Household waste", "Household CO2 equivalent", "Household vs business waste"], swap).addTo(uiMap);
+uiControlOps.createUiSwapper(["Household waste", "Household CO2 equivalent", "Household vs business waste"], swap, initIx).addTo(uiMap);
 
 
 function addUiSwappables(wasteData, config){
@@ -93,7 +101,8 @@ function swap(targetIx){
     addUiSwappables(targets[targetIx].wasteData, targets[targetIx].config);
 }
 
-addUiSwappables(targets[0].wasteData, targets[0].config);
+
+addUiSwappables(targets[initIx].wasteData, targets[initIx].config);
 
 
 

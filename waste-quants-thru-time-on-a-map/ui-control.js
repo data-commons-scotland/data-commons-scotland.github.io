@@ -20,7 +20,7 @@ function createUiTitle(){
 
 // ---------------------------------------------
 
-function createUiSwapper(optLabels, swapFn){
+function createUiSwapper(optLabels, swapFn, initIx){
         var uiSwapper = L.control({position: 'topleft', bubblingMouseEvents: false});
 
         uiSwapper.onAdd = function(uiMap){
@@ -34,6 +34,8 @@ function createUiSwapper(optLabels, swapFn){
                 opt.innerHTML = v;
                 select.appendChild(opt);
             });
+
+            select.value = initIx;
 
             this._div.appendChild(select);
 
