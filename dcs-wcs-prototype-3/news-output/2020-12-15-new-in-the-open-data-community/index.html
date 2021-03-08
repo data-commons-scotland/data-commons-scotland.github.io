@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Waste Commons Scotland: Here&#39;s some news from the open data community</title>
+    <title>Waste Matters Scotland: Here&#39;s some news from the open data community</title>
     
 <meta name="keywords" content="news,community,open,new">
 
@@ -31,6 +31,8 @@
     {  % style "css/asciidoctor-skin-clean.css" %}
     {  % style "css/asciidoctor-skin-tufte.css" %}
     {  % style "css/asciidoctor-skin-medium.css" %}
+    {  % style "css/asciidoc-bootstrap.sandstone.css" %}
+    {  % style "css/asciidoc-jshingler.css" %}
     -->
     <link href="/dcs-wcs-prototype-3/css/asciidoctor-skin-clean.css" rel="stylesheet" type="text/css" />
     <link href="/dcs-wcs-prototype-3/css/screen.css" rel="stylesheet" type="text/css" />
@@ -45,6 +47,13 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
+    <!-- For Leaflet -->
+    <!--
+    <link href="/dcs-wcs-prototype-3/css/ui-style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" media="screen" title="leaflet">
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/leaflet.minichart/dist/leaflet.minichart.min.js" charset="utf-8"></script>
+    -->
 </head>
 <body>
 
@@ -52,12 +61,14 @@
 <nav class="navbar navbar-default">
 
     <!-- Logo and strap-line -->
+    <!--
     <div class="container">
         <div class="navbar-header" style="float: left">
                 <img src="/dcs-wcs-prototype-3/img/dcs-circle.png"/>
                 <font>Discover and learn from the data about waste in Scotland.</font>
         </div>
     </div>
+    -->
 
     <!--- Search form -->
     <div class="container">
@@ -86,7 +97,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/dcs-wcs-prototype-3/">Waste Commons Scotland<sup>prototype-3</sup></a>
+            <a class="navbar-brand" href="/dcs-wcs-prototype-3/">
+                <img src="/dcs-wcs-prototype-3/img/dcs-circle.png"/>Waste Matters Scotland<sup>prototype</sup>
+            </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -100,6 +113,7 @@
                 -->
 
                 <!-- News -->
+                <!--
                 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -113,65 +127,47 @@
                     </ul>
                 </li>
                 
+                -->
 
-                <!-- Generation to disposal -->
+                <!-- Articles -->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        Generation to disposal <span class="caret"></span></a>
+                        Articles <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Facts per region</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/maps/waste-facts-for-each-region/">How is waste in my area?</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Where can I dispose of xyz?</a></li>
+                        <li class="divider"></li>
                         <li class="dropdown-header">Origins</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/origins/who-generates-the-waste/">Who generates waste?</a></li>
                         <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/origins/household-generated/">Household</a></li>
                         <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Shops, schools, hospitals &amp; similar</a></li>
                         <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Industry</a></li>
                         <li class="divider"></li>
                         <li class="dropdown-header">Materials</li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Classification</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/materials/what-enters-the-waste-stream/">What enters the waste stream?</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Classification of waste materials</a></li>
                         <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/materials/reusing-materials/">Reusing waste materials</a></li>
                         <li class="divider"></li>
-                        <li class="dropdown-header">End-states and their consequences</li>
+                        <li class="dropdown-header">End-states</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/end-states-and-consequences/where-does-waste-end-up/">Where does waste end up?</a></li>
                         <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Recycled <i>vs.</i> landfilled <i>vs.</i> other</a></li>
                         <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Pros &amp; cons of incineration </a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Waste consequences</a></li>
                         <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/end-states-and-consequences/carbon-impact/">Carbon impact</a></li>
                     </ul>
                 </li>
 
-                <!-- By location -->
+                <!-- Maps -->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        By location <span class="caret"></span></a>
+                        Maps <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeen-city/">Aberdeen City</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeenshire/">Aberdeenshire</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/angus/">Angus</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/argyll-and-bute/">Argyll and Bute</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/city-of-edinburgh/">City of Edinburgh</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/clackmannanshire/">Clackmannanshire</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dumfries-and-galloway/">Dumfries and Galloway</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dundee-city/">Dundee City</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-ayrshire/">East Ayrshire</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-dunbartonshire/">East Dunbartonshire</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-lothian/">East Lothian</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-renfrewshire/">East Renfrewshire</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/falkirk/">Falkirk</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/fife/">Fife</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/glasgow-city/">Glasgow City</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/highland/">Highland</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/inverclyde/">Inverclyde</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/midlothian/">Midlothian</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/moray/">Moray</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-ayrshire/">North Ayrshire</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-lanarkshire/">North Lanarkshire</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/orkney-islands/">Orkney Islands</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/outer-hebrides/">Outer Hebrides</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/perth-and-kinross/">Perth and Kinross</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/renfrewshire/">Renfrewshire</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/scottish-borders/">Scottish Borders</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/shetland-islands/">Shetland Islands</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-ayrshire/">South Ayrshire</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-lanarkshire/">South Lanarkshire</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/stirling/">Stirling</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-dunbartonshire/">West Dunbartonshire</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-lothian/">West Lothian</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/maps/waste-facts-for-each-region/">Waste facts for each region</a></li>
+                        <li><a href="https://data-commons-scotland.github.io/cluster-map-of-materials-incoming/">Waste sites and quantities of incoming materials</a></li>
+                        <li><a href="https://data-commons-scotland.github.io/waste-quants-thru-time-on-a-map/index.html?preset=hw-mgmt">Household quantities through time</a></li>
+                        <li><a href="https://data-commons-scotland.github.io/waste-quants-thru-time-on-a-map/index.html?preset=hw-co2e">Household CO<sub>2</sub>e through time</a></li>
+                        <li><a href="https://data-commons-scotland.github.io/waste-quants-thru-time-on-a-map/index.html?preset=hvb">Household vs business quantities through time</a></li>
                     </ul>
                 </li>
 
@@ -180,41 +176,42 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         Data <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li class="dropdown-header">Datasets</li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Areas</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Population</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Household counts</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Solid-waste end-states</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Solid-waste materials</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Household solid-waste quantities</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Household carbon impact estimates</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Waste depositing sites</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Embodied carbon</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Stirling bin-route quantities</a></li>
+                        <li class="dropdown-header">About the datasets on this site</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/data/about/">Datasets</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/data/about/index.html#dimensions">Dimensions</a></li>
                         <li class="divider"></li>
-                        <li class="dropdown-header">Hands-on</li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/hands-on/how-to-build-a-graph-showing-etc/">How to build a graph showing...</a></li>
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">A walk-through uploading a new dataset</a></li>
+                        <li class="dropdown-header">Directly access the datasets</li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/household-waste.csv">Household waste <span class="menuitem-record-count">(19,008 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/household-co2e.csv">Household CO<sub>2</sub>e <span class="menuitem-record-count">(208 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/business-waste-by-region.csv">Business waste by region <span class="menuitem-record-count">(8,976 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/business-waste-by-sector.csv">Business waste by sector <span class="menuitem-record-count">(2,640 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/waste-site.csv">Waste site <span class="menuitem-record-count">(1254 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/waste-site-io.csv">Waste site ins &amp; outs <span class="menuitem-record-count">(2,667,914 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/material-coding.csv">Material coding <span class="menuitem-record-count">(557 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/ewc-coding.csv">EWC coding <span class="menuitem-record-count">(973 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/households.csv">Households <span class="menuitem-record-count">(288 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/population.csv">Population <span class="menuitem-record-count">(288 records)</span></a></li>
                         <li class="divider"></li>
-                        <li class="dropdown-header">This site's data services</li>
+                        <li class="dropdown-header">Data tools</li>
+                        <li><a href="https://data-commons-scotland.github.io/pivot-drilldown-and-plot/index.html">Explore the data using data grids &amp; graphs</a></li>
                         <li><a href="https://waste-commons-scotland.wiki.opencura.com/query/">Execute queries against the data (SPARQL)</a></li>
                         <li><a href="https://waste-commons-scotland.wiki.opencura.com">Browse individual data records (Wikibase)</a></li>
                     </ul>
                 </li>
 
-                <!-- About -->
+                <!-- This site -->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        About <span class="caret"></span></a>
+                        This site <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="dropdown-header">Interpreting this site</li>
                         <li><a href="/dcs-wcs-prototype-3/pages-output/about/reliability-indicator/">What does the reliability indicator mean?</a></li>
                         <li><a href="/dcs-wcs-prototype-3/pages-output/about/missing-data/">What data is missing and why?</a></li>
                         <li class="divider"></li>
                         <li class="dropdown-header">Background</li>
+                        <li><a href="https://campuspress.stir.ac.uk/datacommonsscotland/">About the encompassing project</a></li>
                         <li><a href="/dcs-wcs-prototype-3/pages-output/about/purpose/">Purpose of this site</a></li>
                         <li><a href="/dcs-wcs-prototype-3/pages-output/about/tech-stack/">Tech behind this site</a></li>
-                        <li><a href="https://campuspress.stir.ac.uk/datacommonsscotland/">About the encompassing project</a></li>
                         <li><a href="https://github.com/data-commons-scotland">GitHub repositories</a></li>
                         <li class="divider"></li>
                         <li><a href="/dcs-wcs-prototype-3/feed.xml">RSS feed of this site</a></li>
@@ -242,73 +239,11 @@
                         
                         <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/end-states-and-consequences/carbon-impact/">Carbon impact</a></li>
                         
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/by-location/">By location</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeen-city/">Aberdeen City</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/aberdeenshire/">Aberdeenshire</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/angus/">Angus</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/argyll-and-bute/">Argyll and Bute</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/city-of-edinburgh/">City of Edinburgh</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/clackmannanshire/">Clackmannanshire</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dumfries-and-galloway/">Dumfries and Galloway</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/dundee-city/">Dundee City</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-ayrshire/">East Ayrshire</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-dunbartonshire/">East Dunbartonshire</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-lothian/">East Lothian</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/east-renfrewshire/">East Renfrewshire</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/falkirk/">Falkirk</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/fife/">Fife</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/glasgow-city/">Glasgow City</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/highland/">Highland</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/inverclyde/">Inverclyde</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/midlothian/">Midlothian</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/moray/">Moray</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-ayrshire/">North Ayrshire</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/north-lanarkshire/">North Lanarkshire</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/orkney-islands/">Orkney Islands</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/outer-hebrides/">Outer Hebrides</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/perth-and-kinross/">Perth and Kinross</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/renfrewshire/">Renfrewshire</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/scottish-borders/">Scottish Borders</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/shetland-islands/">Shetland Islands</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-ayrshire/">South Ayrshire</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/south-lanarkshire/">South Lanarkshire</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/stirling/">Stirling</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-dunbartonshire/">West Dunbartonshire</a></li>
-                        
-                        <li><a href="/dcs-wcs-prototype-3/pages-output/areas/west-lothian/">West Lothian</a></li>
-                        
                         <li><a href="/dcs-wcs-prototype-3/pages-output/hands-on/how-to-build-a-graph-showing-etc/">How to build a graph showing...</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/maps/waste-facts-for-each-region/">Waste facts for each region</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/data/about/">About the datasets on this site</a></li>
                         
                         <li><a href="/dcs-wcs-prototype-3/pages-output/about/understanding-this-site/">Understanding this site</a></li>
                         
@@ -402,7 +337,7 @@ Placeholder content.
             </div>
         </div>
     </div>
-    <footer>Data Commons Scotland 2020</footer>
+    <footer>Data Commons Scotland 2021</footer>
 </div>
 
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
