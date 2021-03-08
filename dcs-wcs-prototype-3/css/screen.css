@@ -9,6 +9,18 @@ body {
     font-size: 16px;
 }
 
+/*
+a[href^="http://"]:after {
+    content: url(/dcs-wcs-prototype-3/img/external.png);
+    margin: 0 0 0 5px;
+}
+a[href*="http://localhost:3000/"]:after {
+  content: '';
+  margin: 0;
+}
+*/
+
+
 .container {
     max-width: 1000px;
 }
@@ -34,7 +46,7 @@ body {
 }
 
 .navbar-default {
-    background-color: #428bca;
+    background-color: #788585;
     border: none;
 }
 
@@ -47,6 +59,16 @@ body {
     color: #fff;
 }
 
+.navbar-header a {
+    display: inline-block;
+}
+.navbar-header img {
+    display: inline;
+    vertical-align: middle;
+    margin-right: 5px;
+
+}
+
 .navbar-default .navbar-nav li a,
 .navbar-default .navbar-nav .open .dropdown-menu > li > a{
     color: #fff;
@@ -54,16 +76,16 @@ body {
 
 .navbar-default .navbar-nav li a:hover {
     color: #fff;
-    background-color: #3d80ba;
+    background-color: #9caea9;
 }
 
 .navbar-default .navbar-nav .active a {
     color: #fff;
-    background-color: #3d80ba;
+    background-color: #9caea9;
 }
 
 .navbar-default .navbar-toggle:hover{
-    background-color: #3d80ba;
+    background-color: #9caea9;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -71,7 +93,7 @@ body {
 }
 
 .dropdown-menu {
-    background-color: #428bca;
+    background-color: #788585;
 }
 
 .dropdown-header {
@@ -88,7 +110,7 @@ body {
 .navbar-default .navbar-nav .open a:focus,
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
-    background-color: #3d80ba;
+    background-color: #9caea9;
     color: #fff;
 }
 
@@ -106,8 +128,8 @@ body {
 footer {
     font-size: 14px;
     text-align: center;
-    padding-top: 75px;
-    padding-bottom: 30px;
+    padding-top: 25px;
+    padding-bottom: 20px;
 }
 
 blockquote footer {
@@ -144,6 +166,10 @@ blockquote footer {
     font-size: 32px;
 }
 
+.menuitem-record-count {
+    font-size: smaller;
+}
+
 pre {
     overflow-x: auto;
 }
@@ -170,11 +196,11 @@ pre, code, .hljs {
         padding: 3px 20px;
     }
     .navbar-nav>li>a {
-        padding: 30px 15px;
+        padding: 20px 15px;
     }
     .navbar-default .navbar-brand {
         font-size: 30px;
-        padding: 25px 15px;
+        padding: 0px 15px;
     }
     .navbar-header font {
         font-weight: bold;
@@ -185,8 +211,8 @@ pre, code, .hljs {
         width: auto;
     }
     #content{
-        margin-top: 30px;
-        padding: 50px 75px;
+        margin-top: 20px;
+        padding: 2px 35px;
     }
 }
 
@@ -195,7 +221,7 @@ pre, code, .hljs {
         font-size: 14px;
     }
     .navbar-default .navbar-brand {
-        font-size: 22px;
+        font-size: 20px;
     }
     .navbar-header font {
         font-weight: bold;

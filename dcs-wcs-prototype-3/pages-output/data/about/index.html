@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Waste Matters Scotland: About the datasets on this site</title>
+    
+
+<meta name="description" content="Easier open data about waste in ScotlandSeveral organisations are doing a very good job of curating &amp; publishing open data about waste in Scotland but,
+the published data is not always &quot;easy to use&quot; for non-experts.
+We have see several references to this at open data conference events and on social media platforms:One of the objectives of the Data Commons Scotland project is to address
+the &quot;ease of use&quot; issue over open data.
+The contents of this repository are the result of us re-working some of the existing
+source open data
+so that it is easier to use, understand, consume, parse, and all in one place.
+It may not be as detailed or have all the nuances as the source data - but aims to be
+better for the purposes of making the information accessible to non-experts.We have processed the source data just enough to:provide value-based cross-referencing between datasetsadd a few fields whose values are generally useful but not easily derivable by a simple calculation (such as latitude &amp; longitude)make it available as simple CSV and JSON files in a Git repository.We have not augmented the data with derived values that can be simply calculated,
+such as per-population amounts, averages, trends, totals, etc.">
+
+<meta property="og:description" content="Easier open data about waste in ScotlandSeveral organisations are doing a very good job of curating &amp; publishing open data about waste in Scotland but,
+the published data is not always &quot;easy to use&quot; for non-experts.
+We have see several references to this at open data conference events and on social media platforms:One of the objectives of the Data Commons Scotland project is to address
+the &quot;ease of use&quot; issue over open data.
+The contents of this repository are the result of us re-working some of the existing
+source open data
+so that it is easier to use, understand, consume, parse, and all in one place.
+It may not be as detailed or have all the nuances as the source data - but aims to be
+better for the purposes of making the information accessible to non-experts.We have processed the source data just enough to:provide value-based cross-referencing between datasetsadd a few fields whose values are generally useful but not easily derivable by a simple calculation (such as latitude &amp; longitude)make it available as simple CSV and JSON files in a Git repository.We have not augmented the data with derived values that can be simply calculated,
+such as per-population amounts, averages, trends, totals, etc.">
+
+<meta property="og:url" content="http://localhost:3000/dcs-wcs-prototype-3/pages-output/data/about/" />
+<meta property="og:title" content="About the datasets on this site" />
+<meta property="og:type" content="article" />
+
+    <link rel="canonical" href="http://localhost:3000/dcs-wcs-prototype-3/pages-output/data/about/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700" rel="stylesheet"
+          type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+
+    <!-- For asciidoctor skins, see: https://darshandsoni.com/asciidoctor-skins/screenshots/ -->
+    <!--
+    {  % style "css/screen.css" %}
+    {  % style "css/asciidoctor.css" %}
+    -->
+    <!--
+    {  % style "css/asciidoctor-skin-material-teal.css" %}
+    {  % style "css/asciidoctor-skin-notebook.css" %}
+    {  % style "css/asciidoctor-skin-gazette.css" %}
+    {  % style "css/asciidoctor-skin-clean.css" %}
+    {  % style "css/asciidoctor-skin-tufte.css" %}
+    {  % style "css/asciidoctor-skin-medium.css" %}
+    {  % style "css/asciidoc-bootstrap.sandstone.css" %}
+    {  % style "css/asciidoc-jshingler.css" %}
+    -->
+    <link href="/dcs-wcs-prototype-3/css/asciidoctor-skin-clean.css" rel="stylesheet" type="text/css" />
+    <link href="/dcs-wcs-prototype-3/css/screen.css" rel="stylesheet" type="text/css" />
+
+    <!-- For Lunr -->
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/dcs-wcs-prototype-3/js/index/lunr_index.js"></script>
+    <script src="/dcs-wcs-prototype-3/js/lunrclient.js"></script>
+
+    <!-- For Vega -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <!-- For Leaflet -->
+    <!--
+    <link href="/dcs-wcs-prototype-3/css/ui-style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" media="screen" title="leaflet">
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/leaflet.minichart/dist/leaflet.minichart.min.js" charset="utf-8"></script>
+    -->
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+
+    <!-- Logo and strap-line -->
+    <!--
+    <div class="container">
+        <div class="navbar-header" style="float: left">
+                <img src="/dcs-wcs-prototype-3/img/dcs-circle.png"/>
+                <font>Discover and learn from the data about waste in Scotland.</font>
+        </div>
+    </div>
+    -->
+
+    <!--- Search form -->
+    <div class="container">
+        <div class="navbar-header" style="float: right">
+            <div>
+                <form id="lunrSearchForm" name="lunrSearchForm" action="/dcs-wcs-prototype-3/">
+                    <input class="search-input" name="q" placeholder="Enter search term" type="text">
+                    <input class="button nopadding" type="submit" value="Search">
+                </form>
+                <!--
+                <div class="loading" id="loading-div">
+                    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                    <span class="sr-only">Loading...</span>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Title and main menu -->
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/dcs-wcs-prototype-3/">
+                <img src="/dcs-wcs-prototype-3/img/dcs-circle.png"/>Waste Matters Scotland<sup>prototype</sup>
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+
+                <!--
+                <li ><a href="/dcs-wcs-prototype-3/">Home</a></li>
+                <li
+                ><a href="/dcs-wcs-prototype-3/archives/">Archives</a></li>
+                
+                <li><a href="/dcs-wcs-prototype-3/feed.xml">RSS</a></li>
+                -->
+
+                <!-- News -->
+                <!--
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        News <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        
+                        <li><a href="/dcs-wcs-prototype-3/news-output/2020-12-15-new-in-the-open-data-community/">Here&#39;s some news from the open data community</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/news-output/2020-12-14-new-dataset-on-this-site/">Announcing a new datset on this site!</a></li>
+                        
+                    </ul>
+                </li>
+                
+                -->
+
+                <!-- Articles -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        Articles <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Facts per region</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">How is waste in my area?</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Where can I dispose of xyz?</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Origins</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Who generates waste?</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/origins/household-generated/">Household</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Shops, schools, hospitals &amp; similar</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Industry</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Materials</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">What enters the waste stream?</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Classification of waste materials</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/materials/reusing-materials/">Reusing waste materials</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">End-states</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Where does waste end up?</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Recycled <i>vs.</i> landfilled <i>vs.</i> other</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Pros &amp; cons of incineration </a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">Waste consequences</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/end-states-and-consequences/carbon-impact/">Carbon impact</a></li>
+                    </ul>
+                </li>
+
+                <!-- Maps -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        Maps <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/maps/waste-facts-for-each-region/">Waste facts for each region</a></li>
+                        <li><a href="https://data-commons-scotland.github.io/cluster-map-of-materials-incoming/">Waste sites and quantities of incoming materials</a></li>
+                        <li><a href="https://data-commons-scotland.github.io/waste-quants-thru-time-on-a-map/index.html?preset=hw-mgmt">Household quantities through time</a></li>
+                        <li><a href="https://data-commons-scotland.github.io/waste-quants-thru-time-on-a-map/index.html?preset=hw-co2e">Household CO<sub>2</sub>e through time</a></li>
+                        <li><a href="https://data-commons-scotland.github.io/waste-quants-thru-time-on-a-map/index.html?preset=hvb">Household vs business quantities through time</a></li>
+                    </ul>
+                </li>
+
+                <!-- Data -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        Data <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">About the datasets on this site</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/data/about/">Datasets</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/data/about/index.html#dimensions">Dimensions</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Directly access the datasets</li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/household-waste.csv">Household waste <span class="menuitem-record-count">(19,008 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/household-co2e.csv">Household CO<sub>2</sub>e <span class="menuitem-record-count">(208 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/business-waste-by-region.csv">Business waste by region <span class="menuitem-record-count">(8,976 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/business-waste-by-sector.csv">Business waste by sector <span class="menuitem-record-count">(2,640 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/waste-site.csv">Waste site <span class="menuitem-record-count">(1254 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/waste-site-io.csv">Waste site ins &amp; outs <span class="menuitem-record-count">(2,667,914 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/material-coding.csv">Material coding <span class="menuitem-record-count">(557 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/ewc-coding.csv">EWC coding <span class="menuitem-record-count">(973 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/households.csv">Households <span class="menuitem-record-count">(288 records)</span></a></li>
+                        <li><a href="https://github.com/data-commons-scotland/dcs-easier-open-data/raw/master/data/population.csv">Population <span class="menuitem-record-count">(288 records)</span></a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Data tools</li>
+                        <li><a href="https://data-commons-scotland.github.io/pivot-drilldown-and-plot/index.html">Explore the data using data grids &amp; graphs</a></li>
+                        <li><a href="https://waste-commons-scotland.wiki.opencura.com/query/">Execute queries against the data (SPARQL)</a></li>
+                        <li><a href="https://waste-commons-scotland.wiki.opencura.com">Browse individual data records (Wikibase)</a></li>
+                    </ul>
+                </li>
+
+                <!-- This site -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        This site <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Interpreting this site</li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/reliability-indicator/">What does the reliability indicator mean?</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/missing-data/">What data is missing and why?</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Background</li>
+                        <li><a href="https://campuspress.stir.ac.uk/datacommonsscotland/">About the encompassing project</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/purpose/">Purpose of this site</a></li>
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/tech-stack/">Tech behind this site</a></li>
+                        <li><a href="https://github.com/data-commons-scotland">GitHub repositories</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/dcs-wcs-prototype-3/feed.xml">RSS feed of this site</a></li>
+                    </ul>
+                </li>
+
+                <!-- The original More dropdown
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        More <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Links</li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/origins/who-generates-the-waste/">Who generates the waste?</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/origins/household-generated/">Generation and disposal</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/materials/what-enters-the-waste-stream/">What enters the waste stream?</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/origins/bin-collection/">Bin collection</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/materials/reusing-materials/">Reusing waste materials</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/end-states-and-consequences/where-does-waste-end-up/">Where does waste end up?</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/lifecycle/end-states-and-consequences/carbon-impact/">Carbon impact</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/hands-on/how-to-build-a-graph-showing-etc/">How to build a graph showing...</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/maps/waste-facts-for-each-region/">Waste facts for each region</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/data/about/">About the datasets on this site</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/understanding-this-site/">Understanding this site</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/reliability-indicator/">What does the reliability indicator mean?</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/missing-data/">What data is missing and why?</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/purpose/">Purpose of this site</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/about/tech-stack/">Tech stack of this site</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/pages-output/todo/">ToDo</a></li>
+                        
+
+                        
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Recent Posts</li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/news-output/2020-12-15-new-in-the-open-data-community/">Here&#39;s some news from the open data community</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/news-output/2020-12-14-new-dataset-on-this-site/">Announcing a new datset on this site!</a></li>
+                        
+                        
+
+                        
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Tags</li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/tags-output/news/">news</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/tags-output/community/">community</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/tags-output/open/">open</a></li>
+                        
+                        <li><a href="/dcs-wcs-prototype-3/tags-output/new/">new</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                -->
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="resultCount" id="resultCount"></div>
+            <div id="content">
+                
+<div id="custom-page">
+    <div id="page-header">
+        <h2>About the datasets on this site</h2>
+    </div>
+    
+    <div class="sect1"><h2 id="_easier_open_data_about_waste_in_scotland"><em>Easier</em> open data about waste in Scotland</h2><div class="sectionbody"><div class="paragraph"><p>Several organisations are doing a very good job of curating &amp; publishing <em>open data</em> about waste in Scotland but,
+the published data is not always "easy to use" for non-experts.
+We have see several references to this at open data conference events and on social media platforms:</p></div><div class="quoteblock"><blockquote>
+Whilst statisticians/coders may think that it is reasonably simple to knead together these
+somewhat diverse datasets into a coherent knowledge, the interested layman doesn’t find it so easy.
+</blockquote></div><div class="paragraph"><p>One of the objectives of the Data Commons Scotland project is to address
+the "ease of use" issue over open data.
+The contents of this repository are the result of us <em>re-working</em> some of the existing
+<em>source</em> open data
+so that it is <strong><em>easier</em></strong> to use, understand, consume, parse, and all in one place.
+It may not be as detailed or have all the nuances as the source data - but aims to be
+better for the purposes of making the information accessible to non-experts.</p></div><div class="paragraph"><p>We have processed the source data just enough to:</p></div><div class="ulist"><ul><li><p>provide value-based cross-referencing between datasets</p></li><li><p>add a few fields whose values are generally useful but not easily derivable by a simple calculation (such as latitude &amp; longitude)</p></li><li><p>make it available as simple CSV and JSON files in a Git repository.</p></li></ul></div><div class="paragraph"><p>We have not augmented the data with derived values that can be simply calculated,
+such as per-population amounts, averages, trends, totals, etc.</p></div></div></div><div class="sect1"><h2 id="_the_10_easier_datasets">The 10 <em>easier</em> datasets</h2><div class="sectionbody"><table class="tableblock frame-all grid-all stretch"><colgroup><col style="width: 14.2857%;"></col><col style="width: 14.2857%;"></col><col style="width: 14.2857%;"></col><col style="width: 14.2857%;"></col><col style="width: 14.2857%;"></col><col style="width: 14.2857%;"></col><col style="width: 14.2858%;"></col></colgroup><tbody><tr><th class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">dataset <sup>(generated February 2021)</sup></p></th><th class="tableblock halign-center valign-top" colspan="3"><p class="tableblock">source data <sup>(sourced January 2021)</sup></p></th></tr><tr><th class="tableblock halign-left valign-top"><p class="tableblock">name</p></th><th class="tableblock halign-left valign-top"><p class="tableblock">description</p></th><th class="tableblock halign-left valign-top"><p class="tableblock">file</p></th><th class="tableblock halign-left valign-top"><p class="tableblock">number of records</p></th><th class="tableblock halign-left valign-top"><p class="tableblock">creator</p></th><th class="tableblock halign-left valign-top"><p class="tableblock">supplier</p></th><th class="tableblock halign-left valign-top"><p class="tableblock">licence</p></th></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a id="household-waste"></a> household-waste</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The categorised quantities of the ('managed') waste generated by households.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="data/household-waste.csv">CSV</a> <a href="data/household-waste.json">JSON</a></p></td><td class="tableblock halign-right valign-top"><p class="tableblock">19008</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">SEPA</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">statistics.gov.scot<sup> <a href="http://statistics.gov.scot/data/household-waste">URL</a></sup></p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">OGL v3.0</a></p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a id="household-co2e"></a> household-co2e</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The carbon impact of the waste generated by households.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="data/household-co2e.csv">CSV</a> <a href="data/household-co2e.json">JSON</a></p></td><td class="tableblock halign-right valign-top"><p class="tableblock">288</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">SEPA</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">SEPA<sup> <a href="https://www.environment.gov.scot/data/data-analysis/household-waste">URL</a></sup></p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/">OGL v2.0</a></p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a id="business-waste-by-region"></a> business-waste-by-region</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The categorised quantities of the waste generated by industry &amp; commerce.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="data/business-waste-by-region.csv">CSV</a> <a href="data/business-waste-by-region.json">JSON</a></p></td><td class="tableblock halign-right valign-top"><p class="tableblock">8976</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">SEPA</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">SEPA<sup> <a href="https://www.sepa.org.uk/environment/waste/waste-data/waste-data-reporting/business-waste-data">URL</a></sup></p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/">OGL v2.0</a></p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a id="business-waste-by-sector"></a> business-waste-by-sector</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The categorised quantities of the waste generated by industry &amp; commerce.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="data/business-waste-by-sector.csv">CSV</a> <a href="data/business-waste-by-sector.json">JSON</a></p></td><td class="tableblock halign-right valign-top"><p class="tableblock">2640</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">SEPA</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">SEPA<sup> <a href="https://www.sepa.org.uk/environment/waste/waste-data/waste-data-reporting/business-waste-data">URL</a></sup></p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/">OGL v2.0</a></p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a id="waste-site"></a> waste-site</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The locations, services &amp; capacities of waste sites.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="data/waste-site.csv">CSV</a> <a href="data/waste-site.json">JSON</a></p></td><td class="tableblock halign-right valign-top"><p class="tableblock">1254</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">SEPA</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">SEPA<sup> <a href="https://www.sepa.org.uk/data-visualisation/waste-sites-and-capacity-tool">URL</a></sup></p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/">OGL v2.0</a></p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a id="waste-site-io"></a> waste-site-io</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The categorised quantities of waste going in and out of waste sites.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="data/waste-site-io.csv">CSV</a></p></td><td class="tableblock halign-right valign-top"><p class="tableblock">2667914</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">SEPA</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">SEPA<sup> <a href="https://www.sepa.org.uk/data-visualisation/waste-sites-and-capacity-tool">URL</a></sup></p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/">OGL v2.0</a></p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a id="material-coding"></a> material-coding</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">A mapping between the EWC codes and SEPA’s materials classification (as used in these datasets).</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="data/material-coding.csv">CSV</a> <a href="data/material-coding.json">JSON</a></p></td><td class="tableblock halign-right valign-top"><p class="tableblock">557</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">SEPA</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">SEPA<sup> <a href="https://www.sepa.org.uk/data-visualisation/waste-sites-and-capacity-tool">URL</a></sup></p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/">OGL v2.0</a></p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a id="ewc-coding"></a> ewc-coding</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">EWC (European Waste Classification) codes and descriptions.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="data/ewc-coding.csv">CSV</a> <a href="data/ewc-coding.json">JSON</a></p></td><td class="tableblock halign-right valign-top"><p class="tableblock">973</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">European Commission of the EU</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the EU<sup> <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02000D0532-20150601&amp;from=EN#tocId7">URL</a></sup></p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a id="households"></a> households</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Occupied residential dwelling counts. Useful for calculating per-household amounts.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="data/households.csv">CSV</a> <a href="data/households.json">JSON</a></p></td><td class="tableblock halign-right valign-top"><p class="tableblock">288</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">NRS</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">statistics.gov.scot<sup> <a href="http://statistics.gov.scot/data/household-estimates">URL</a></sup></p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">OGL v3.0</a></p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a id="population"></a> population</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">People counts. Useful for calculating per-citizen amounts.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="data/population.csv">CSV</a> <a href="data/population.json">JSON</a></p></td><td class="tableblock halign-right valign-top"><p class="tableblock">288</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">NRS</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">statistics.gov.scot<sup> <a href="http://statistics.gov.scot/data/population-estimates-current-geographic-boundaries">URL</a></sup></p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">OGL v3.0</a></p></td></tr></tbody></table><div class="paragraph"><p>(The fuller, <a href="metadata/datasets.csv">CSV version of the table</a> above.)</p></div><div class="paragraph"><p><a id="dimensions"></a></p></div></div></div><div class="sect1"><h2 id="_the_dimensions_of_the_easier_datasets">The dimensions of the <em>easier</em> datasets</h2><div class="sectionbody"><div class="paragraph"><p>One of the things that makes these datasets <em>easier</em> to use,
+is that they use consistent dimensions values/controlled code-lists.
+This makes it easier to join/link datasets.</p></div><div class="paragraph"><p>So we have tried to rectify the inconsistencies that occur in the source data
+(in particular, the inconsistent labelling of waste materials and regions).
+However, this is still "work-in-progress" and we yet to tease out &amp; make consistent further useful dimensions.</p></div><table class="tableblock frame-all grid-all stretch"><colgroup><col style="width: 14.2857%;"></col><col style="width: 14.2857%;"></col><col style="width: 14.2857%;"></col><col style="width: 14.2857%;"></col><col style="width: 14.2857%;"></col><col style="width: 14.2857%;"></col><col style="width: 14.2858%;"></col></colgroup><thead><tr><th class="tableblock halign-left valign-top">dimension</th><th class="tableblock halign-left valign-top">description</th><th class="tableblock halign-left valign-top">dataset</th><th class="tableblock halign-left valign-top">example value of dimension</th><th class="tableblock halign-left valign-top">count of values of dimension</th><th class="tableblock halign-left valign-top">min value of dimension</th><th class="tableblock halign-left valign-top">max value of dimension</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">region</p></td><td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">The name of a council area.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#household-waste">household-waste</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Falkirk</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">32</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="../datasets/#household-co2e">household-co2e</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Aberdeen City</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">32</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#business-waste-by-region">business-waste-by-region</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Falkirk</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site">waste-site</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">North Lanarkshire</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">32</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#households">households</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">West Dunbartonshire</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">32</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#population">population</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">West Dunbartonshire</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">32</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">business-sector</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The label representing the business/economic sector.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#business-waste-by-sector">business-waste-by-sector</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Manufacture of food and beverage products</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock">year</p></td><td class="tableblock halign-left valign-top" rowspan="8"><p class="tableblock">The integer representation of a year.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#household-waste">household-waste</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2019</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#household-co2e">household-co2e</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2013</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2019</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#business-waste-by-region">business-waste-by-region</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2018</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#business-waste-by-sector">business-waste-by-sector</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2018</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site">waste-site</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2019</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2019</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2019</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site-io">waste-site-io</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2013</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2007</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2020</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#households">households</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2019</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#population">population</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2013</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2011</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2019</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">quarter</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The integer representation of the year’s quarter.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site-io">waste-site-io</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">site-name</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The name of the waste site.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site">waste-site</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Bellshill H/care Waste Treatment &amp; Transfer</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">1246</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">permit</p></td><td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">The waste site operator’s official permit or licence.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site">waste-site</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">PPC/A/1180708</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">1254</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site-io">waste-site-io</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">PPC/A/1000060</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">1401</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">status</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The label indicating the open/closed status of the waste site in the record’s timeframe.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site">waste-site</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Not applicable</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">latitude</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The signed decimal representing a latitude.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site">waste-site</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">55.824871489601804</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">1227</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">longitude</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The signed decimal representing a longitude.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site">waste-site</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">-4.035165962797409</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">1227</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">io-direction</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The label indicating the direction of travel of the waste from the PoV of a waste site.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site-io">waste-site-io</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">in</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">material</p></td><td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">The name of a waste material in SEPA’s classification.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#household-waste">household-waste</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Animal and mixed food waste</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#business-waste-by-region">business-waste-by-region</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Spent solvents</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">33</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#business-waste-by-sector">business-waste-by-sector</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Spent solvents</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">33</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#material-coding">material-coding</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Acid, alkaline or saline wastes</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">management</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The label indicating how the waste was managed/processed (i.e. what its end-state was).</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#household-waste">household-waste</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other Diversion</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">ewc-code</p></td><td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">The code from the European Waste Classification hierarchy.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site-io">waste-site-io</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">00 00 00</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">787</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#material-coding">material-coding</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">11 01 06*</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">557</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ewc-coding">ewc-coding</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">01</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">973</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">ewc-description</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The description from the European Waste Classification hierarchy.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ewc-coding">ewc-coding</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">WASTES RESULTING FROM EXPLORATION, MINING, QUARRYING, AND PHYSICAL AND CHEMICAL TREATMENT OF MINERALS</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">774</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">operator</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The name of the waste site operator.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site">waste-site</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">TRADEBE UK</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">753</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">activities</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The waste processing activities supported by the waste site.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site">waste-site</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other treatment</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">accepts</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The kinds of clients/wastes accepted by the waste site.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site">waste-site</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Other special</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">42</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">population</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The population count as an integer.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#population">population</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">89800</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"><p class="tableblock">21420</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">633120</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">households</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The households count as an integer.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#households">households</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">42962</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"><p class="tableblock">9424</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">307161</p></td></tr><tr><td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">tonnes</p></td><td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">The waste related quantity as a decimal.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#household-waste">household-waste</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">183691</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#household-co2e">household-co2e</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">251386.54</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"><p class="tableblock">24768.53</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">762399.92</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#business-waste-by-region">business-waste-by-region</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">753</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">486432</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#business-waste-by-sector">business-waste-by-sector</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">54</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">1039179</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site-io">waste-site-io</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"><p class="tableblock">-8.56</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">2325652.83</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">tonnes-input</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The quantity of incoming waste as a decimal.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site">waste-site</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">154.55</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">1476044</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">tonnes-treated-recovered</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The quantity of waste treated or recovered as a decimal.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site">waste-site</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">133.04</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">1476044</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">tonnes-output</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">The quantity of outgoing waste as a decimal.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#waste-site">waste-site</a></p></td><td class="tableblock halign-left valign-top"><p class="tableblock">152.8</p></td><td class="tableblock halign-left valign-top"></td><td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">235354.51</p></td></tr></tbody></table><div class="paragraph"><p>(The <a href="metadata/dimensions.csv">CSV version of the table</a> above.)</p></div></div></div>
+
+    <div id="prev-next">
+        
+        <a href="/dcs-wcs-prototype-3/pages-output/maps/waste-facts-for-each-region/">&laquo; Waste facts for each region</a>
+        
+        
+        ||
+        
+        
+        <a href="/dcs-wcs-prototype-3/pages-output/about/understanding-this-site/">Understanding this site &raquo;</a>
+        
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <footer>Data Commons Scotland 2021</footer>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="/dcs-wcs-prototype-3/js/highlight.pack.js" type="application/javascript"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+</body>
+</html>
+
