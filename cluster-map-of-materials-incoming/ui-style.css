@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     color: #fff;
-    background-color: #3d80ba;
+    background-color: #788585;
 }
 html, body {
     height: 100%;
@@ -18,11 +18,12 @@ html, body {
     align-items: center;
 }
 .title h1 {
-    font-size: large;
+    font-size: 26px;
+    font-family: 'Alegreya';
 }
 .title img {
-    height: 32px;
-    width: 32px;
+    max-height: 64px;
+    width: auto;
     padding: 3px;
 }
 #map-container {
