@@ -25,6 +25,14 @@ html, body {
     max-height: 64px;
     width: auto;
     padding: 3px;
+    display: inline;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.title a {
+    color: #fff !important;
+    font-size: 26px;
+    text-decoration: none;
 }
 #map-container {
     position: relative;
