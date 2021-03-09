@@ -13,6 +13,11 @@ html, body {
     align-items: center;
     margin: 3px;
 }
+.title a {
+    color: #fff !important;
+    font-size: 26px;
+    text-decoration: none;
+}
 .title h1 {
     font-size: 26px;
     font-family: 'Alegreya';
@@ -21,6 +26,9 @@ html, body {
     max-height: 64px;
     width: auto;
     padding: 3px;
+    display: inline;
+    vertical-align: middle;
+    margin-right: 5px;
 }
 #map-container {
     position: relative;
