@@ -27,9 +27,17 @@ if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (
 } else {
 dcs.prototype_6.state.household_waste_derivation_composition_holder = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(null);
 }
-if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (typeof dcs.prototype_6.state !== 'undefined') && (typeof dcs.prototype_6.state.household_co2e_derivation_holder !== 'undefined')){
+if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (typeof dcs.prototype_6.state !== 'undefined') && (typeof dcs.prototype_6.state.household_waste_derivation_positions_holder !== 'undefined')){
 } else {
-dcs.prototype_6.state.household_co2e_derivation_holder = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(null);
+dcs.prototype_6.state.household_waste_derivation_positions_holder = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(null);
+}
+if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (typeof dcs.prototype_6.state !== 'undefined') && (typeof dcs.prototype_6.state.household_co2e_derivation_generation_holder !== 'undefined')){
+} else {
+dcs.prototype_6.state.household_co2e_derivation_generation_holder = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(null);
+}
+if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (typeof dcs.prototype_6.state !== 'undefined') && (typeof dcs.prototype_6.state.household_co2e_derivation_positions_holder !== 'undefined')){
+} else {
+dcs.prototype_6.state.household_co2e_derivation_positions_holder = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(null);
 }
 if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (typeof dcs.prototype_6.state !== 'undefined') && (typeof dcs.prototype_6.state.business_waste_by_region_derivation_generation_holder !== 'undefined')){
 } else {
@@ -38,6 +46,10 @@ dcs.prototype_6.state.business_waste_by_region_derivation_generation_holder = cl
 if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (typeof dcs.prototype_6.state !== 'undefined') && (typeof dcs.prototype_6.state.business_waste_by_region_derivation_composition_holder !== 'undefined')){
 } else {
 dcs.prototype_6.state.business_waste_by_region_derivation_composition_holder = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(null);
+}
+if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (typeof dcs.prototype_6.state !== 'undefined') && (typeof dcs.prototype_6.state.business_waste_by_region_derivation_positions_holder !== 'undefined')){
+} else {
+dcs.prototype_6.state.business_waste_by_region_derivation_positions_holder = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(null);
 }
 if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (typeof dcs.prototype_6.state !== 'undefined') && (typeof dcs.prototype_6.state.population_holder !== 'undefined')){
 } else {
@@ -56,30 +68,30 @@ if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (
 dcs.prototype_6.state.business_waste_by_region_holder = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(null);
 }
 console.log("load geojson");
-var c__25757__auto___27416 = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
+var c__25757__auto___28964 = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
 cljs.core.async.impl.dispatch.run((function (){
-var f__25758__auto__ = (function (){var switch__25734__auto__ = (function (state_27313){
-var state_val_27314 = (state_27313[(1)]);
-if((state_val_27314 === (1))){
-var inst_27302 = cljs_http.client.get("geojson.json");
-var state_27313__$1 = state_27313;
-return cljs.core.async.impl.ioc_helpers.take_BANG_(state_27313__$1,(2),inst_27302);
+var f__25758__auto__ = (function (){var switch__25734__auto__ = (function (state_28857){
+var state_val_28858 = (state_28857[(1)]);
+if((state_val_28858 === (1))){
+var inst_28846 = cljs_http.client.get("geojson.json");
+var state_28857__$1 = state_28857;
+return cljs.core.async.impl.ioc_helpers.take_BANG_(state_28857__$1,(2),inst_28846);
 } else {
-if((state_val_27314 === (2))){
-var inst_27304 = (state_27313[(2)]);
-var inst_27305 = new cljs.core.Keyword(null,"status","status",-1997798413).cljs$core$IFn$_invoke$arity$1(inst_27304);
-var inst_27306 = new cljs.core.Keyword(null,"success","success",1890645906).cljs$core$IFn$_invoke$arity$1(inst_27304);
-var inst_27307 = ["geojson, status=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_27305),", success=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_27306)].join('');
-var inst_27308 = console.log(inst_27307);
-var inst_27309 = new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(inst_27304);
-var inst_27310 = cljs.core.clj__GT_js(inst_27309);
-var inst_27311 = cljs.core.reset_BANG_(dcs.prototype_6.state.geojson_holder,inst_27310);
-var state_27313__$1 = (function (){var statearr_27315 = state_27313;
-(statearr_27315[(7)] = inst_27308);
+if((state_val_28858 === (2))){
+var inst_28848 = (state_28857[(2)]);
+var inst_28849 = new cljs.core.Keyword(null,"status","status",-1997798413).cljs$core$IFn$_invoke$arity$1(inst_28848);
+var inst_28850 = new cljs.core.Keyword(null,"success","success",1890645906).cljs$core$IFn$_invoke$arity$1(inst_28848);
+var inst_28851 = ["geojson, status=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_28849),", success=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_28850)].join('');
+var inst_28852 = console.log(inst_28851);
+var inst_28853 = new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(inst_28848);
+var inst_28854 = cljs.core.clj__GT_js(inst_28853);
+var inst_28855 = cljs.core.reset_BANG_(dcs.prototype_6.state.geojson_holder,inst_28854);
+var state_28857__$1 = (function (){var statearr_28859 = state_28857;
+(statearr_28859[(7)] = inst_28852);
 
-return statearr_27315;
+return statearr_28859;
 })();
-return cljs.core.async.impl.ioc_helpers.return_chan(state_27313__$1,inst_27311);
+return cljs.core.async.impl.ioc_helpers.return_chan(state_28857__$1,inst_28855);
 } else {
 return null;
 }
@@ -88,17 +100,17 @@ return null;
 return (function() {
 var dcs$prototype_6$state$state_machine__25735__auto__ = null;
 var dcs$prototype_6$state$state_machine__25735__auto____0 = (function (){
-var statearr_27316 = [null,null,null,null,null,null,null,null];
-(statearr_27316[(0)] = dcs$prototype_6$state$state_machine__25735__auto__);
+var statearr_28860 = [null,null,null,null,null,null,null,null];
+(statearr_28860[(0)] = dcs$prototype_6$state$state_machine__25735__auto__);
 
-(statearr_27316[(1)] = (1));
+(statearr_28860[(1)] = (1));
 
-return statearr_27316;
+return statearr_28860;
 });
-var dcs$prototype_6$state$state_machine__25735__auto____1 = (function (state_27313){
+var dcs$prototype_6$state$state_machine__25735__auto____1 = (function (state_28857){
 while(true){
 var ret_value__25736__auto__ = (function (){try{while(true){
-var result__25737__auto__ = switch__25734__auto__(state_27313);
+var result__25737__auto__ = switch__25734__auto__(state_28857);
 if(cljs.core.keyword_identical_QMARK_(result__25737__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
 continue;
 } else {
@@ -106,14 +118,14 @@ return result__25737__auto__;
 }
 break;
 }
-}catch (e27317){var ex__25738__auto__ = e27317;
-var statearr_27318_27417 = state_27313;
-(statearr_27318_27417[(2)] = ex__25738__auto__);
+}catch (e28861){var ex__25738__auto__ = e28861;
+var statearr_28862_28965 = state_28857;
+(statearr_28862_28965[(2)] = ex__25738__auto__);
 
 
-if(cljs.core.seq((state_27313[(4)]))){
-var statearr_27319_27418 = state_27313;
-(statearr_27319_27418[(1)] = cljs.core.first((state_27313[(4)])));
+if(cljs.core.seq((state_28857[(4)]))){
+var statearr_28863_28966 = state_28857;
+(statearr_28863_28966[(1)] = cljs.core.first((state_28857[(4)])));
 
 } else {
 throw ex__25738__auto__;
@@ -122,8 +134,8 @@ throw ex__25738__auto__;
 return new cljs.core.Keyword(null,"recur","recur",-437573268);
 }})();
 if(cljs.core.keyword_identical_QMARK_(ret_value__25736__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
-var G__27419 = state_27313;
-state_27313 = G__27419;
+var G__28967 = state_28857;
+state_28857 = G__28967;
 continue;
 } else {
 return ret_value__25736__auto__;
@@ -131,12 +143,12 @@ return ret_value__25736__auto__;
 break;
 }
 });
-dcs$prototype_6$state$state_machine__25735__auto__ = function(state_27313){
+dcs$prototype_6$state$state_machine__25735__auto__ = function(state_28857){
 switch(arguments.length){
 case 0:
 return dcs$prototype_6$state$state_machine__25735__auto____0.call(this);
 case 1:
-return dcs$prototype_6$state$state_machine__25735__auto____1.call(this,state_27313);
+return dcs$prototype_6$state$state_machine__25735__auto____1.call(this,state_28857);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
@@ -145,40 +157,40 @@ dcs$prototype_6$state$state_machine__25735__auto__.cljs$core$IFn$_invoke$arity$1
 return dcs$prototype_6$state$state_machine__25735__auto__;
 })()
 })();
-var state__25759__auto__ = (function (){var statearr_27320 = f__25758__auto__();
-(statearr_27320[(6)] = c__25757__auto___27416);
+var state__25759__auto__ = (function (){var statearr_28864 = f__25758__auto__();
+(statearr_28864[(6)] = c__25757__auto___28964);
 
-return statearr_27320;
+return statearr_28864;
 })();
 return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped(state__25759__auto__);
 }));
 
 console.log("load population");
-var c__25757__auto___27420 = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
+var c__25757__auto___28968 = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
 cljs.core.async.impl.dispatch.run((function (){
-var f__25758__auto__ = (function (){var switch__25734__auto__ = (function (state_27333){
-var state_val_27334 = (state_27333[(1)]);
-if((state_val_27334 === (1))){
-var inst_27321 = cljs_http.client.get("population.json");
-var state_27333__$1 = state_27333;
-return cljs.core.async.impl.ioc_helpers.take_BANG_(state_27333__$1,(2),inst_27321);
+var f__25758__auto__ = (function (){var switch__25734__auto__ = (function (state_28877){
+var state_val_28878 = (state_28877[(1)]);
+if((state_val_28878 === (1))){
+var inst_28865 = cljs_http.client.get("population.json");
+var state_28877__$1 = state_28877;
+return cljs.core.async.impl.ioc_helpers.take_BANG_(state_28877__$1,(2),inst_28865);
 } else {
-if((state_val_27334 === (2))){
-var inst_27323 = (state_27333[(2)]);
-var inst_27324 = new cljs.core.Keyword(null,"status","status",-1997798413).cljs$core$IFn$_invoke$arity$1(inst_27323);
-var inst_27325 = new cljs.core.Keyword(null,"success","success",1890645906).cljs$core$IFn$_invoke$arity$1(inst_27323);
-var inst_27326 = ["population, status=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_27324),", success=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_27325)].join('');
-var inst_27327 = console.log(inst_27326);
-var inst_27328 = new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(inst_27323);
-var inst_27329 = dcs.prototype_6.data_shaping.rollup_population_regions(inst_27328);
-var inst_27330 = cljs.core.concat.cljs$core$IFn$_invoke$arity$2(inst_27328,inst_27329);
-var inst_27331 = cljs.core.reset_BANG_(dcs.prototype_6.state.population_holder,inst_27330);
-var state_27333__$1 = (function (){var statearr_27335 = state_27333;
-(statearr_27335[(7)] = inst_27327);
+if((state_val_28878 === (2))){
+var inst_28867 = (state_28877[(2)]);
+var inst_28868 = new cljs.core.Keyword(null,"status","status",-1997798413).cljs$core$IFn$_invoke$arity$1(inst_28867);
+var inst_28869 = new cljs.core.Keyword(null,"success","success",1890645906).cljs$core$IFn$_invoke$arity$1(inst_28867);
+var inst_28870 = ["population, status=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_28868),", success=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_28869)].join('');
+var inst_28871 = console.log(inst_28870);
+var inst_28872 = new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(inst_28867);
+var inst_28873 = dcs.prototype_6.data_shaping.rollup_population_regions(inst_28872);
+var inst_28874 = cljs.core.concat.cljs$core$IFn$_invoke$arity$2(inst_28872,inst_28873);
+var inst_28875 = cljs.core.reset_BANG_(dcs.prototype_6.state.population_holder,inst_28874);
+var state_28877__$1 = (function (){var statearr_28879 = state_28877;
+(statearr_28879[(7)] = inst_28871);
 
-return statearr_27335;
+return statearr_28879;
 })();
-return cljs.core.async.impl.ioc_helpers.return_chan(state_27333__$1,inst_27331);
+return cljs.core.async.impl.ioc_helpers.return_chan(state_28877__$1,inst_28875);
 } else {
 return null;
 }
@@ -187,17 +199,17 @@ return null;
 return (function() {
 var dcs$prototype_6$state$state_machine__25735__auto__ = null;
 var dcs$prototype_6$state$state_machine__25735__auto____0 = (function (){
-var statearr_27336 = [null,null,null,null,null,null,null,null];
-(statearr_27336[(0)] = dcs$prototype_6$state$state_machine__25735__auto__);
+var statearr_28880 = [null,null,null,null,null,null,null,null];
+(statearr_28880[(0)] = dcs$prototype_6$state$state_machine__25735__auto__);
 
-(statearr_27336[(1)] = (1));
+(statearr_28880[(1)] = (1));
 
-return statearr_27336;
+return statearr_28880;
 });
-var dcs$prototype_6$state$state_machine__25735__auto____1 = (function (state_27333){
+var dcs$prototype_6$state$state_machine__25735__auto____1 = (function (state_28877){
 while(true){
 var ret_value__25736__auto__ = (function (){try{while(true){
-var result__25737__auto__ = switch__25734__auto__(state_27333);
+var result__25737__auto__ = switch__25734__auto__(state_28877);
 if(cljs.core.keyword_identical_QMARK_(result__25737__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
 continue;
 } else {
@@ -205,14 +217,14 @@ return result__25737__auto__;
 }
 break;
 }
-}catch (e27337){var ex__25738__auto__ = e27337;
-var statearr_27338_27421 = state_27333;
-(statearr_27338_27421[(2)] = ex__25738__auto__);
+}catch (e28881){var ex__25738__auto__ = e28881;
+var statearr_28882_28969 = state_28877;
+(statearr_28882_28969[(2)] = ex__25738__auto__);
 
 
-if(cljs.core.seq((state_27333[(4)]))){
-var statearr_27339_27422 = state_27333;
-(statearr_27339_27422[(1)] = cljs.core.first((state_27333[(4)])));
+if(cljs.core.seq((state_28877[(4)]))){
+var statearr_28883_28970 = state_28877;
+(statearr_28883_28970[(1)] = cljs.core.first((state_28877[(4)])));
 
 } else {
 throw ex__25738__auto__;
@@ -221,8 +233,8 @@ throw ex__25738__auto__;
 return new cljs.core.Keyword(null,"recur","recur",-437573268);
 }})();
 if(cljs.core.keyword_identical_QMARK_(ret_value__25736__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
-var G__27423 = state_27333;
-state_27333 = G__27423;
+var G__28971 = state_28877;
+state_28877 = G__28971;
 continue;
 } else {
 return ret_value__25736__auto__;
@@ -230,12 +242,12 @@ return ret_value__25736__auto__;
 break;
 }
 });
-dcs$prototype_6$state$state_machine__25735__auto__ = function(state_27333){
+dcs$prototype_6$state$state_machine__25735__auto__ = function(state_28877){
 switch(arguments.length){
 case 0:
 return dcs$prototype_6$state$state_machine__25735__auto____0.call(this);
 case 1:
-return dcs$prototype_6$state$state_machine__25735__auto____1.call(this,state_27333);
+return dcs$prototype_6$state$state_machine__25735__auto____1.call(this,state_28877);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
@@ -244,40 +256,40 @@ dcs$prototype_6$state$state_machine__25735__auto__.cljs$core$IFn$_invoke$arity$1
 return dcs$prototype_6$state$state_machine__25735__auto__;
 })()
 })();
-var state__25759__auto__ = (function (){var statearr_27340 = f__25758__auto__();
-(statearr_27340[(6)] = c__25757__auto___27420);
+var state__25759__auto__ = (function (){var statearr_28884 = f__25758__auto__();
+(statearr_28884[(6)] = c__25757__auto___28968);
 
-return statearr_27340;
+return statearr_28884;
 })();
 return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped(state__25759__auto__);
 }));
 
 console.log("load household-waste");
-var c__25757__auto___27424 = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
+var c__25757__auto___28972 = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
 cljs.core.async.impl.dispatch.run((function (){
-var f__25758__auto__ = (function (){var switch__25734__auto__ = (function (state_27353){
-var state_val_27354 = (state_27353[(1)]);
-if((state_val_27354 === (1))){
-var inst_27341 = cljs_http.client.get("household-waste.json");
-var state_27353__$1 = state_27353;
-return cljs.core.async.impl.ioc_helpers.take_BANG_(state_27353__$1,(2),inst_27341);
+var f__25758__auto__ = (function (){var switch__25734__auto__ = (function (state_28897){
+var state_val_28898 = (state_28897[(1)]);
+if((state_val_28898 === (1))){
+var inst_28885 = cljs_http.client.get("household-waste.json");
+var state_28897__$1 = state_28897;
+return cljs.core.async.impl.ioc_helpers.take_BANG_(state_28897__$1,(2),inst_28885);
 } else {
-if((state_val_27354 === (2))){
-var inst_27343 = (state_27353[(2)]);
-var inst_27344 = new cljs.core.Keyword(null,"status","status",-1997798413).cljs$core$IFn$_invoke$arity$1(inst_27343);
-var inst_27345 = new cljs.core.Keyword(null,"success","success",1890645906).cljs$core$IFn$_invoke$arity$1(inst_27343);
-var inst_27346 = ["household-waste, status=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_27344),", success=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_27345)].join('');
-var inst_27347 = console.log(inst_27346);
-var inst_27348 = new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(inst_27343);
-var inst_27349 = dcs.prototype_6.data_shaping.rollup_household_waste_regions(inst_27348);
-var inst_27350 = cljs.core.concat.cljs$core$IFn$_invoke$arity$2(inst_27348,inst_27349);
-var inst_27351 = cljs.core.reset_BANG_(dcs.prototype_6.state.household_waste_holder,inst_27350);
-var state_27353__$1 = (function (){var statearr_27355 = state_27353;
-(statearr_27355[(7)] = inst_27347);
+if((state_val_28898 === (2))){
+var inst_28887 = (state_28897[(2)]);
+var inst_28888 = new cljs.core.Keyword(null,"status","status",-1997798413).cljs$core$IFn$_invoke$arity$1(inst_28887);
+var inst_28889 = new cljs.core.Keyword(null,"success","success",1890645906).cljs$core$IFn$_invoke$arity$1(inst_28887);
+var inst_28890 = ["household-waste, status=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_28888),", success=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_28889)].join('');
+var inst_28891 = console.log(inst_28890);
+var inst_28892 = new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(inst_28887);
+var inst_28893 = dcs.prototype_6.data_shaping.rollup_household_waste_regions(inst_28892);
+var inst_28894 = cljs.core.concat.cljs$core$IFn$_invoke$arity$2(inst_28892,inst_28893);
+var inst_28895 = cljs.core.reset_BANG_(dcs.prototype_6.state.household_waste_holder,inst_28894);
+var state_28897__$1 = (function (){var statearr_28899 = state_28897;
+(statearr_28899[(7)] = inst_28891);
 
-return statearr_27355;
+return statearr_28899;
 })();
-return cljs.core.async.impl.ioc_helpers.return_chan(state_27353__$1,inst_27351);
+return cljs.core.async.impl.ioc_helpers.return_chan(state_28897__$1,inst_28895);
 } else {
 return null;
 }
@@ -286,17 +298,17 @@ return null;
 return (function() {
 var dcs$prototype_6$state$state_machine__25735__auto__ = null;
 var dcs$prototype_6$state$state_machine__25735__auto____0 = (function (){
-var statearr_27356 = [null,null,null,null,null,null,null,null];
-(statearr_27356[(0)] = dcs$prototype_6$state$state_machine__25735__auto__);
+var statearr_28900 = [null,null,null,null,null,null,null,null];
+(statearr_28900[(0)] = dcs$prototype_6$state$state_machine__25735__auto__);
 
-(statearr_27356[(1)] = (1));
+(statearr_28900[(1)] = (1));
 
-return statearr_27356;
+return statearr_28900;
 });
-var dcs$prototype_6$state$state_machine__25735__auto____1 = (function (state_27353){
+var dcs$prototype_6$state$state_machine__25735__auto____1 = (function (state_28897){
 while(true){
 var ret_value__25736__auto__ = (function (){try{while(true){
-var result__25737__auto__ = switch__25734__auto__(state_27353);
+var result__25737__auto__ = switch__25734__auto__(state_28897);
 if(cljs.core.keyword_identical_QMARK_(result__25737__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
 continue;
 } else {
@@ -304,14 +316,14 @@ return result__25737__auto__;
 }
 break;
 }
-}catch (e27357){var ex__25738__auto__ = e27357;
-var statearr_27358_27425 = state_27353;
-(statearr_27358_27425[(2)] = ex__25738__auto__);
+}catch (e28901){var ex__25738__auto__ = e28901;
+var statearr_28902_28973 = state_28897;
+(statearr_28902_28973[(2)] = ex__25738__auto__);
 
 
-if(cljs.core.seq((state_27353[(4)]))){
-var statearr_27359_27426 = state_27353;
-(statearr_27359_27426[(1)] = cljs.core.first((state_27353[(4)])));
+if(cljs.core.seq((state_28897[(4)]))){
+var statearr_28903_28974 = state_28897;
+(statearr_28903_28974[(1)] = cljs.core.first((state_28897[(4)])));
 
 } else {
 throw ex__25738__auto__;
@@ -320,8 +332,8 @@ throw ex__25738__auto__;
 return new cljs.core.Keyword(null,"recur","recur",-437573268);
 }})();
 if(cljs.core.keyword_identical_QMARK_(ret_value__25736__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
-var G__27427 = state_27353;
-state_27353 = G__27427;
+var G__28975 = state_28897;
+state_28897 = G__28975;
 continue;
 } else {
 return ret_value__25736__auto__;
@@ -329,12 +341,12 @@ return ret_value__25736__auto__;
 break;
 }
 });
-dcs$prototype_6$state$state_machine__25735__auto__ = function(state_27353){
+dcs$prototype_6$state$state_machine__25735__auto__ = function(state_28897){
 switch(arguments.length){
 case 0:
 return dcs$prototype_6$state$state_machine__25735__auto____0.call(this);
 case 1:
-return dcs$prototype_6$state$state_machine__25735__auto____1.call(this,state_27353);
+return dcs$prototype_6$state$state_machine__25735__auto____1.call(this,state_28897);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
@@ -343,40 +355,40 @@ dcs$prototype_6$state$state_machine__25735__auto__.cljs$core$IFn$_invoke$arity$1
 return dcs$prototype_6$state$state_machine__25735__auto__;
 })()
 })();
-var state__25759__auto__ = (function (){var statearr_27360 = f__25758__auto__();
-(statearr_27360[(6)] = c__25757__auto___27424);
+var state__25759__auto__ = (function (){var statearr_28904 = f__25758__auto__();
+(statearr_28904[(6)] = c__25757__auto___28972);
 
-return statearr_27360;
+return statearr_28904;
 })();
 return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped(state__25759__auto__);
 }));
 
 console.log("load household-co2e");
-var c__25757__auto___27428 = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
+var c__25757__auto___28976 = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
 cljs.core.async.impl.dispatch.run((function (){
-var f__25758__auto__ = (function (){var switch__25734__auto__ = (function (state_27373){
-var state_val_27374 = (state_27373[(1)]);
-if((state_val_27374 === (1))){
-var inst_27361 = cljs_http.client.get("household-co2e.json");
-var state_27373__$1 = state_27373;
-return cljs.core.async.impl.ioc_helpers.take_BANG_(state_27373__$1,(2),inst_27361);
+var f__25758__auto__ = (function (){var switch__25734__auto__ = (function (state_28917){
+var state_val_28918 = (state_28917[(1)]);
+if((state_val_28918 === (1))){
+var inst_28905 = cljs_http.client.get("household-co2e.json");
+var state_28917__$1 = state_28917;
+return cljs.core.async.impl.ioc_helpers.take_BANG_(state_28917__$1,(2),inst_28905);
 } else {
-if((state_val_27374 === (2))){
-var inst_27363 = (state_27373[(2)]);
-var inst_27364 = new cljs.core.Keyword(null,"status","status",-1997798413).cljs$core$IFn$_invoke$arity$1(inst_27363);
-var inst_27365 = new cljs.core.Keyword(null,"success","success",1890645906).cljs$core$IFn$_invoke$arity$1(inst_27363);
-var inst_27366 = ["household-co2e, status=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_27364),", success=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_27365)].join('');
-var inst_27367 = console.log(inst_27366);
-var inst_27368 = new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(inst_27363);
-var inst_27369 = dcs.prototype_6.data_shaping.rollup_household_co2e_regions(inst_27368);
-var inst_27370 = cljs.core.concat.cljs$core$IFn$_invoke$arity$2(inst_27368,inst_27369);
-var inst_27371 = cljs.core.reset_BANG_(dcs.prototype_6.state.household_co2e_holder,inst_27370);
-var state_27373__$1 = (function (){var statearr_27375 = state_27373;
-(statearr_27375[(7)] = inst_27367);
+if((state_val_28918 === (2))){
+var inst_28907 = (state_28917[(2)]);
+var inst_28908 = new cljs.core.Keyword(null,"status","status",-1997798413).cljs$core$IFn$_invoke$arity$1(inst_28907);
+var inst_28909 = new cljs.core.Keyword(null,"success","success",1890645906).cljs$core$IFn$_invoke$arity$1(inst_28907);
+var inst_28910 = ["household-co2e, status=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_28908),", success=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_28909)].join('');
+var inst_28911 = console.log(inst_28910);
+var inst_28912 = new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(inst_28907);
+var inst_28913 = dcs.prototype_6.data_shaping.rollup_household_co2e_regions(inst_28912);
+var inst_28914 = cljs.core.concat.cljs$core$IFn$_invoke$arity$2(inst_28912,inst_28913);
+var inst_28915 = cljs.core.reset_BANG_(dcs.prototype_6.state.household_co2e_holder,inst_28914);
+var state_28917__$1 = (function (){var statearr_28919 = state_28917;
+(statearr_28919[(7)] = inst_28911);
 
-return statearr_27375;
+return statearr_28919;
 })();
-return cljs.core.async.impl.ioc_helpers.return_chan(state_27373__$1,inst_27371);
+return cljs.core.async.impl.ioc_helpers.return_chan(state_28917__$1,inst_28915);
 } else {
 return null;
 }
@@ -385,17 +397,17 @@ return null;
 return (function() {
 var dcs$prototype_6$state$state_machine__25735__auto__ = null;
 var dcs$prototype_6$state$state_machine__25735__auto____0 = (function (){
-var statearr_27376 = [null,null,null,null,null,null,null,null];
-(statearr_27376[(0)] = dcs$prototype_6$state$state_machine__25735__auto__);
+var statearr_28920 = [null,null,null,null,null,null,null,null];
+(statearr_28920[(0)] = dcs$prototype_6$state$state_machine__25735__auto__);
 
-(statearr_27376[(1)] = (1));
+(statearr_28920[(1)] = (1));
 
-return statearr_27376;
+return statearr_28920;
 });
-var dcs$prototype_6$state$state_machine__25735__auto____1 = (function (state_27373){
+var dcs$prototype_6$state$state_machine__25735__auto____1 = (function (state_28917){
 while(true){
 var ret_value__25736__auto__ = (function (){try{while(true){
-var result__25737__auto__ = switch__25734__auto__(state_27373);
+var result__25737__auto__ = switch__25734__auto__(state_28917);
 if(cljs.core.keyword_identical_QMARK_(result__25737__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
 continue;
 } else {
@@ -403,14 +415,14 @@ return result__25737__auto__;
 }
 break;
 }
-}catch (e27377){var ex__25738__auto__ = e27377;
-var statearr_27378_27429 = state_27373;
-(statearr_27378_27429[(2)] = ex__25738__auto__);
+}catch (e28921){var ex__25738__auto__ = e28921;
+var statearr_28922_28977 = state_28917;
+(statearr_28922_28977[(2)] = ex__25738__auto__);
 
 
-if(cljs.core.seq((state_27373[(4)]))){
-var statearr_27379_27430 = state_27373;
-(statearr_27379_27430[(1)] = cljs.core.first((state_27373[(4)])));
+if(cljs.core.seq((state_28917[(4)]))){
+var statearr_28923_28978 = state_28917;
+(statearr_28923_28978[(1)] = cljs.core.first((state_28917[(4)])));
 
 } else {
 throw ex__25738__auto__;
@@ -419,8 +431,8 @@ throw ex__25738__auto__;
 return new cljs.core.Keyword(null,"recur","recur",-437573268);
 }})();
 if(cljs.core.keyword_identical_QMARK_(ret_value__25736__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
-var G__27431 = state_27373;
-state_27373 = G__27431;
+var G__28979 = state_28917;
+state_28917 = G__28979;
 continue;
 } else {
 return ret_value__25736__auto__;
@@ -428,12 +440,12 @@ return ret_value__25736__auto__;
 break;
 }
 });
-dcs$prototype_6$state$state_machine__25735__auto__ = function(state_27373){
+dcs$prototype_6$state$state_machine__25735__auto__ = function(state_28917){
 switch(arguments.length){
 case 0:
 return dcs$prototype_6$state$state_machine__25735__auto____0.call(this);
 case 1:
-return dcs$prototype_6$state$state_machine__25735__auto____1.call(this,state_27373);
+return dcs$prototype_6$state$state_machine__25735__auto____1.call(this,state_28917);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
@@ -442,40 +454,40 @@ dcs$prototype_6$state$state_machine__25735__auto__.cljs$core$IFn$_invoke$arity$1
 return dcs$prototype_6$state$state_machine__25735__auto__;
 })()
 })();
-var state__25759__auto__ = (function (){var statearr_27380 = f__25758__auto__();
-(statearr_27380[(6)] = c__25757__auto___27428);
+var state__25759__auto__ = (function (){var statearr_28924 = f__25758__auto__();
+(statearr_28924[(6)] = c__25757__auto___28976);
 
-return statearr_27380;
+return statearr_28924;
 })();
 return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped(state__25759__auto__);
 }));
 
 console.log("load business-waste-by-region");
-var c__25757__auto___27432 = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
+var c__25757__auto___28980 = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));
 cljs.core.async.impl.dispatch.run((function (){
-var f__25758__auto__ = (function (){var switch__25734__auto__ = (function (state_27393){
-var state_val_27394 = (state_27393[(1)]);
-if((state_val_27394 === (1))){
-var inst_27381 = cljs_http.client.get("business-waste-by-region.json");
-var state_27393__$1 = state_27393;
-return cljs.core.async.impl.ioc_helpers.take_BANG_(state_27393__$1,(2),inst_27381);
+var f__25758__auto__ = (function (){var switch__25734__auto__ = (function (state_28937){
+var state_val_28938 = (state_28937[(1)]);
+if((state_val_28938 === (1))){
+var inst_28925 = cljs_http.client.get("business-waste-by-region.json");
+var state_28937__$1 = state_28937;
+return cljs.core.async.impl.ioc_helpers.take_BANG_(state_28937__$1,(2),inst_28925);
 } else {
-if((state_val_27394 === (2))){
-var inst_27383 = (state_27393[(2)]);
-var inst_27384 = new cljs.core.Keyword(null,"status","status",-1997798413).cljs$core$IFn$_invoke$arity$1(inst_27383);
-var inst_27385 = new cljs.core.Keyword(null,"success","success",1890645906).cljs$core$IFn$_invoke$arity$1(inst_27383);
-var inst_27386 = ["business-waste-by-region, status=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_27384),", success=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_27385)].join('');
-var inst_27387 = console.log(inst_27386);
-var inst_27388 = new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(inst_27383);
-var inst_27389 = dcs.prototype_6.data_shaping.rollup_business_waste_by_region_regions(inst_27388);
-var inst_27390 = cljs.core.concat.cljs$core$IFn$_invoke$arity$2(inst_27388,inst_27389);
-var inst_27391 = cljs.core.reset_BANG_(dcs.prototype_6.state.business_waste_by_region_holder,inst_27390);
-var state_27393__$1 = (function (){var statearr_27395 = state_27393;
-(statearr_27395[(7)] = inst_27387);
+if((state_val_28938 === (2))){
+var inst_28927 = (state_28937[(2)]);
+var inst_28928 = new cljs.core.Keyword(null,"status","status",-1997798413).cljs$core$IFn$_invoke$arity$1(inst_28927);
+var inst_28929 = new cljs.core.Keyword(null,"success","success",1890645906).cljs$core$IFn$_invoke$arity$1(inst_28927);
+var inst_28930 = ["business-waste-by-region, status=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_28928),", success=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_28929)].join('');
+var inst_28931 = console.log(inst_28930);
+var inst_28932 = new cljs.core.Keyword(null,"body","body",-2049205669).cljs$core$IFn$_invoke$arity$1(inst_28927);
+var inst_28933 = dcs.prototype_6.data_shaping.rollup_business_waste_by_region_regions(inst_28932);
+var inst_28934 = cljs.core.concat.cljs$core$IFn$_invoke$arity$2(inst_28932,inst_28933);
+var inst_28935 = cljs.core.reset_BANG_(dcs.prototype_6.state.business_waste_by_region_holder,inst_28934);
+var state_28937__$1 = (function (){var statearr_28939 = state_28937;
+(statearr_28939[(7)] = inst_28931);
 
-return statearr_27395;
+return statearr_28939;
 })();
-return cljs.core.async.impl.ioc_helpers.return_chan(state_27393__$1,inst_27391);
+return cljs.core.async.impl.ioc_helpers.return_chan(state_28937__$1,inst_28935);
 } else {
 return null;
 }
@@ -484,17 +496,17 @@ return null;
 return (function() {
 var dcs$prototype_6$state$state_machine__25735__auto__ = null;
 var dcs$prototype_6$state$state_machine__25735__auto____0 = (function (){
-var statearr_27396 = [null,null,null,null,null,null,null,null];
-(statearr_27396[(0)] = dcs$prototype_6$state$state_machine__25735__auto__);
+var statearr_28940 = [null,null,null,null,null,null,null,null];
+(statearr_28940[(0)] = dcs$prototype_6$state$state_machine__25735__auto__);
 
-(statearr_27396[(1)] = (1));
+(statearr_28940[(1)] = (1));
 
-return statearr_27396;
+return statearr_28940;
 });
-var dcs$prototype_6$state$state_machine__25735__auto____1 = (function (state_27393){
+var dcs$prototype_6$state$state_machine__25735__auto____1 = (function (state_28937){
 while(true){
 var ret_value__25736__auto__ = (function (){try{while(true){
-var result__25737__auto__ = switch__25734__auto__(state_27393);
+var result__25737__auto__ = switch__25734__auto__(state_28937);
 if(cljs.core.keyword_identical_QMARK_(result__25737__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
 continue;
 } else {
@@ -502,14 +514,14 @@ return result__25737__auto__;
 }
 break;
 }
-}catch (e27397){var ex__25738__auto__ = e27397;
-var statearr_27398_27433 = state_27393;
-(statearr_27398_27433[(2)] = ex__25738__auto__);
+}catch (e28941){var ex__25738__auto__ = e28941;
+var statearr_28942_28981 = state_28937;
+(statearr_28942_28981[(2)] = ex__25738__auto__);
 
 
-if(cljs.core.seq((state_27393[(4)]))){
-var statearr_27399_27434 = state_27393;
-(statearr_27399_27434[(1)] = cljs.core.first((state_27393[(4)])));
+if(cljs.core.seq((state_28937[(4)]))){
+var statearr_28943_28982 = state_28937;
+(statearr_28943_28982[(1)] = cljs.core.first((state_28937[(4)])));
 
 } else {
 throw ex__25738__auto__;
@@ -518,8 +530,8 @@ throw ex__25738__auto__;
 return new cljs.core.Keyword(null,"recur","recur",-437573268);
 }})();
 if(cljs.core.keyword_identical_QMARK_(ret_value__25736__auto__,new cljs.core.Keyword(null,"recur","recur",-437573268))){
-var G__27435 = state_27393;
-state_27393 = G__27435;
+var G__28983 = state_28937;
+state_28937 = G__28983;
 continue;
 } else {
 return ret_value__25736__auto__;
@@ -527,12 +539,12 @@ return ret_value__25736__auto__;
 break;
 }
 });
-dcs$prototype_6$state$state_machine__25735__auto__ = function(state_27393){
+dcs$prototype_6$state$state_machine__25735__auto__ = function(state_28937){
 switch(arguments.length){
 case 0:
 return dcs$prototype_6$state$state_machine__25735__auto____0.call(this);
 case 1:
-return dcs$prototype_6$state$state_machine__25735__auto____1.call(this,state_27393);
+return dcs$prototype_6$state$state_machine__25735__auto____1.call(this,state_28937);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
@@ -541,10 +553,10 @@ dcs$prototype_6$state$state_machine__25735__auto__.cljs$core$IFn$_invoke$arity$1
 return dcs$prototype_6$state$state_machine__25735__auto__;
 })()
 })();
-var state__25759__auto__ = (function (){var statearr_27400 = f__25758__auto__();
-(statearr_27400[(6)] = c__25757__auto___27432);
+var state__25759__auto__ = (function (){var statearr_28944 = f__25758__auto__();
+(statearr_28944[(6)] = c__25757__auto___28980);
 
-return statearr_27400;
+return statearr_28944;
 })();
 return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped(state__25759__auto__);
 }));
@@ -562,63 +574,83 @@ var population_for_lookup = cljs.core.group_by(cljs.core.juxt.cljs$core$IFn$_inv
 var lookup_population = (function (region,year){
 return new cljs.core.Keyword(null,"population","population",-1209901867).cljs$core$IFn$_invoke$arity$1(cljs.core.first(cljs.core.get.cljs$core$IFn$_invoke$arity$2(population_for_lookup,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [region,year], null))));
 });
-var household_waste_derivation_generation = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__27401){
-var map__27402 = p__27401;
-var map__27402__$1 = (((((!((map__27402 == null))))?(((((map__27402.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27402.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__27402):map__27402);
-var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27402__$1,new cljs.core.Keyword(null,"region","region",270415120));
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27402__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27402__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
+var household_waste_derivation_generation = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__28947){
+var map__28948 = p__28947;
+var map__28948__$1 = (((((!((map__28948 == null))))?(((((map__28948.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__28948.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__28948):map__28948);
+var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28948__$1,new cljs.core.Keyword(null,"region","region",270415120));
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28948__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28948__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),(tonnes / lookup_population(region,year))], null);
 }),household_waste_derivation_generation0);
-var household_waste_derivation_management = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__27404){
-var map__27405 = p__27404;
-var map__27405__$1 = (((((!((map__27405 == null))))?(((((map__27405.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27405.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__27405):map__27405);
-var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27405__$1,new cljs.core.Keyword(null,"region","region",270415120));
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27405__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var management = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27405__$1,new cljs.core.Keyword(null,"management","management",-516161795));
-var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27405__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
+var household_waste_derivation_management = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__28950){
+var map__28951 = p__28950;
+var map__28951__$1 = (((((!((map__28951 == null))))?(((((map__28951.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__28951.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__28951):map__28951);
+var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28951__$1,new cljs.core.Keyword(null,"region","region",270415120));
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28951__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var management = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28951__$1,new cljs.core.Keyword(null,"management","management",-516161795));
+var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28951__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
 return new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"management","management",-516161795),management,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),(tonnes / lookup_population(region,year))], null);
 }),household_waste_derivation_management0);
-var household_waste_derivation_composition = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__27407){
-var map__27408 = p__27407;
-var map__27408__$1 = (((((!((map__27408 == null))))?(((((map__27408.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27408.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__27408):map__27408);
-var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27408__$1,new cljs.core.Keyword(null,"region","region",270415120));
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27408__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var material = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27408__$1,new cljs.core.Keyword(null,"material","material",460118677));
-var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27408__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
+var household_waste_derivation_composition = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__28953){
+var map__28954 = p__28953;
+var map__28954__$1 = (((((!((map__28954 == null))))?(((((map__28954.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__28954.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__28954):map__28954);
+var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28954__$1,new cljs.core.Keyword(null,"region","region",270415120));
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28954__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var material = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28954__$1,new cljs.core.Keyword(null,"material","material",460118677));
+var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28954__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
 return new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"material","material",460118677),material,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),(tonnes / lookup_population(region,year))], null);
 }),household_waste_derivation_composition0);
 var household_waste_derivation_percent_recycled = dcs.prototype_6.data_shaping.calc_household_waste_percentage_recycled(household_waste);
+var latest_year = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.max,cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"year","year",335913393),household_waste));
+var household_waste_derivation_positions = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"generation","generation",-2132542044),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"latest","latest",24323665),cljs.core.map_indexed.cljs$core$IFn$_invoke$arity$2((function (ix,m){
+return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(m),new cljs.core.Keyword(null,"position","position",-2011731912),(ix + (1)),new cljs.core.Keyword(null,"year","year",335913393),latest_year], null);
+}),cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__28945_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(latest_year,new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__28945_SHARP_));
+}),household_waste_derivation_generation))),new cljs.core.Keyword(null,"trend","trend",54563841),null], null),new cljs.core.Keyword(null,"percent-recycled","percent-recycled",-587162431),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"latest","latest",24323665),cljs.core.map_indexed.cljs$core$IFn$_invoke$arity$2((function (ix,m){
+return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(m),new cljs.core.Keyword(null,"position","position",-2011731912),(ix + (1)),new cljs.core.Keyword(null,"year","year",335913393),latest_year], null);
+}),cljs.core.reverse(cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__28946_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(latest_year,new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__28946_SHARP_));
+}),household_waste_derivation_percent_recycled)))),new cljs.core.Keyword(null,"trend","trend",54563841),null], null)], null);
 cljs.core.reset_BANG_(dcs.prototype_6.state.household_waste_derivation_generation_holder,household_waste_derivation_generation);
 
 cljs.core.reset_BANG_(dcs.prototype_6.state.household_waste_derivation_percent_recycled_holder,household_waste_derivation_percent_recycled);
 
 cljs.core.reset_BANG_(dcs.prototype_6.state.household_waste_derivation_management_holder,household_waste_derivation_management);
 
-return cljs.core.reset_BANG_(dcs.prototype_6.state.household_waste_derivation_composition_holder,household_waste_derivation_composition);
+cljs.core.reset_BANG_(dcs.prototype_6.state.household_waste_derivation_composition_holder,household_waste_derivation_composition);
+
+return cljs.core.reset_BANG_(dcs.prototype_6.state.household_waste_derivation_positions_holder,household_waste_derivation_positions);
 } else {
 return null;
 }
 });
-dcs.prototype_6.state.maybe_calc_household_co2e_derivation = (function dcs$prototype_6$state$maybe_calc_household_co2e_derivation(){
+dcs.prototype_6.state.maybe_calc_household_co2e_derivations = (function dcs$prototype_6$state$maybe_calc_household_co2e_derivations(){
 var household_co2e = cljs.core.deref(dcs.prototype_6.state.household_co2e_holder);
 var population = cljs.core.deref(dcs.prototype_6.state.population_holder);
 if((((!((household_co2e == null)))) && ((!((population == null)))))){
-console.log("calculating household-co2e-derivation");
+console.log("calculating household-co2e-derivations");
 
 var population_for_lookup = cljs.core.group_by(cljs.core.juxt.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"region","region",270415120),new cljs.core.Keyword(null,"year","year",335913393)),population);
 var lookup_population = (function (region,year){
 return new cljs.core.Keyword(null,"population","population",-1209901867).cljs$core$IFn$_invoke$arity$1(cljs.core.first(cljs.core.get.cljs$core$IFn$_invoke$arity$2(population_for_lookup,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [region,year], null))));
 });
-var household_co2e_derivation = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__27410){
-var map__27411 = p__27410;
-var map__27411__$1 = (((((!((map__27411 == null))))?(((((map__27411.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27411.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__27411):map__27411);
-var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27411__$1,new cljs.core.Keyword(null,"region","region",270415120));
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27411__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27411__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
+var household_co2e_derivation_generation = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__28957){
+var map__28958 = p__28957;
+var map__28958__$1 = (((((!((map__28958 == null))))?(((((map__28958.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__28958.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__28958):map__28958);
+var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28958__$1,new cljs.core.Keyword(null,"region","region",270415120));
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28958__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28958__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),(tonnes / lookup_population(region,year))], null);
 }),household_co2e);
-return cljs.core.reset_BANG_(dcs.prototype_6.state.household_co2e_derivation_holder,household_co2e_derivation);
+var latest_year = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.max,cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"year","year",335913393),household_co2e));
+var household_co2e_derivation_positions = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"generation","generation",-2132542044),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"latest","latest",24323665),cljs.core.map_indexed.cljs$core$IFn$_invoke$arity$2((function (ix,m){
+return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(m),new cljs.core.Keyword(null,"position","position",-2011731912),(ix + (1)),new cljs.core.Keyword(null,"year","year",335913393),latest_year], null);
+}),cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__28956_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(latest_year,new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__28956_SHARP_));
+}),household_co2e_derivation_generation))),new cljs.core.Keyword(null,"trend","trend",54563841),null], null)], null);
+cljs.core.reset_BANG_(dcs.prototype_6.state.household_co2e_derivation_generation_holder,household_co2e_derivation_generation);
+
+return cljs.core.reset_BANG_(dcs.prototype_6.state.household_co2e_derivation_positions_holder,household_co2e_derivation_positions);
 } else {
 return null;
 }
@@ -633,13 +665,13 @@ console.log("calculating business-waste-by-region-derivations");
 
 var region_count = cljs.core.count(cljs.core.distinct.cljs$core$IFn$_invoke$arity$1(cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"region","region",270415120),business_waste_by_region)));
 var business_waste_by_region_derivation_generation0 = dcs.prototype_6.data_shaping.rollup_business_waste_by_region_materials(business_waste_by_region);
-var business_waste_by_region_derivation_generation = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__27413){
-var map__27414 = p__27413;
-var map__27414__$1 = (((((!((map__27414 == null))))?(((((map__27414.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__27414.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__27414):map__27414);
-var original = map__27414__$1;
-var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27414__$1,new cljs.core.Keyword(null,"region","region",270415120));
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27414__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__27414__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
+var business_waste_by_region_derivation_generation = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__28961){
+var map__28962 = p__28961;
+var map__28962__$1 = (((((!((map__28962 == null))))?(((((map__28962.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__28962.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__28962):map__28962);
+var original = map__28962__$1;
+var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28962__$1,new cljs.core.Keyword(null,"region","region",270415120));
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28962__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__28962__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("Scotland",region)){
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),"Scotland average",new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),(tonnes / region_count)], null);
 } else {
@@ -647,9 +679,17 @@ return original;
 }
 }),business_waste_by_region_derivation_generation0);
 var business_waste_by_region_derivation_composition = business_waste_by_region;
+var latest_year = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.max,cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"year","year",335913393),business_waste_by_region));
+var business_waste_by_region_derivation_positions = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"generation","generation",-2132542044),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"latest","latest",24323665),cljs.core.map_indexed.cljs$core$IFn$_invoke$arity$2((function (ix,m){
+return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(m),new cljs.core.Keyword(null,"position","position",-2011731912),(ix + (1)),new cljs.core.Keyword(null,"year","year",335913393),latest_year], null);
+}),cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__28960_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(latest_year,new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__28960_SHARP_));
+}),business_waste_by_region_derivation_generation))),new cljs.core.Keyword(null,"trend","trend",54563841),null], null)], null);
 cljs.core.reset_BANG_(dcs.prototype_6.state.business_waste_by_region_derivation_generation_holder,business_waste_by_region_derivation_generation);
 
-return cljs.core.reset_BANG_(dcs.prototype_6.state.business_waste_by_region_derivation_composition_holder,business_waste_by_region_derivation_composition);
+cljs.core.reset_BANG_(dcs.prototype_6.state.business_waste_by_region_derivation_composition_holder,business_waste_by_region_derivation_composition);
+
+return cljs.core.reset_BANG_(dcs.prototype_6.state.business_waste_by_region_derivation_positions_holder,business_waste_by_region_derivation_positions);
 });
 cljs.core.add_watch(dcs.prototype_6.state.population_holder,new cljs.core.Keyword(null,"household-waste-derivations-dependency","household-waste-derivations-dependency",1237970348),(function (_key,_atom,old_state,new_state){
 if(cljs.core.truth_(new_state)){
@@ -658,9 +698,9 @@ return dcs.prototype_6.state.maybe_calc_household_waste_derivations();
 return null;
 }
 }));
-cljs.core.add_watch(dcs.prototype_6.state.population_holder,new cljs.core.Keyword(null,"household-co2e-derivation-dependency","household-co2e-derivation-dependency",1258774414),(function (_key,_atom,old_state,new_state){
+cljs.core.add_watch(dcs.prototype_6.state.population_holder,new cljs.core.Keyword(null,"household-co2e-derivations-dependency","household-co2e-derivations-dependency",-155623698),(function (_key,_atom,old_state,new_state){
 if(cljs.core.truth_(new_state)){
-return dcs.prototype_6.state.maybe_calc_household_co2e_derivation();
+return dcs.prototype_6.state.maybe_calc_household_co2e_derivations();
 } else {
 return null;
 }
@@ -672,9 +712,9 @@ return dcs.prototype_6.state.maybe_calc_household_waste_derivations();
 return null;
 }
 }));
-cljs.core.add_watch(dcs.prototype_6.state.household_co2e_holder,new cljs.core.Keyword(null,"household-co2e-derivation-dependency","household-co2e-derivation-dependency",1258774414),(function (_key,_atom,old_state,new_state){
+cljs.core.add_watch(dcs.prototype_6.state.household_co2e_holder,new cljs.core.Keyword(null,"household-co2e-derivations-dependency","household-co2e-derivations-dependency",-155623698),(function (_key,_atom,old_state,new_state){
 if(cljs.core.truth_(new_state)){
-return dcs.prototype_6.state.maybe_calc_household_co2e_derivation();
+return dcs.prototype_6.state.maybe_calc_household_co2e_derivations();
 } else {
 return null;
 }
