@@ -78,7 +78,19 @@ cljs.core.reset_BANG_(dcs.prototype_6.ui_map.component_holder,component);
 
 component.setView([dcs.prototype_6.ui_map.init_lat,dcs.prototype_6.ui_map.init_lng],dcs.prototype_6.ui_map.init_zoom);
 
-return basemap_layer.addTo(component);
+basemap_layer.addTo(component);
+
+var temp__5735__auto__ = cljs.core.deref(dcs.prototype_6.state.geojson_holder);
+if(cljs.core.truth_(temp__5735__auto__)){
+var geojson = temp__5735__auto__;
+var geojson_layer = L.geoJson(cljs.core.deref(dcs.prototype_6.state.geojson_holder),({"style": dcs.prototype_6.ui_map.style, "onEachFeature": dcs.prototype_6.ui_map.on_each_feature}));
+var component__$1 = cljs.core.deref(dcs.prototype_6.ui_map.component_holder);
+cljs.core.reset_BANG_(dcs.prototype_6.ui_map.geojson_layer_holder,geojson_layer);
+
+return geojson_layer.addTo(component__$1);
+} else {
+return null;
+}
 });
 dcs.prototype_6.ui_map.did_update = (function dcs$prototype_6$ui_map$did_update(this$,prev_props){
 var geojson = new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(reagent.core.props(this$));
@@ -89,7 +101,7 @@ cljs.core.reset_BANG_(dcs.prototype_6.ui_map.geojson_layer_holder,geojson_layer)
 return geojson_layer.addTo(component);
 });
 dcs.prototype_6.ui_map.render = (function dcs$prototype_6$ui_map$render(){
-return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div#map-ui.map-container","div#map-ui.map-container",-1735188125)], null);
+return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div#map-ui","div#map-ui",-251424517)], null);
 });
 dcs.prototype_6.ui_map.component = (function dcs$prototype_6$ui_map$component(){
 return reagent.core.create_class(new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"reagent-render","reagent-render",-985383853),dcs.prototype_6.ui_map.render,new cljs.core.Keyword(null,"component-did-mount","component-did-mount",-1126910518),dcs.prototype_6.ui_map.did_mount,new cljs.core.Keyword(null,"component-did-update","component-did-update",-1468549173),dcs.prototype_6.ui_map.did_update], null));

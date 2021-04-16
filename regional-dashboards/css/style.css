@@ -1,50 +1,9 @@
 
-:root {
-    --navbar-height: 55px;
-}
+/* Leaflet ------------------------------ */
 
-.main-container {
-    height: 100vh;
-    width: 100vw;
-    max-width: 1000px;
-    color: #333;
-    background-color: floralwhite; /* #f2f2f2; */
-    padding: 5px;
-}
-
-.navbar {
-    height: var(--navbar-height);
-}
-
-#map-ui {
-    height: calc((100vh * (2/3)) - var(--navbar-height));
-    width: 100%;
-}
-
-.settings-container {
-    margin-top: 5%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.settings-form {
-    width: 40%;
-}
-
-.search-btn {
-    width: 75px;
-}
-
-.token-btn {
-    width: 75px;
-}
-
-.navbar-inputs {
-    display: flex;
-    justify-content: center;
+.leaflet-container {
+    z-index:0;
+    min-height: 600px;
 }
 
 .leaflet-popup-content-wrapper {
@@ -57,105 +16,83 @@
 }
 
 
+/* The "league table" ------------------------------ */
 
-
-.navbar {
-    display: flex;
-    align-items: center;
-    margin: 3px;
-    color: #fff;
-    background-color: #788585;
-    padding-top: 10px;
-    padding-bottom: 0px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.navbar a {
-    color: #fff !important;
-    font-size: 26px;
-    text-decoration: none;
-}
-.navbar img {
-    max-height: 64px;
-    width: auto;
-    padding: 3px;
-    display: inline;
-    vertical-align: middle;
-    margin-right: 5px;
+#league-table {
+    font-size: x-small;
 }
 
 
+/* Brand logo ------------------------------ */
 
-
-.page-title {
-  padding: 0px;
-  text-align: center;
+.brand-logo {
+ width: 32px;
+ margin-right: 10px;
 }
 
-.region-title {
-  padding: 0px;
-  text-align: center;
-  color: olive;
-}
+/* Footer ------------------------------ */
 
-
-#centre {
+.footer {
     text-align: center;
-}
-.positions th {
-    text-align: left;
-    color: gray;
-}
-.positions th, td {
-    font-size: smaller;
-}
-.position {
-    text-align: right;
-}
-.bottom-border {
-    border-bottom-style: solid;
-    border-width: 1px;
+    font-size: x-small;
 }
 
 
-.floats-left-column {
-  float: left;
+/* Navbar dynamics ------------------------------ */
+
+/* We don't need checkbox to be displayed in order for it to work */
+.toggler {
+  display: none;
 }
 
-.floats-right-column {
-  float: right;
+/* Hamburger changes to X when toggler is checked */
+.navbar .toggler:checked + .navbar-brand .burger span:nth-child(1) {
+  -webkit-transform: translateY(5px) rotate(45deg);
+  transform: translateY(5px) rotate(45deg);
+}
+.navbar .toggler:checked + .navbar-brand .burger span:nth-child(2) {
+  opacity: 0;
+}
+.navbar .toggler:checked + .navbar-brand .burger span:nth-child(3) {
+  -webkit-transform: translateY(-5px) rotate(-45deg);
+  transform: translateY(-5px) rotate(-45deg);
 }
 
-.one-third-width {
-  width: 33.33%;
-}
-
-.two-thirds-width {
-  width: 66.66%;
-}
-
-.two-fiths-width {
-  width: 40.00%;
-}
-
-.three-fiths-width {
-  width: 60.00%;
-}
-
-.half-width {
-  width: 50.00%;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-/* Responsive layout - makes the columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .one-third-width, .two-thirds-width, .two-fiths-width, .three-fiths-width, .half-width {
-    width: 100%;
+/*  Displays menu when toggler is checked only on mobile/tablet */
+@media screen and (max-width: 1024px) {
+  .navbar .toggler:checked ~ .navbar-menu {
+    display: block;
+  }
+  /* We don't want menu to be displayed on mobile by default */
+  .navbar-menu {
+    display: none;
   }
 }
+
+/* For dropdown functionality */
+
+/* Same reason as for checkbox */
+.has-dropdown input[type=checkbox] {
+  display: none;
+}
+/* Hide by default */
+.navbar-dropdown {
+  display: none;
+}
+/* The functionality */
+#explore-checkbox:checked ~ #explore-dropdown,
+#data-checkbox:checked ~ #data-dropdown,
+#about-checkbox:checked ~ #about-dropdown {
+    display: block;
+}
+
+
+/* Navbar sundry ------------------------------ */
+
+/* Specify this using sass instead? */
+.navbar-divider {
+    background-color: #4D4637; /* 'richbrown' */
+}
+
+
+
