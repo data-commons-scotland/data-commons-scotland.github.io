@@ -15,7 +15,7 @@ dcs.prototype_6.view.regional_dashboard.map.style_highlighted = ({"weight": (2),
 dcs.prototype_6.view.regional_dashboard.map.style = (function dcs$prototype_6$view$regional_dashboard$map$style(feature){
 var properties_map = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$1(feature.properties);
 var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(properties_map,"LAD13NM");
-if((((!((cljs.core.deref(dcs.prototype_6.state.region_holder) == null)))) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(dcs.prototype_6.state.region_holder),region)))){
+if((((!((cljs.core.deref(dcs.prototype_6.state.region_cursor) == null)))) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(dcs.prototype_6.state.region_cursor),region)))){
 return dcs.prototype_6.view.regional_dashboard.map.style_selected;
 } else {
 return dcs.prototype_6.view.regional_dashboard.map.style_neutral;
@@ -52,12 +52,12 @@ var x = e.target;
 var component = cljs.core.deref(dcs.prototype_6.view.regional_dashboard.map.component_holder);
 var properties_map = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$1(x.feature.properties);
 var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(properties_map,"LAD13NM");
-if(cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(dcs.prototype_6.state.region_holder),region)){
+if(cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(dcs.prototype_6.state.region_cursor),region)){
 dcs.prototype_6.view.regional_dashboard.map.style_neutral_the_previously_selected();
 
 x.setStyle(dcs.prototype_6.view.regional_dashboard.map.style_selected);
 
-cljs.core.reset_BANG_(dcs.prototype_6.state.region_holder,region);
+cljs.core.reset_BANG_(dcs.prototype_6.state.region_cursor,region);
 
 return cljs.core.reset_BANG_(dcs.prototype_6.view.regional_dashboard.map.x_for_region_holder,x);
 } else {
@@ -80,10 +80,10 @@ component.setView([dcs.prototype_6.view.regional_dashboard.map.init_lat,dcs.prot
 
 basemap_layer.addTo(component);
 
-var temp__5735__auto__ = cljs.core.deref(dcs.prototype_6.state.geojson_holder);
+var temp__5735__auto__ = cljs.core.deref(dcs.prototype_6.state.geojson_cursor);
 if(cljs.core.truth_(temp__5735__auto__)){
 var geojson = temp__5735__auto__;
-var geojson_layer = L.geoJson(cljs.core.deref(dcs.prototype_6.state.geojson_holder),({"style": dcs.prototype_6.view.regional_dashboard.map.style, "onEachFeature": dcs.prototype_6.view.regional_dashboard.map.on_each_feature}));
+var geojson_layer = L.geoJson(cljs.core.deref(dcs.prototype_6.state.geojson_cursor),({"style": dcs.prototype_6.view.regional_dashboard.map.style, "onEachFeature": dcs.prototype_6.view.regional_dashboard.map.on_each_feature}));
 var component__$1 = cljs.core.deref(dcs.prototype_6.view.regional_dashboard.map.component_holder);
 cljs.core.reset_BANG_(dcs.prototype_6.view.regional_dashboard.map.geojson_layer_holder,geojson_layer);
 
@@ -94,7 +94,7 @@ return null;
 });
 dcs.prototype_6.view.regional_dashboard.map.did_update = (function dcs$prototype_6$view$regional_dashboard$map$did_update(this$,prev_props){
 var geojson = new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(reagent.core.props(this$));
-var geojson_layer = L.geoJson(cljs.core.deref(dcs.prototype_6.state.geojson_holder),({"style": dcs.prototype_6.view.regional_dashboard.map.style, "onEachFeature": dcs.prototype_6.view.regional_dashboard.map.on_each_feature}));
+var geojson_layer = L.geoJson(cljs.core.deref(dcs.prototype_6.state.geojson_cursor),({"style": dcs.prototype_6.view.regional_dashboard.map.style, "onEachFeature": dcs.prototype_6.view.regional_dashboard.map.on_each_feature}));
 var component = cljs.core.deref(dcs.prototype_6.view.regional_dashboard.map.component_holder);
 cljs.core.reset_BANG_(dcs.prototype_6.view.regional_dashboard.map.geojson_layer_holder,geojson_layer);
 
@@ -107,7 +107,7 @@ dcs.prototype_6.view.regional_dashboard.map.component = (function dcs$prototype_
 return reagent.core.create_class(new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"reagent-render","reagent-render",-985383853),dcs.prototype_6.view.regional_dashboard.map.render,new cljs.core.Keyword(null,"component-did-mount","component-did-mount",-1126910518),dcs.prototype_6.view.regional_dashboard.map.did_mount,new cljs.core.Keyword(null,"component-did-update","component-did-update",-1468549173),dcs.prototype_6.view.regional_dashboard.map.did_update], null));
 });
 dcs.prototype_6.view.regional_dashboard.map.root = (function dcs$prototype_6$view$regional_dashboard$map$root(){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcs.prototype_6.view.regional_dashboard.map.component,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"data","data",-232669377),cljs.core.deref(dcs.prototype_6.state.geojson_holder)], null)], null);
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcs.prototype_6.view.regional_dashboard.map.component,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"data","data",-232669377),cljs.core.deref(dcs.prototype_6.state.geojson_cursor)], null)], null);
 });
 
 //# sourceMappingURL=dcs.prototype_6.view.regional_dashboard.map.js.map
