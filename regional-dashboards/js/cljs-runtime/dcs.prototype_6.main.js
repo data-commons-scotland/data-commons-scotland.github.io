@@ -14,7 +14,7 @@ dcs.prototype_6.router.init();
 
 console.log("Starting render");
 
-return reagent.core.render.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcs.prototype_6.main.page], null),document.getElementById("app"));
+return reagent.dom.render.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [dcs.prototype_6.main.page], null),document.getElementById("app"));
 });
 dcs.prototype_6.main.init = (function dcs$prototype_6$main$init(){
 dcs.prototype_6.loader.load_data();

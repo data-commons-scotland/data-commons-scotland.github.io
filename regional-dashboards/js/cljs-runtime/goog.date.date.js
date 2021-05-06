@@ -1,11 +1,11 @@
 goog.provide("goog.date");
 goog.provide("goog.date.Date");
+goog.provide("goog.date.DateLike");
 goog.provide("goog.date.DateTime");
 goog.provide("goog.date.Interval");
 goog.provide("goog.date.month");
 goog.provide("goog.date.weekDay");
 goog.require("goog.asserts");
-goog.require("goog.date.DateLike");
 goog.require("goog.i18n.DateTimeSymbols");
 goog.require("goog.string");
 goog.date.weekDay = {MON:0, TUE:1, WED:2, THU:3, FRI:4, SAT:5, SUN:6};
@@ -276,6 +276,7 @@ goog.date.Interval.prototype.add = function(interval) {
   this.minutes += interval.minutes;
   this.seconds += interval.seconds;
 };
+goog.date.DateLike;
 goog.date.Date = function(opt_year, opt_month, opt_date) {
   this.date;
   if (typeof opt_year === "number") {

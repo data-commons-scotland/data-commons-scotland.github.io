@@ -1,10 +1,4 @@
 goog.provide("goog.object");
-goog.object.is = function(v, v2) {
-  if (v === v2) {
-    return v !== 0 || 1 / v === 1 / v2;
-  }
-  return v !== v && v2 !== v2;
-};
 goog.object.forEach = function(obj, f, opt_obj) {
   for (var key in obj) {
     f.call(opt_obj, obj[key], key, obj);
@@ -162,8 +156,8 @@ goog.object.equals = function(a, b) {
       return false;
     }
   }
-  for (var k$1 in b) {
-    if (!(k$1 in a)) {
+  for (var k$0 in b) {
+    if (!(k$0 in a)) {
       return false;
     }
   }
@@ -177,18 +171,17 @@ goog.object.clone = function(obj) {
   return res;
 };
 goog.object.unsafeClone = function(obj) {
-  var type = goog.typeOf(obj);
-  if (type == "object" || type == "array") {
-    if (goog.isFunction(obj.clone)) {
-      return obj.clone();
-    }
-    var clone = type == "array" ? [] : {};
-    for (var key in obj) {
-      clone[key] = goog.object.unsafeClone(obj[key]);
-    }
-    return clone;
+  if (!obj || typeof obj !== "object") {
+    return obj;
   }
-  return obj;
+  if (typeof obj.clone === "function") {
+    return obj.clone();
+  }
+  var clone = Array.isArray(obj) ? [] : typeof ArrayBuffer === "function" && typeof ArrayBuffer.isView === "function" && ArrayBuffer.isView(obj) && !(obj instanceof DataView) ? new obj.constructor(obj.length) : {};
+  for (var key in obj) {
+    clone[key] = goog.object.unsafeClone(obj[key]);
+  }
+  return clone;
 };
 goog.object.transpose = function(obj) {
   var transposed = {};
@@ -216,7 +209,7 @@ goog.object.extend = function(target, var_args) {
 };
 goog.object.create = function(var_args) {
   var argLength = arguments.length;
-  if (argLength == 1 && goog.isArray(arguments[0])) {
+  if (argLength == 1 && Array.isArray(arguments[0])) {
     return goog.object.create.apply(null, arguments[0]);
   }
   if (argLength % 2) {
@@ -230,7 +223,7 @@ goog.object.create = function(var_args) {
 };
 goog.object.createSet = function(var_args) {
   var argLength = arguments.length;
-  if (argLength == 1 && goog.isArray(arguments[0])) {
+  if (argLength == 1 && Array.isArray(arguments[0])) {
     return goog.object.createSet.apply(null, arguments[0]);
   }
   var rv = {};

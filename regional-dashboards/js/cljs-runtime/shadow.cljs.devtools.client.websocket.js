@@ -11,7 +11,7 @@ return shadow.cljs.devtools.client.shared.remote_open(runtime,e);
 }));
 
 (socket.onclose = (function (e){
-return shadow.cljs.devtools.client.shared.remote_close(runtime,e);
+return shadow.cljs.devtools.client.shared.remote_close(runtime,e,ws_url);
 }));
 
 (socket.onerror = (function (e){

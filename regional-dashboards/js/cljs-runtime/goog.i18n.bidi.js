@@ -161,10 +161,14 @@ goog.i18n.bidi.setElementDirByTextDirectionality = function(element, text) {
   var htmlElement = element;
   switch(goog.i18n.bidi.estimateDirection(text)) {
     case goog.i18n.bidi.Dir.LTR:
-      htmlElement.dir = "ltr";
+      if (htmlElement.dir !== "ltr") {
+        htmlElement.dir = "ltr";
+      }
       break;
     case goog.i18n.bidi.Dir.RTL:
-      htmlElement.dir = "rtl";
+      if (htmlElement.dir !== "rtl") {
+        htmlElement.dir = "rtl";
+      }
       break;
     default:
       htmlElement.removeAttribute("dir");

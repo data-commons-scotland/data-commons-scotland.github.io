@@ -92,6 +92,12 @@ goog.async.Deferred.prototype.errback = function(opt_result) {
   this.makeStackTraceLong_(opt_result);
   this.updateResult_(false, opt_result);
 };
+goog.async.Deferred.unhandledErrorHandler_ = function(e) {
+  throw e;
+};
+goog.async.Deferred.setUnhandledErrorHandler = function(handler) {
+  goog.async.Deferred.unhandledErrorHandler_ = handler;
+};
 goog.async.Deferred.prototype.makeStackTraceLong_ = function(error) {
   if (!goog.async.Deferred.LONG_STACK_TRACES) {
     return;
@@ -174,8 +180,11 @@ goog.async.Deferred.prototype.isError = function(res) {
 };
 goog.async.Deferred.prototype.hasErrback_ = function() {
   return goog.array.some(this.sequence_, function(sequenceRow) {
-    return goog.isFunction(sequenceRow[1]);
+    return typeof sequenceRow[1] === "function";
   });
+};
+goog.async.Deferred.prototype.getLastValueForMigration = function() {
+  return this.hasFired() && !this.hadError_ ? this.result_ : undefined;
 };
 goog.async.Deferred.prototype.fire_ = function() {
   if (this.unhandledErrorId_ && this.hasFired() && this.hasErrback_()) {
@@ -288,7 +297,7 @@ goog.async.Deferred.Error_ = function(error) {
 goog.async.Deferred.Error_.prototype.throwError = function() {
   goog.asserts.assert(goog.async.Deferred.errorMap_[this.id_], "Cannot throw an error that is not scheduled.");
   delete goog.async.Deferred.errorMap_[this.id_];
-  throw this.error_;
+  goog.async.Deferred.unhandledErrorHandler_(this.error_);
 };
 goog.async.Deferred.Error_.prototype.resetTimer = function() {
   goog.global.clearTimeout(this.id_);

@@ -1,6 +1,5 @@
 goog.provide("goog.net.XhrIo");
 goog.provide("goog.net.XhrIo.ResponseType");
-goog.forwardDeclare("goog.Uri");
 goog.require("goog.Timer");
 goog.require("goog.array");
 goog.require("goog.asserts");
@@ -18,6 +17,10 @@ goog.require("goog.structs");
 goog.require("goog.structs.Map");
 goog.require("goog.uri.utils");
 goog.require("goog.userAgent");
+goog.requireType("goog.Uri");
+goog.requireType("goog.debug.ErrorHandler");
+goog.requireType("goog.net.XhrLike");
+goog.requireType("goog.net.XmlHttpFactory");
 goog.scope(function() {
   goog.net.XhrIo = function(opt_xmlHttpFactory) {
     XhrIo.base(this, "constructor");
@@ -43,7 +46,7 @@ goog.scope(function() {
   };
   goog.inherits(goog.net.XhrIo, goog.events.EventTarget);
   var XhrIo = goog.net.XhrIo;
-  goog.net.XhrIo.ResponseType = {DEFAULT:"", TEXT:"text", DOCUMENT:"document", BLOB:"blob", ARRAY_BUFFER:"arraybuffer"};
+  goog.net.XhrIo.ResponseType = {DEFAULT:"", TEXT:"text", DOCUMENT:"document", BLOB:"blob", ARRAY_BUFFER:"arraybuffer", };
   var ResponseType = goog.net.XhrIo.ResponseType;
   goog.net.XhrIo.prototype.logger_ = goog.log.getLogger("goog.net.XhrIo");
   goog.net.XhrIo.CONTENT_TYPE_HEADER = "Content-Type";
@@ -134,9 +137,9 @@ goog.scope(function() {
       this.inOpen_ = true;
       this.xhr_.open(method, String(url), true);
       this.inOpen_ = false;
-    } catch (err) {
-      goog.log.fine(this.logger_, this.formatMsg_("Error opening Xhr: " + err.message));
-      this.error_(goog.net.ErrorCode.EXCEPTION, err);
+    } catch (err$8) {
+      goog.log.fine(this.logger_, this.formatMsg_("Error opening Xhr: " + err$8.message));
+      this.error_(goog.net.ErrorCode.EXCEPTION, err$8);
       return;
     }
     var content = opt_content || "";
@@ -176,9 +179,9 @@ goog.scope(function() {
       this.inSend_ = true;
       this.xhr_.send(content);
       this.inSend_ = false;
-    } catch (err$5) {
-      goog.log.fine(this.logger_, this.formatMsg_("Send error: " + err$5.message));
-      this.error_(goog.net.ErrorCode.EXCEPTION, err$5);
+    } catch (err$9) {
+      goog.log.fine(this.logger_, this.formatMsg_("Send error: " + err$9.message));
+      this.error_(goog.net.ErrorCode.EXCEPTION, err$9);
     }
   };
   goog.net.XhrIo.shouldUseXhr2Timeout_ = function(xhr) {
@@ -298,7 +301,7 @@ goog.scope(function() {
     this.dispatchEvent(goog.net.XhrIo.buildProgressEvent_(e, opt_isDownload ? goog.net.EventType.DOWNLOAD_PROGRESS : goog.net.EventType.UPLOAD_PROGRESS));
   };
   goog.net.XhrIo.buildProgressEvent_ = function(e, eventType) {
-    return {type:eventType, lengthComputable:e.lengthComputable, loaded:e.loaded, total:e.total};
+    return {type:eventType, lengthComputable:e.lengthComputable, loaded:e.loaded, total:e.total, };
   };
   goog.net.XhrIo.prototype.cleanUpXhr_ = function(opt_fromDispose) {
     if (this.xhr_) {

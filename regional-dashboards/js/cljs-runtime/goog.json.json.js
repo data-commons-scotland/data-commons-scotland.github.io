@@ -35,7 +35,7 @@ goog.json.parse = goog.json.USE_NATIVE_JSON ? goog.global["JSON"]["parse"] : fun
         goog.json.errorLogger_("Invalid JSON: " + o, error);
       }
       return result;
-    } catch (ex$4) {
+    } catch (ex$7) {
     }
   }
   throw new Error("Invalid JSON string: " + o);
@@ -59,7 +59,7 @@ goog.json.Serializer.prototype.serializeInternal = function(object, sb) {
     return;
   }
   if (typeof object == "object") {
-    if (goog.isArray(object)) {
+    if (Array.isArray(object)) {
       this.serializeArray(object, sb);
       return;
     } else {

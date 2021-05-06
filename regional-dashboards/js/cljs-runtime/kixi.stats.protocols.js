@@ -5,15 +5,15 @@ goog.provide('kixi.stats.protocols');
  */
 kixi.stats.protocols.PBounded = function(){};
 
-var kixi$stats$protocols$PBounded$minimum$dyn_26078 = (function (this$){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.minimum[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4429__auto__.call(null,this$));
+var kixi$stats$protocols$PBounded$minimum$dyn_36010 = (function (this$){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.minimum[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4464__auto__.call(null,this$));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.minimum["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4426__auto__.call(null,this$));
+var m__4461__auto__ = (kixi.stats.protocols.minimum["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4461__auto__.call(null,this$));
 } else {
 throw cljs.core.missing_protocol("PBounded.minimum",this$);
 }
@@ -26,19 +26,19 @@ kixi.stats.protocols.minimum = (function kixi$stats$protocols$minimum(this$){
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PBounded$minimum$arity$1 == null)))))){
 return this$.kixi$stats$protocols$PBounded$minimum$arity$1(this$);
 } else {
-return kixi$stats$protocols$PBounded$minimum$dyn_26078(this$);
+return kixi$stats$protocols$PBounded$minimum$dyn_36010(this$);
 }
 });
 
-var kixi$stats$protocols$PBounded$maximum$dyn_26079 = (function (this$){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.maximum[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4429__auto__.call(null,this$));
+var kixi$stats$protocols$PBounded$maximum$dyn_36015 = (function (this$){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.maximum[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4464__auto__.call(null,this$));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.maximum["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4426__auto__.call(null,this$));
+var m__4461__auto__ = (kixi.stats.protocols.maximum["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4461__auto__.call(null,this$));
 } else {
 throw cljs.core.missing_protocol("PBounded.maximum",this$);
 }
@@ -51,7 +51,7 @@ kixi.stats.protocols.maximum = (function kixi$stats$protocols$maximum(this$){
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PBounded$maximum$arity$1 == null)))))){
 return this$.kixi$stats$protocols$PBounded$maximum$arity$1(this$);
 } else {
-return kixi$stats$protocols$PBounded$maximum$dyn_26079(this$);
+return kixi$stats$protocols$PBounded$maximum$dyn_36015(this$);
 }
 });
 
@@ -61,15 +61,15 @@ return kixi$stats$protocols$PBounded$maximum$dyn_26079(this$);
  */
 kixi.stats.protocols.PContingencyTable = function(){};
 
-var kixi$stats$protocols$PContingencyTable$cell$dyn_26083 = (function (this$,coordinates){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.cell[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$2(this$,coordinates) : m__4429__auto__.call(null,this$,coordinates));
+var kixi$stats$protocols$PContingencyTable$cell$dyn_36021 = (function (this$,coordinates){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.cell[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$2(this$,coordinates) : m__4464__auto__.call(null,this$,coordinates));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.cell["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$2(this$,coordinates) : m__4426__auto__.call(null,this$,coordinates));
+var m__4461__auto__ = (kixi.stats.protocols.cell["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$2(this$,coordinates) : m__4461__auto__.call(null,this$,coordinates));
 } else {
 throw cljs.core.missing_protocol("PContingencyTable.cell",this$);
 }
@@ -82,19 +82,19 @@ kixi.stats.protocols.cell = (function kixi$stats$protocols$cell(this$,coordinate
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PContingencyTable$cell$arity$2 == null)))))){
 return this$.kixi$stats$protocols$PContingencyTable$cell$arity$2(this$,coordinates);
 } else {
-return kixi$stats$protocols$PContingencyTable$cell$dyn_26083(this$,coordinates);
+return kixi$stats$protocols$PContingencyTable$cell$dyn_36021(this$,coordinates);
 }
 });
 
-var kixi$stats$protocols$PContingencyTable$grand_total$dyn_26088 = (function (this$){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.grand_total[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4429__auto__.call(null,this$));
+var kixi$stats$protocols$PContingencyTable$grand_total$dyn_36022 = (function (this$){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.grand_total[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4464__auto__.call(null,this$));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.grand_total["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4426__auto__.call(null,this$));
+var m__4461__auto__ = (kixi.stats.protocols.grand_total["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4461__auto__.call(null,this$));
 } else {
 throw cljs.core.missing_protocol("PContingencyTable.grand-total",this$);
 }
@@ -107,19 +107,19 @@ kixi.stats.protocols.grand_total = (function kixi$stats$protocols$grand_total(th
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PContingencyTable$grand_total$arity$1 == null)))))){
 return this$.kixi$stats$protocols$PContingencyTable$grand_total$arity$1(this$);
 } else {
-return kixi$stats$protocols$PContingencyTable$grand_total$dyn_26088(this$);
+return kixi$stats$protocols$PContingencyTable$grand_total$dyn_36022(this$);
 }
 });
 
-var kixi$stats$protocols$PContingencyTable$margin_totals$dyn_26089 = (function (this$){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.margin_totals[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4429__auto__.call(null,this$));
+var kixi$stats$protocols$PContingencyTable$margin_totals$dyn_36023 = (function (this$){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.margin_totals[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4464__auto__.call(null,this$));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.margin_totals["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4426__auto__.call(null,this$));
+var m__4461__auto__ = (kixi.stats.protocols.margin_totals["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4461__auto__.call(null,this$));
 } else {
 throw cljs.core.missing_protocol("PContingencyTable.margin-totals",this$);
 }
@@ -132,19 +132,19 @@ kixi.stats.protocols.margin_totals = (function kixi$stats$protocols$margin_total
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PContingencyTable$margin_totals$arity$1 == null)))))){
 return this$.kixi$stats$protocols$PContingencyTable$margin_totals$arity$1(this$);
 } else {
-return kixi$stats$protocols$PContingencyTable$margin_totals$dyn_26089(this$);
+return kixi$stats$protocols$PContingencyTable$margin_totals$dyn_36023(this$);
 }
 });
 
-var kixi$stats$protocols$PContingencyTable$size$dyn_26090 = (function (this$){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.size[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4429__auto__.call(null,this$));
+var kixi$stats$protocols$PContingencyTable$size$dyn_36024 = (function (this$){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.size[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4464__auto__.call(null,this$));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.size["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4426__auto__.call(null,this$));
+var m__4461__auto__ = (kixi.stats.protocols.size["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4461__auto__.call(null,this$));
 } else {
 throw cljs.core.missing_protocol("PContingencyTable.size",this$);
 }
@@ -157,7 +157,7 @@ kixi.stats.protocols.size = (function kixi$stats$protocols$size(this$){
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PContingencyTable$size$arity$1 == null)))))){
 return this$.kixi$stats$protocols$PContingencyTable$size$arity$1(this$);
 } else {
-return kixi$stats$protocols$PContingencyTable$size$dyn_26090(this$);
+return kixi$stats$protocols$PContingencyTable$size$dyn_36024(this$);
 }
 });
 
@@ -167,15 +167,15 @@ return kixi$stats$protocols$PContingencyTable$size$dyn_26090(this$);
  */
 kixi.stats.protocols.PDependent = function(){};
 
-var kixi$stats$protocols$PDependent$measure$dyn_26091 = (function (this$,x){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.measure[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$2(this$,x) : m__4429__auto__.call(null,this$,x));
+var kixi$stats$protocols$PDependent$measure$dyn_36027 = (function (this$,x){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.measure[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$2(this$,x) : m__4464__auto__.call(null,this$,x));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.measure["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$2(this$,x) : m__4426__auto__.call(null,this$,x));
+var m__4461__auto__ = (kixi.stats.protocols.measure["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$2(this$,x) : m__4461__auto__.call(null,this$,x));
 } else {
 throw cljs.core.missing_protocol("PDependent.measure",this$);
 }
@@ -188,7 +188,7 @@ kixi.stats.protocols.measure = (function kixi$stats$protocols$measure(this$,x){
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PDependent$measure$arity$2 == null)))))){
 return this$.kixi$stats$protocols$PDependent$measure$arity$2(this$,x);
 } else {
-return kixi$stats$protocols$PDependent$measure$dyn_26091(this$,x);
+return kixi$stats$protocols$PDependent$measure$dyn_36027(this$,x);
 }
 });
 
@@ -198,15 +198,15 @@ return kixi$stats$protocols$PDependent$measure$dyn_26091(this$,x);
  */
 kixi.stats.protocols.PDependentWithSignificance = function(){};
 
-var kixi$stats$protocols$PDependentWithSignificance$measure_with_significance$dyn_26092 = (function (this$,x,alpha){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.measure_with_significance[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$3(this$,x,alpha) : m__4429__auto__.call(null,this$,x,alpha));
+var kixi$stats$protocols$PDependentWithSignificance$measure_with_significance$dyn_36028 = (function (this$,x,alpha){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.measure_with_significance[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$3(this$,x,alpha) : m__4464__auto__.call(null,this$,x,alpha));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.measure_with_significance["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$3(this$,x,alpha) : m__4426__auto__.call(null,this$,x,alpha));
+var m__4461__auto__ = (kixi.stats.protocols.measure_with_significance["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$3(this$,x,alpha) : m__4461__auto__.call(null,this$,x,alpha));
 } else {
 throw cljs.core.missing_protocol("PDependentWithSignificance.measure-with-significance",this$);
 }
@@ -219,7 +219,7 @@ kixi.stats.protocols.measure_with_significance = (function kixi$stats$protocols$
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PDependentWithSignificance$measure_with_significance$arity$3 == null)))))){
 return this$.kixi$stats$protocols$PDependentWithSignificance$measure_with_significance$arity$3(this$,x,alpha);
 } else {
-return kixi$stats$protocols$PDependentWithSignificance$measure_with_significance$dyn_26092(this$,x,alpha);
+return kixi$stats$protocols$PDependentWithSignificance$measure_with_significance$dyn_36028(this$,x,alpha);
 }
 });
 
@@ -229,15 +229,15 @@ return kixi$stats$protocols$PDependentWithSignificance$measure_with_significance
  */
 kixi.stats.protocols.PDiscreteRandomVariable = function(){};
 
-var kixi$stats$protocols$PDiscreteRandomVariable$sample_frequencies$dyn_26093 = (function (this$,n,rng){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.sample_frequencies[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$3(this$,n,rng) : m__4429__auto__.call(null,this$,n,rng));
+var kixi$stats$protocols$PDiscreteRandomVariable$sample_frequencies$dyn_36033 = (function (this$,n,rng){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.sample_frequencies[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$3(this$,n,rng) : m__4464__auto__.call(null,this$,n,rng));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.sample_frequencies["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$3(this$,n,rng) : m__4426__auto__.call(null,this$,n,rng));
+var m__4461__auto__ = (kixi.stats.protocols.sample_frequencies["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$3(this$,n,rng) : m__4461__auto__.call(null,this$,n,rng));
 } else {
 throw cljs.core.missing_protocol("PDiscreteRandomVariable.sample-frequencies",this$);
 }
@@ -247,7 +247,7 @@ kixi.stats.protocols.sample_frequencies = (function kixi$stats$protocols$sample_
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PDiscreteRandomVariable$sample_frequencies$arity$3 == null)))))){
 return this$.kixi$stats$protocols$PDiscreteRandomVariable$sample_frequencies$arity$3(this$,n,rng);
 } else {
-return kixi$stats$protocols$PDiscreteRandomVariable$sample_frequencies$dyn_26093(this$,n,rng);
+return kixi$stats$protocols$PDiscreteRandomVariable$sample_frequencies$dyn_36033(this$,n,rng);
 }
 });
 
@@ -257,56 +257,56 @@ return kixi$stats$protocols$PDiscreteRandomVariable$sample_frequencies$dyn_26093
  */
 kixi.stats.protocols.PTestResult = function(){};
 
-var kixi$stats$protocols$PTestResult$p_value$dyn_26094 = (function() {
-var G__26095 = null;
-var G__26095__1 = (function (this$){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.p_value[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4429__auto__.call(null,this$));
+var kixi$stats$protocols$PTestResult$p_value$dyn_36034 = (function() {
+var G__36035 = null;
+var G__36035__1 = (function (this$){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.p_value[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4464__auto__.call(null,this$));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.p_value["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4426__auto__.call(null,this$));
-} else {
-throw cljs.core.missing_protocol("PTestResult.p-value",this$);
-}
-}
-});
-var G__26095__2 = (function (this$,alternative){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.p_value[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$2(this$,alternative) : m__4429__auto__.call(null,this$,alternative));
-} else {
-var m__4426__auto__ = (kixi.stats.protocols.p_value["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$2(this$,alternative) : m__4426__auto__.call(null,this$,alternative));
+var m__4461__auto__ = (kixi.stats.protocols.p_value["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4461__auto__.call(null,this$));
 } else {
 throw cljs.core.missing_protocol("PTestResult.p-value",this$);
 }
 }
 });
-G__26095 = function(this$,alternative){
+var G__36035__2 = (function (this$,alternative){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.p_value[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$2(this$,alternative) : m__4464__auto__.call(null,this$,alternative));
+} else {
+var m__4461__auto__ = (kixi.stats.protocols.p_value["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$2(this$,alternative) : m__4461__auto__.call(null,this$,alternative));
+} else {
+throw cljs.core.missing_protocol("PTestResult.p-value",this$);
+}
+}
+});
+G__36035 = function(this$,alternative){
 switch(arguments.length){
 case 1:
-return G__26095__1.call(this,this$);
+return G__36035__1.call(this,this$);
 case 2:
-return G__26095__2.call(this,this$,alternative);
+return G__36035__2.call(this,this$,alternative);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
-G__26095.cljs$core$IFn$_invoke$arity$1 = G__26095__1;
-G__26095.cljs$core$IFn$_invoke$arity$2 = G__26095__2;
-return G__26095;
+G__36035.cljs$core$IFn$_invoke$arity$1 = G__36035__1;
+G__36035.cljs$core$IFn$_invoke$arity$2 = G__36035__2;
+return G__36035;
 })()
 ;
 /**
  * The p-value associated with this test result
  */
 kixi.stats.protocols.p_value = (function kixi$stats$protocols$p_value(var_args){
-var G__26075 = arguments.length;
-switch (G__26075) {
+var G__35994 = arguments.length;
+switch (G__35994) {
 case 1:
 return kixi.stats.protocols.p_value.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -325,7 +325,7 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PTestResult$p_value$arity$1 == null)))))){
 return this$.kixi$stats$protocols$PTestResult$p_value$arity$1(this$);
 } else {
-return kixi$stats$protocols$PTestResult$p_value$dyn_26094(this$);
+return kixi$stats$protocols$PTestResult$p_value$dyn_36034(this$);
 }
 }));
 
@@ -333,63 +333,63 @@ return kixi$stats$protocols$PTestResult$p_value$dyn_26094(this$);
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PTestResult$p_value$arity$2 == null)))))){
 return this$.kixi$stats$protocols$PTestResult$p_value$arity$2(this$,alternative);
 } else {
-return kixi$stats$protocols$PTestResult$p_value$dyn_26094(this$,alternative);
+return kixi$stats$protocols$PTestResult$p_value$dyn_36034(this$,alternative);
 }
 }));
 
 (kixi.stats.protocols.p_value.cljs$lang$maxFixedArity = 2);
 
 
-var kixi$stats$protocols$PTestResult$significant_QMARK_$dyn_26097 = (function() {
-var G__26098 = null;
-var G__26098__2 = (function (this$,alpha){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.significant_QMARK_[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$2(this$,alpha) : m__4429__auto__.call(null,this$,alpha));
+var kixi$stats$protocols$PTestResult$significant_QMARK_$dyn_36037 = (function() {
+var G__36038 = null;
+var G__36038__2 = (function (this$,alpha){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.significant_QMARK_[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$2(this$,alpha) : m__4464__auto__.call(null,this$,alpha));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.significant_QMARK_["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$2(this$,alpha) : m__4426__auto__.call(null,this$,alpha));
-} else {
-throw cljs.core.missing_protocol("PTestResult.significant?",this$);
-}
-}
-});
-var G__26098__3 = (function (this$,alpha,alternative){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.significant_QMARK_[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$3(this$,alpha,alternative) : m__4429__auto__.call(null,this$,alpha,alternative));
-} else {
-var m__4426__auto__ = (kixi.stats.protocols.significant_QMARK_["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$3(this$,alpha,alternative) : m__4426__auto__.call(null,this$,alpha,alternative));
+var m__4461__auto__ = (kixi.stats.protocols.significant_QMARK_["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$2(this$,alpha) : m__4461__auto__.call(null,this$,alpha));
 } else {
 throw cljs.core.missing_protocol("PTestResult.significant?",this$);
 }
 }
 });
-G__26098 = function(this$,alpha,alternative){
+var G__36038__3 = (function (this$,alpha,alternative){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.significant_QMARK_[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$3(this$,alpha,alternative) : m__4464__auto__.call(null,this$,alpha,alternative));
+} else {
+var m__4461__auto__ = (kixi.stats.protocols.significant_QMARK_["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$3(this$,alpha,alternative) : m__4461__auto__.call(null,this$,alpha,alternative));
+} else {
+throw cljs.core.missing_protocol("PTestResult.significant?",this$);
+}
+}
+});
+G__36038 = function(this$,alpha,alternative){
 switch(arguments.length){
 case 2:
-return G__26098__2.call(this,this$,alpha);
+return G__36038__2.call(this,this$,alpha);
 case 3:
-return G__26098__3.call(this,this$,alpha,alternative);
+return G__36038__3.call(this,this$,alpha,alternative);
 }
 throw(new Error('Invalid arity: ' + arguments.length));
 };
-G__26098.cljs$core$IFn$_invoke$arity$2 = G__26098__2;
-G__26098.cljs$core$IFn$_invoke$arity$3 = G__26098__3;
-return G__26098;
+G__36038.cljs$core$IFn$_invoke$arity$2 = G__36038__2;
+G__36038.cljs$core$IFn$_invoke$arity$3 = G__36038__3;
+return G__36038;
 })()
 ;
 /**
  * Whether the result is significant at the given alpha
  */
 kixi.stats.protocols.significant_QMARK_ = (function kixi$stats$protocols$significant_QMARK_(var_args){
-var G__26077 = arguments.length;
-switch (G__26077) {
+var G__35996 = arguments.length;
+switch (G__35996) {
 case 2:
 return kixi.stats.protocols.significant_QMARK_.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -408,7 +408,7 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PTestResult$significant_QMARK_$arity$2 == null)))))){
 return this$.kixi$stats$protocols$PTestResult$significant_QMARK_$arity$2(this$,alpha);
 } else {
-return kixi$stats$protocols$PTestResult$significant_QMARK_$dyn_26097(this$,alpha);
+return kixi$stats$protocols$PTestResult$significant_QMARK_$dyn_36037(this$,alpha);
 }
 }));
 
@@ -416,7 +416,7 @@ return kixi$stats$protocols$PTestResult$significant_QMARK_$dyn_26097(this$,alpha
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PTestResult$significant_QMARK_$arity$3 == null)))))){
 return this$.kixi$stats$protocols$PTestResult$significant_QMARK_$arity$3(this$,alpha,alternative);
 } else {
-return kixi$stats$protocols$PTestResult$significant_QMARK_$dyn_26097(this$,alpha,alternative);
+return kixi$stats$protocols$PTestResult$significant_QMARK_$dyn_36037(this$,alpha,alternative);
 }
 }));
 
@@ -429,15 +429,15 @@ return kixi$stats$protocols$PTestResult$significant_QMARK_$dyn_26097(this$,alpha
  */
 kixi.stats.protocols.PInterval = function(){};
 
-var kixi$stats$protocols$PInterval$lower$dyn_26110 = (function (this$){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.lower[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4429__auto__.call(null,this$));
+var kixi$stats$protocols$PInterval$lower$dyn_36044 = (function (this$){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.lower[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4464__auto__.call(null,this$));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.lower["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4426__auto__.call(null,this$));
+var m__4461__auto__ = (kixi.stats.protocols.lower["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4461__auto__.call(null,this$));
 } else {
 throw cljs.core.missing_protocol("PInterval.lower",this$);
 }
@@ -450,19 +450,19 @@ kixi.stats.protocols.lower = (function kixi$stats$protocols$lower(this$){
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PInterval$lower$arity$1 == null)))))){
 return this$.kixi$stats$protocols$PInterval$lower$arity$1(this$);
 } else {
-return kixi$stats$protocols$PInterval$lower$dyn_26110(this$);
+return kixi$stats$protocols$PInterval$lower$dyn_36044(this$);
 }
 });
 
-var kixi$stats$protocols$PInterval$upper$dyn_26111 = (function (this$){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.upper[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4429__auto__.call(null,this$));
+var kixi$stats$protocols$PInterval$upper$dyn_36045 = (function (this$){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.upper[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4464__auto__.call(null,this$));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.upper["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4426__auto__.call(null,this$));
+var m__4461__auto__ = (kixi.stats.protocols.upper["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4461__auto__.call(null,this$));
 } else {
 throw cljs.core.missing_protocol("PInterval.upper",this$);
 }
@@ -475,7 +475,7 @@ kixi.stats.protocols.upper = (function kixi$stats$protocols$upper(this$){
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PInterval$upper$arity$1 == null)))))){
 return this$.kixi$stats$protocols$PInterval$upper$arity$1(this$);
 } else {
-return kixi$stats$protocols$PInterval$upper$dyn_26111(this$);
+return kixi$stats$protocols$PInterval$upper$dyn_36045(this$);
 }
 });
 
@@ -485,15 +485,15 @@ return kixi$stats$protocols$PInterval$upper$dyn_26111(this$);
  */
 kixi.stats.protocols.PParameterised = function(){};
 
-var kixi$stats$protocols$PParameterised$parameters$dyn_26117 = (function (this$){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.parameters[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4429__auto__.call(null,this$));
+var kixi$stats$protocols$PParameterised$parameters$dyn_36046 = (function (this$){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.parameters[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4464__auto__.call(null,this$));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.parameters["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4426__auto__.call(null,this$));
+var m__4461__auto__ = (kixi.stats.protocols.parameters["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__4461__auto__.call(null,this$));
 } else {
 throw cljs.core.missing_protocol("PParameterised.parameters",this$);
 }
@@ -506,7 +506,7 @@ kixi.stats.protocols.parameters = (function kixi$stats$protocols$parameters(this
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PParameterised$parameters$arity$1 == null)))))){
 return this$.kixi$stats$protocols$PParameterised$parameters$arity$1(this$);
 } else {
-return kixi$stats$protocols$PParameterised$parameters$dyn_26117(this$);
+return kixi$stats$protocols$PParameterised$parameters$dyn_36046(this$);
 }
 });
 
@@ -516,15 +516,15 @@ return kixi$stats$protocols$PParameterised$parameters$dyn_26117(this$);
  */
 kixi.stats.protocols.PQuantile = function(){};
 
-var kixi$stats$protocols$PQuantile$cdf$dyn_26118 = (function (this$,x){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.cdf[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$2(this$,x) : m__4429__auto__.call(null,this$,x));
+var kixi$stats$protocols$PQuantile$cdf$dyn_36047 = (function (this$,x){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.cdf[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$2(this$,x) : m__4464__auto__.call(null,this$,x));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.cdf["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$2(this$,x) : m__4426__auto__.call(null,this$,x));
+var m__4461__auto__ = (kixi.stats.protocols.cdf["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$2(this$,x) : m__4461__auto__.call(null,this$,x));
 } else {
 throw cljs.core.missing_protocol("PQuantile.cdf",this$);
 }
@@ -537,19 +537,19 @@ kixi.stats.protocols.cdf = (function kixi$stats$protocols$cdf(this$,x){
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PQuantile$cdf$arity$2 == null)))))){
 return this$.kixi$stats$protocols$PQuantile$cdf$arity$2(this$,x);
 } else {
-return kixi$stats$protocols$PQuantile$cdf$dyn_26118(this$,x);
+return kixi$stats$protocols$PQuantile$cdf$dyn_36047(this$,x);
 }
 });
 
-var kixi$stats$protocols$PQuantile$quantile$dyn_26119 = (function (this$,p){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.quantile[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$2(this$,p) : m__4429__auto__.call(null,this$,p));
+var kixi$stats$protocols$PQuantile$quantile$dyn_36048 = (function (this$,p){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.quantile[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$2(this$,p) : m__4464__auto__.call(null,this$,p));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.quantile["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$2(this$,p) : m__4426__auto__.call(null,this$,p));
+var m__4461__auto__ = (kixi.stats.protocols.quantile["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$2(this$,p) : m__4461__auto__.call(null,this$,p));
 } else {
 throw cljs.core.missing_protocol("PQuantile.quantile",this$);
 }
@@ -562,7 +562,7 @@ kixi.stats.protocols.quantile = (function kixi$stats$protocols$quantile(this$,p)
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PQuantile$quantile$arity$2 == null)))))){
 return this$.kixi$stats$protocols$PQuantile$quantile$arity$2(this$,p);
 } else {
-return kixi$stats$protocols$PQuantile$quantile$dyn_26119(this$,p);
+return kixi$stats$protocols$PQuantile$quantile$dyn_36048(this$,p);
 }
 });
 
@@ -572,15 +572,15 @@ return kixi$stats$protocols$PQuantile$quantile$dyn_26119(this$,p);
  */
 kixi.stats.protocols.PRandomVariable = function(){};
 
-var kixi$stats$protocols$PRandomVariable$sample_1$dyn_26120 = (function (this$,rng){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.sample_1[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$2(this$,rng) : m__4429__auto__.call(null,this$,rng));
+var kixi$stats$protocols$PRandomVariable$sample_1$dyn_36049 = (function (this$,rng){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.sample_1[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$2(this$,rng) : m__4464__auto__.call(null,this$,rng));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.sample_1["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$2(this$,rng) : m__4426__auto__.call(null,this$,rng));
+var m__4461__auto__ = (kixi.stats.protocols.sample_1["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$2 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$2(this$,rng) : m__4461__auto__.call(null,this$,rng));
 } else {
 throw cljs.core.missing_protocol("PRandomVariable.sample-1",this$);
 }
@@ -590,19 +590,19 @@ kixi.stats.protocols.sample_1 = (function kixi$stats$protocols$sample_1(this$,rn
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PRandomVariable$sample_1$arity$2 == null)))))){
 return this$.kixi$stats$protocols$PRandomVariable$sample_1$arity$2(this$,rng);
 } else {
-return kixi$stats$protocols$PRandomVariable$sample_1$dyn_26120(this$,rng);
+return kixi$stats$protocols$PRandomVariable$sample_1$dyn_36049(this$,rng);
 }
 });
 
-var kixi$stats$protocols$PRandomVariable$sample_n$dyn_26121 = (function (this$,n,rng){
-var x__4428__auto__ = (((this$ == null))?null:this$);
-var m__4429__auto__ = (kixi.stats.protocols.sample_n[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$3(this$,n,rng) : m__4429__auto__.call(null,this$,n,rng));
+var kixi$stats$protocols$PRandomVariable$sample_n$dyn_36050 = (function (this$,n,rng){
+var x__4463__auto__ = (((this$ == null))?null:this$);
+var m__4464__auto__ = (kixi.stats.protocols.sample_n[goog.typeOf(x__4463__auto__)]);
+if((!((m__4464__auto__ == null)))){
+return (m__4464__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4464__auto__.cljs$core$IFn$_invoke$arity$3(this$,n,rng) : m__4464__auto__.call(null,this$,n,rng));
 } else {
-var m__4426__auto__ = (kixi.stats.protocols.sample_n["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$3(this$,n,rng) : m__4426__auto__.call(null,this$,n,rng));
+var m__4461__auto__ = (kixi.stats.protocols.sample_n["_"]);
+if((!((m__4461__auto__ == null)))){
+return (m__4461__auto__.cljs$core$IFn$_invoke$arity$3 ? m__4461__auto__.cljs$core$IFn$_invoke$arity$3(this$,n,rng) : m__4461__auto__.call(null,this$,n,rng));
 } else {
 throw cljs.core.missing_protocol("PRandomVariable.sample-n",this$);
 }
@@ -612,7 +612,7 @@ kixi.stats.protocols.sample_n = (function kixi$stats$protocols$sample_n(this$,n,
 if((((!((this$ == null)))) && ((!((this$.kixi$stats$protocols$PRandomVariable$sample_n$arity$3 == null)))))){
 return this$.kixi$stats$protocols$PRandomVariable$sample_n$arity$3(this$,n,rng);
 } else {
-return kixi$stats$protocols$PRandomVariable$sample_n$dyn_26121(this$,n,rng);
+return kixi$stats$protocols$PRandomVariable$sample_n$dyn_36050(this$,n,rng);
 }
 });
 

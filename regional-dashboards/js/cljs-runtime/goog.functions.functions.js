@@ -13,6 +13,10 @@ goog.functions.TRUE = function() {
 goog.functions.NULL = function() {
   return null;
 };
+goog.functions.UNDEFINED = function() {
+  return undefined;
+};
+goog.functions.EMPTY = goog.functions.UNDEFINED;
 goog.functions.identity = function(opt_returnValue, var_args) {
   return opt_returnValue;
 };
@@ -42,6 +46,9 @@ goog.functions.partialRight = function(fn, var_args) {
   var rightArgs = Array.prototype.slice.call(arguments, 1);
   return function() {
     var self = this;
+    if (self === goog.global) {
+      self = undefined;
+    }
     var newArgs = Array.prototype.slice.call(arguments);
     newArgs.push.apply(newArgs, rightArgs);
     return fn.apply(self, newArgs);
@@ -192,6 +199,9 @@ goog.functions.rateLimit = function(f, interval, opt_scope) {
       f.apply(opt_scope, arguments);
     }
   };
+};
+goog.functions.isFunction = function(val) {
+  return typeof val === "function";
 };
 
 //# sourceMappingURL=goog.functions.functions.js.map
