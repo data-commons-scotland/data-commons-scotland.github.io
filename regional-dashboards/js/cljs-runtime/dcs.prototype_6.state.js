@@ -87,6 +87,10 @@ if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (
 } else {
 dcs.prototype_6.state.stirling_community_food_footfall_derivation_cursor = reagent.core.cursor(dcs.prototype_6.state.root,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"stirling-community-food-footfall-derivation","stirling-community-food-footfall-derivation",145481436)], null));
 }
+if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (typeof dcs.prototype_6.state !== 'undefined') && (typeof dcs.prototype_6.state.household_waste_analysis_derivation_cursor !== 'undefined')){
+} else {
+dcs.prototype_6.state.household_waste_analysis_derivation_cursor = reagent.core.cursor(dcs.prototype_6.state.root,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"household-waste-analysis-derivation","household-waste-analysis-derivation",-22446818)], null));
+}
 if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (typeof dcs.prototype_6.state !== 'undefined') && (typeof dcs.prototype_6.state.population_holder !== 'undefined')){
 } else {
 dcs.prototype_6.state.population_holder = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(null);
@@ -118,6 +122,10 @@ dcs.prototype_6.state.stirling_community_food_tonnes_holder = cljs.core.atom.clj
 if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (typeof dcs.prototype_6.state !== 'undefined') && (typeof dcs.prototype_6.state.stirling_community_food_footfall_holder !== 'undefined')){
 } else {
 dcs.prototype_6.state.stirling_community_food_footfall_holder = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(null);
+}
+if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (typeof dcs.prototype_6.state !== 'undefined') && (typeof dcs.prototype_6.state.household_waste_analysis_holder !== 'undefined')){
+} else {
+dcs.prototype_6.state.household_waste_analysis_holder = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(null);
 }
 
 //# sourceMappingURL=dcs.prototype_6.state.js.map
