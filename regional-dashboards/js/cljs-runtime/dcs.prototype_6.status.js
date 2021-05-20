@@ -1,7 +1,7 @@
 goog.provide('dcs.prototype_6.status');
 dcs.prototype_6.status.ele = (function dcs$prototype_6$status$ele(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t){
 var num = cljs.core.count(cljs.core.filter.cljs$core$IFn$_invoke$arity$2(cljs.core.nil_QMARK_,new cljs.core.PersistentVector(null, 20, 5, cljs.core.PersistentVector.EMPTY_NODE, [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t], null)));
-var s__$1 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2((0),num))?"":["Please wait... loading/deriving ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(num)," datasets."].join(''));
+var s__$1 = ((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2((0),num))?"":new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.icon-text","span.icon-text",1208576291),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.icon","span.icon",-1181275586),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"i.fas.fa-spinner.fa-pulse","i.fas.fa-spinner.fa-pulse",1605646997)], null)], null),[" please wait - loading/deriving ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(num)," datasets"].join('')], null));
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),s__$1], null)], null);
 });
 dcs.prototype_6.status.root = (function dcs$prototype_6$status$root(){
