@@ -57,9 +57,11 @@ dcs.prototype_6.view.regional_dashboard.map.style_neutral_the_previously_selecte
 
 x.setStyle(dcs.prototype_6.view.regional_dashboard.map.style_selected);
 
+cljs.core.reset_BANG_(dcs.prototype_6.view.regional_dashboard.map.x_for_region_holder,x);
+
 cljs.core.reset_BANG_(dcs.prototype_6.state.region_cursor,region);
 
-return cljs.core.reset_BANG_(dcs.prototype_6.view.regional_dashboard.map.x_for_region_holder,x);
+return (window.location = reitit.frontend.easy.href.cljs$core$IFn$_invoke$arity$3(new cljs.core.Keyword("dcs.prototype-6.router","dashboard-view","dcs.prototype-6.router/dashboard-view",1282925944),null,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"region","region",270415120),region], null)));
 } else {
 return null;
 }
