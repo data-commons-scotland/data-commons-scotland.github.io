@@ -4,14 +4,14 @@ goog.provide('dcs.prototype_6.navbar');
  */
 dcs.prototype_6.navbar.close_burger = (function dcs$prototype_6$navbar$close_burger(var_args){
 var args__4777__auto__ = [];
-var len__4771__auto___28034 = arguments.length;
-var i__4772__auto___28035 = (0);
+var len__4771__auto___27907 = arguments.length;
+var i__4772__auto___27908 = (0);
 while(true){
-if((i__4772__auto___28035 < len__4771__auto___28034)){
-args__4777__auto__.push((arguments[i__4772__auto___28035]));
+if((i__4772__auto___27908 < len__4771__auto___27907)){
+args__4777__auto__.push((arguments[i__4772__auto___27908]));
 
-var G__28036 = (i__4772__auto___28035 + (1));
-i__4772__auto___28035 = G__28036;
+var G__27909 = (i__4772__auto___27908 + (1));
+i__4772__auto___27908 = G__27909;
 continue;
 } else {
 }
@@ -23,53 +23,53 @@ return dcs.prototype_6.navbar.close_burger.cljs$core$IFn$_invoke$arity$variadic(
 });
 
 (dcs.prototype_6.navbar.close_burger.cljs$core$IFn$_invoke$arity$variadic = (function (_){
-var seq__28028 = cljs.core.seq(new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, ["articles-checkbox","tools-checkbox","data-checkbox","about-checkbox","toggler"], null));
-var chunk__28029 = null;
-var count__28030 = (0);
-var i__28031 = (0);
+var seq__27901 = cljs.core.seq(new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, ["articles-checkbox","tools-checkbox","data-checkbox","about-checkbox","toggler"], null));
+var chunk__27902 = null;
+var count__27903 = (0);
+var i__27904 = (0);
 while(true){
-if((i__28031 < count__28030)){
-var id = chunk__28029.cljs$core$IIndexed$_nth$arity$2(null,i__28031);
+if((i__27904 < count__27903)){
+var id = chunk__27902.cljs$core$IIndexed$_nth$arity$2(null,i__27904);
 (document.getElementById(id).checked = false);
 
 
-var G__28037 = seq__28028;
-var G__28038 = chunk__28029;
-var G__28039 = count__28030;
-var G__28040 = (i__28031 + (1));
-seq__28028 = G__28037;
-chunk__28029 = G__28038;
-count__28030 = G__28039;
-i__28031 = G__28040;
+var G__27910 = seq__27901;
+var G__27911 = chunk__27902;
+var G__27912 = count__27903;
+var G__27913 = (i__27904 + (1));
+seq__27901 = G__27910;
+chunk__27902 = G__27911;
+count__27903 = G__27912;
+i__27904 = G__27913;
 continue;
 } else {
-var temp__5735__auto__ = cljs.core.seq(seq__28028);
+var temp__5735__auto__ = cljs.core.seq(seq__27901);
 if(temp__5735__auto__){
-var seq__28028__$1 = temp__5735__auto__;
-if(cljs.core.chunked_seq_QMARK_(seq__28028__$1)){
-var c__4591__auto__ = cljs.core.chunk_first(seq__28028__$1);
-var G__28041 = cljs.core.chunk_rest(seq__28028__$1);
-var G__28042 = c__4591__auto__;
-var G__28043 = cljs.core.count(c__4591__auto__);
-var G__28044 = (0);
-seq__28028 = G__28041;
-chunk__28029 = G__28042;
-count__28030 = G__28043;
-i__28031 = G__28044;
+var seq__27901__$1 = temp__5735__auto__;
+if(cljs.core.chunked_seq_QMARK_(seq__27901__$1)){
+var c__4591__auto__ = cljs.core.chunk_first(seq__27901__$1);
+var G__27914 = cljs.core.chunk_rest(seq__27901__$1);
+var G__27915 = c__4591__auto__;
+var G__27916 = cljs.core.count(c__4591__auto__);
+var G__27917 = (0);
+seq__27901 = G__27914;
+chunk__27902 = G__27915;
+count__27903 = G__27916;
+i__27904 = G__27917;
 continue;
 } else {
-var id = cljs.core.first(seq__28028__$1);
+var id = cljs.core.first(seq__27901__$1);
 (document.getElementById(id).checked = false);
 
 
-var G__28045 = cljs.core.next(seq__28028__$1);
-var G__28046 = null;
-var G__28047 = (0);
-var G__28048 = (0);
-seq__28028 = G__28045;
-chunk__28029 = G__28046;
-count__28030 = G__28047;
-i__28031 = G__28048;
+var G__27918 = cljs.core.next(seq__27901__$1);
+var G__27919 = null;
+var G__27920 = (0);
+var G__27921 = (0);
+seq__27901 = G__27918;
+chunk__27902 = G__27919;
+count__27903 = G__27920;
+i__27904 = G__27921;
 continue;
 }
 } else {
@@ -83,14 +83,14 @@ break;
 (dcs.prototype_6.navbar.close_burger.cljs$lang$maxFixedArity = (0));
 
 /** @this {Function} */
-(dcs.prototype_6.navbar.close_burger.cljs$lang$applyTo = (function (seq28027){
+(dcs.prototype_6.navbar.close_burger.cljs$lang$applyTo = (function (seq27900){
 var self__4759__auto__ = this;
-return self__4759__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq28027));
+return self__4759__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq27900));
 }));
 
 dcs.prototype_6.navbar.navbar_clickable = (function dcs$prototype_6$navbar$navbar_clickable(var_args){
-var G__28033 = arguments.length;
-switch (G__28033) {
+var G__27906 = arguments.length;
+switch (G__27906) {
 case 2:
 return dcs.prototype_6.navbar.navbar_clickable.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
