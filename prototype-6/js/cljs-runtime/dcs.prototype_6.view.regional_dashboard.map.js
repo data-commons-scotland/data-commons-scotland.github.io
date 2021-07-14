@@ -23,8 +23,6 @@ return dcs.prototype_6.view.regional_dashboard.map.style_neutral;
 });
 dcs.prototype_6.view.regional_dashboard.map.highlight_feature = (function dcs$prototype_6$view$regional_dashboard$map$highlight_feature(e){
 var x = e.target;
-var properties_map = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$1(x.feature.properties);
-var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(properties_map,"LAD13NM");
 x.openTooltip();
 
 x.setStyle(dcs.prototype_6.view.regional_dashboard.map.style_highlighted);
@@ -49,7 +47,6 @@ return null;
 });
 dcs.prototype_6.view.regional_dashboard.map.zoom_to_feature = (function dcs$prototype_6$view$regional_dashboard$map$zoom_to_feature(e){
 var x = e.target;
-var component = cljs.core.deref(dcs.prototype_6.view.regional_dashboard.map.component_holder);
 var properties_map = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$1(x.feature.properties);
 var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(properties_map,"LAD13NM");
 if(cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(dcs.prototype_6.state.region_cursor),region)){
@@ -84,7 +81,7 @@ basemap_layer.addTo(component);
 
 var temp__5735__auto__ = cljs.core.deref(dcs.prototype_6.state.geojson_cursor);
 if(cljs.core.truth_(temp__5735__auto__)){
-var geojson = temp__5735__auto__;
+var _geojson = temp__5735__auto__;
 var geojson_layer = L.geoJson(cljs.core.deref(dcs.prototype_6.state.geojson_cursor),({"style": dcs.prototype_6.view.regional_dashboard.map.style, "onEachFeature": dcs.prototype_6.view.regional_dashboard.map.on_each_feature}));
 var component__$1 = cljs.core.deref(dcs.prototype_6.view.regional_dashboard.map.component_holder);
 cljs.core.reset_BANG_(dcs.prototype_6.view.regional_dashboard.map.geojson_layer_holder,geojson_layer);
@@ -94,8 +91,7 @@ return geojson_layer.addTo(component__$1);
 return null;
 }
 });
-dcs.prototype_6.view.regional_dashboard.map.did_update = (function dcs$prototype_6$view$regional_dashboard$map$did_update(this$,prev_props){
-var geojson = new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(reagent.core.props(this$));
+dcs.prototype_6.view.regional_dashboard.map.did_update = (function dcs$prototype_6$view$regional_dashboard$map$did_update(_this,_prev_props){
 var geojson_layer = L.geoJson(cljs.core.deref(dcs.prototype_6.state.geojson_cursor),({"style": dcs.prototype_6.view.regional_dashboard.map.style, "onEachFeature": dcs.prototype_6.view.regional_dashboard.map.on_each_feature}));
 var component = cljs.core.deref(dcs.prototype_6.view.regional_dashboard.map.component_holder);
 cljs.core.reset_BANG_(dcs.prototype_6.view.regional_dashboard.map.geojson_layer_holder,geojson_layer);

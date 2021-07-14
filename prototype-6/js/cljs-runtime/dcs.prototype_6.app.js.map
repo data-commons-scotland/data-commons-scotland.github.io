@@ -1,1 +1,0 @@
-{"version":3,"sources":["dcs/prototype_6/app.cljs"],"mappings":";AAEA,AAAA,AAAMA;AAAN,AACE,AAAA,AAACC","names":["dcs.prototype-6.app/init","cljs.core.println"],"sourcesContent":["(ns dcs.prototype-6.app)\n\n(defn init []\n  (println \"Hello World\"))\n"]}

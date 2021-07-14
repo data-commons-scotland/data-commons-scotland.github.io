@@ -6,7 +6,7 @@ dcs.prototype_6.view.stirling_community_food.flow.did_mount = (function dcs$prot
 var flow = new cljs.core.Keyword(null,"data","data",-232669377).cljs$core$IFn$_invoke$arity$1(reagent.core.props(this$));
 return (new Highcharts.Chart(reagent.dom.dom_node(this$),cljs.core.clj__GT_js(dcs.prototype_6.view.stirling_community_food.flow.chart_config(flow))));
 });
-dcs.prototype_6.view.stirling_community_food.flow.did_update = (function dcs$prototype_6$view$stirling_community_food$flow$did_update(this$,prev_props){
+dcs.prototype_6.view.stirling_community_food.flow.did_update = (function dcs$prototype_6$view$stirling_community_food$flow$did_update(this$,_prev_props){
 return dcs.prototype_6.view.stirling_community_food.flow.did_mount(this$);
 });
 dcs.prototype_6.view.stirling_community_food.flow.render = (function dcs$prototype_6$view$stirling_community_food$flow$render(){

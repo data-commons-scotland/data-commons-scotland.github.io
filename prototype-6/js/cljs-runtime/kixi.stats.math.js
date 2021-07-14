@@ -1,11 +1,11 @@
 goog.provide('kixi.stats.math');
 kixi.stats.math.PI = Math.PI;
 kixi.stats.math.abs = (function kixi$stats$math$abs(x){
-var G__35985 = x;
+var G__35786 = x;
 if((x < (0))){
-return (- G__35985);
+return (- G__35786);
 } else {
-return G__35985;
+return G__35786;
 }
 });
 kixi.stats.math.sqrt = (function kixi$stats$math$sqrt(x){
@@ -81,10 +81,10 @@ kixi.stats.math.LANCZOS_G = ((607) / (128));
  * Computes the Lanczos approximation to the Gamma function
  */
 kixi.stats.math.lanczos_approximation = (function kixi$stats$math$lanczos_approximation(x){
-return (cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (sum,p__35986){
-var vec__35987 = p__35986;
-var i = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__35987,(0),null);
-var l = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__35987,(1),null);
+return (cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (sum,p__35836){
+var vec__35837 = p__35836;
+var i = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__35837,(0),null);
+var l = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__35837,(1),null);
 return (sum + (l / (x + i)));
 }),0.0,kixi.stats.math.LANCZOS) + 0.9999999999999971);
 });
@@ -95,9 +95,9 @@ return (sum + (l / (x + i)));
 kixi.stats.math.inv_gamma_1pm1 = (function kixi$stats$math$inv_gamma_1pm1(x){
 var t = (((x <= 0.5))?x:((x - 0.5) - 0.5));
 if((t < (0))){
-var vec__35990 = kixi.stats.math.A;
-var a0 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__35990,(0),null);
-var a1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__35990,(1),null);
+var vec__35862 = kixi.stats.math.A;
+var a0 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__35862,(0),null);
+var a1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__35862,(1),null);
 var b = ((t * cljs.core.reduce.cljs$core$IFn$_invoke$arity$2((function (b,b_SINGLEQUOTE_){
 return ((t * b) + b_SINGLEQUOTE_);
 }),kixi.stats.math.B)) + (1));
@@ -149,10 +149,10 @@ return (kixi.stats.math.log_gamma_1p((x - (n + (1)))) + (function (){var i = (1)
 var p = 1.0;
 while(true){
 if((i <= n)){
-var G__36004 = (i + (1));
-var G__36005 = (p * (x - i));
-i = G__36004;
-p = G__36005;
+var G__35911 = (i + (1));
+var G__35912 = (p * (x - i));
+i = G__35911;
+p = G__35912;
 continue;
 } else {
 return kixi.stats.math.log(p);
@@ -179,10 +179,10 @@ var t = (x - (1));
 var p = (1);
 while(true){
 if((t > 1.5)){
-var G__36006 = (t - (1));
-var G__36007 = (p * t);
-t = G__36006;
-p = G__36007;
+var G__35918 = (t - (1));
+var G__35919 = (p * t);
+t = G__35918;
+p = G__35919;
 continue;
 } else {
 return (p / (kixi.stats.math.inv_gamma_1pm1(t) + (1)));
@@ -194,10 +194,10 @@ var t = (x + (1));
 var p = x;
 while(true){
 if((t < 0.5)){
-var G__36008 = (t + (1));
-var G__36009 = (p * t);
-t = G__36008;
-p = G__36009;
+var G__35922 = (t + (1));
+var G__35923 = (p * t);
+t = G__35922;
+p = G__35923;
 continue;
 } else {
 return ((1) / (p * (kixi.stats.math.inv_gamma_1pm1((t - (1))) + (1))));
@@ -230,14 +230,14 @@ while(true){
 if((i < max_iter)){
 var ap__$1 = (ap + (1));
 var del__$1 = (del * (x / ap__$1));
-var G__36011 = (i + (1));
-var G__36012 = ap__$1;
-var G__36013 = del__$1;
-var G__36014 = (sum + del__$1);
-i = G__36011;
-ap = G__36012;
-del = G__36013;
-sum = G__36014;
+var G__35924 = (i + (1));
+var G__35925 = ap__$1;
+var G__35926 = del__$1;
+var G__35927 = (sum + del__$1);
+i = G__35924;
+ap = G__35925;
+del = G__35926;
+sum = G__35927;
 continue;
 } else {
 return (sum * kixi.stats.math.exp((((a * kixi.stats.math.log(x)) - x) - kixi.stats.math.log_gamma(a))));
@@ -258,16 +258,16 @@ var c__$1 = (b__$1 + (an / c));
 var d__$2 = ((1) / d__$1);
 var h__$1 = ((h * d__$2) * c__$1);
 if((i < max_iter)){
-var G__36016 = (i + (1));
-var G__36017 = b__$1;
-var G__36018 = c__$1;
-var G__36019 = d__$2;
-var G__36020 = h__$1;
-i = G__36016;
-b = G__36017;
-c = G__36018;
-d = G__36019;
-h = G__36020;
+var G__35930 = (i + (1));
+var G__35931 = b__$1;
+var G__35932 = c__$1;
+var G__35933 = d__$2;
+var G__35934 = h__$1;
+i = G__35930;
+b = G__35931;
+c = G__35932;
+d = G__35933;
+h = G__35934;
 continue;
 } else {
 return ((1) - (h__$1 * kixi.stats.math.exp((((a * kixi.stats.math.log(x)) - x) - kixi.stats.math.log_gamma(a)))));
@@ -328,10 +328,10 @@ var x__$3 = (((x__$2 <= (0)))?(0.5 * (x__$2 + t__$1)):x__$2);
 if((((kixi.stats.math.abs(t__$1) < (EPS * x__$3))) || (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(j,(11))))){
 return x__$3;
 } else {
-var G__36025 = (j + (1));
-var G__36026 = x__$3;
-j = G__36025;
-x__$1 = G__36026;
+var G__35936 = (j + (1));
+var G__35937 = x__$3;
+j = G__35936;
+x__$1 = G__35937;
 continue;
 }
 }
@@ -396,14 +396,14 @@ var h__$2 = (h__$1 * del);
 if((((kixi.stats.math.abs(del) < 3.0E-7)) || ((m >= (100))))){
 return h__$2;
 } else {
-var G__36029 = (m + (1));
-var G__36030 = h__$2;
-var G__36031 = c__$2;
-var G__36032 = d__$3;
-m = G__36029;
-h = G__36030;
-c = G__36031;
-d__$1 = G__36032;
+var G__35941 = (m + (1));
+var G__35942 = h__$2;
+var G__35943 = c__$2;
+var G__35944 = d__$3;
+m = G__35941;
+h = G__35942;
+c = G__35943;
+d__$1 = G__35944;
 continue;
 }
 break;
@@ -476,10 +476,10 @@ var x__$3 = (((x__$2 <= (0)))?(0.5 * (x__$2 + t__$1)):(((x__$2 >= (1)))?(0.5 * (
 if((((j > (0))) && ((kixi.stats.math.abs(t__$1) < (eps * x__$3))))){
 return x__$3;
 } else {
-var G__36040 = (j + (1));
-var G__36041 = x__$3;
-j = G__36040;
-x__$1 = G__36041;
+var G__35946 = (j + (1));
+var G__35947 = x__$3;
+j = G__35946;
+x__$1 = G__35947;
 continue;
 }
 }
@@ -496,14 +496,14 @@ kixi.stats.math.erf = (function kixi$stats$math$erf(x){
 var x_SINGLEQUOTE_ = kixi.stats.math.abs(x);
 var t = ((2) / (x_SINGLEQUOTE_ + (2)));
 var ty = (((4) * t) - (2));
-var vec__35997 = cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (p__36000,cof){
-var vec__36001 = p__36000;
-var d = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__36001,(0),null);
-var dd = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__36001,(1),null);
+var vec__35886 = cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (p__35889,cof){
+var vec__35890 = p__35889;
+var d = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__35890,(0),null);
+var dd = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__35890,(1),null);
 return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[(((ty * d) - dd) + cof),d],null));
 }),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(0),(0)], null),new cljs.core.PersistentVector(null, 27, 5, cljs.core.PersistentVector.EMPTY_NODE, [-2.8E-17,1.21E-16,-9.4E-17,-1.523E-15,7.106E-15,3.81E-16,-1.12708E-13,3.13092E-13,8.94487E-13,-6.886027E-12,2.394038E-12,9.6467911E-11,-2.27365122E-10,-9.91364156E-10,5.059343495E-9,6.529054439E-9,-8.5238095915E-8,1.5626441722E-8,1.30365583558E-6,-1.624290004647E-6,-2.0278578112534E-5,4.2523324806907E-5,3.66839497852761E-4,-9.46595344482036E-4,-0.00956151478680863,0.019476473204185836,0.6419697923564902], null));
-var d = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__35997,(0),null);
-var dd = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__35997,(1),null);
+var d = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__35886,(0),null);
+var dd = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__35886,(1),null);
 var cof = -1.3026537197817094;
 var res = (t * kixi.stats.math.exp(((((- x_SINGLEQUOTE_) * x_SINGLEQUOTE_) + (0.5 * ((ty * d) + cof))) + (- dd))));
 if((x < (0))){
@@ -536,10 +536,10 @@ var x__$1 = x;
 while(true){
 if((j < (2))){
 var err = (kixi.stats.math.erfc(x__$1) - pp);
-var G__36042 = (j + (1));
-var G__36043 = (x__$1 + (err / ((1.1283791670955126 * kixi.stats.math.exp(((- x__$1) * x__$1))) - (x__$1 * err))));
-j = G__36042;
-x__$1 = G__36043;
+var G__35959 = (j + (1));
+var G__35960 = (x__$1 + (err / ((1.1283791670955126 * kixi.stats.math.exp(((- x__$1) * x__$1))) - (x__$1 * err))));
+j = G__35959;
+x__$1 = G__35960;
 continue;
 } else {
 return x__$1;
