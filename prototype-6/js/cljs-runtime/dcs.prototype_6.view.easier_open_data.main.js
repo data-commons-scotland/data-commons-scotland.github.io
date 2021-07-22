@@ -12,15 +12,15 @@ ele.classList.add("is-selected");
 var temp__5735__auto__ = window.scrollY;
 if(cljs.core.truth_(temp__5735__auto__)){
 var scrolledY = temp__5735__auto__;
-return window.scroll((0),(scrolledY - (50)));
+return window.scroll((0),(scrolledY - (65)));
 } else {
 return null;
 }
 });
 });
 dcs.prototype_6.view.easier_open_data.main.dimension_row = (function dcs$prototype_6$view$easier_open_data$main$dimension_row(var_args){
-var G__34793 = arguments.length;
-switch (G__34793) {
+var G__34237 = arguments.length;
+switch (G__34237) {
 case 6:
 return dcs.prototype_6.view.easier_open_data.main.dimension_row.cljs$core$IFn$_invoke$arity$6((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),(arguments[(4)]),(arguments[(5)]));
 
@@ -47,13 +47,13 @@ return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentVector.E
 (dcs.prototype_6.view.easier_open_data.main.dimension_row.cljs$lang$maxFixedArity = 10);
 
 dcs.prototype_6.view.easier_open_data.main.root = (function dcs$prototype_6$view$easier_open_data$main$root(route){
-var target = (function (){var G__34797 = route;
-var G__34797__$1 = (((G__34797 == null))?null:new cljs.core.Keyword(null,"parameters","parameters",-1229919748).cljs$core$IFn$_invoke$arity$1(G__34797));
-var G__34797__$2 = (((G__34797__$1 == null))?null:new cljs.core.Keyword(null,"query","query",-1288509510).cljs$core$IFn$_invoke$arity$1(G__34797__$1));
-if((G__34797__$2 == null)){
+var target = (function (){var G__34238 = route;
+var G__34238__$1 = (((G__34238 == null))?null:new cljs.core.Keyword(null,"parameters","parameters",-1229919748).cljs$core$IFn$_invoke$arity$1(G__34238));
+var G__34238__$2 = (((G__34238__$1 == null))?null:new cljs.core.Keyword(null,"query","query",-1288509510).cljs$core$IFn$_invoke$arity$1(G__34238__$1));
+if((G__34238__$2 == null)){
 return null;
 } else {
-return new cljs.core.Keyword(null,"target","target",253001721).cljs$core$IFn$_invoke$arity$1(G__34797__$2);
+return new cljs.core.Keyword(null,"target","target",253001721).cljs$core$IFn$_invoke$arity$1(G__34238__$2);
 }
 })();
 if(cljs.core.truth_(target)){
