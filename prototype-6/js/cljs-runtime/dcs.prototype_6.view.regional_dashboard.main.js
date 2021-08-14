@@ -1,12 +1,12 @@
 goog.provide('dcs.prototype_6.view.regional_dashboard.main');
 dcs.prototype_6.view.regional_dashboard.main.root = (function dcs$prototype_6$view$regional_dashboard$main$root(route){
-var region = (function (){var G__33342 = route;
-var G__33342__$1 = (((G__33342 == null))?null:new cljs.core.Keyword(null,"parameters","parameters",-1229919748).cljs$core$IFn$_invoke$arity$1(G__33342));
-var G__33342__$2 = (((G__33342__$1 == null))?null:new cljs.core.Keyword(null,"query","query",-1288509510).cljs$core$IFn$_invoke$arity$1(G__33342__$1));
-if((G__33342__$2 == null)){
+var region = (function (){var G__31618 = route;
+var G__31618__$1 = (((G__31618 == null))?null:new cljs.core.Keyword(null,"parameters","parameters",-1229919748).cljs$core$IFn$_invoke$arity$1(G__31618));
+var G__31618__$2 = (((G__31618__$1 == null))?null:new cljs.core.Keyword(null,"query","query",-1288509510).cljs$core$IFn$_invoke$arity$1(G__31618__$1));
+if((G__31618__$2 == null)){
 return null;
 } else {
-return new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(G__33342__$2);
+return new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(G__31618__$2);
 }
 })();
 cljs.core.reset_BANG_(dcs.prototype_6.state.region_cursor,region);
