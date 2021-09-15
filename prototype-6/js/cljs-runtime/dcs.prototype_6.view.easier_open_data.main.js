@@ -1,24 +1,24 @@
 goog.provide('dcs.prototype_6.view.easier_open_data.main');
-dcs.prototype_6.view.easier_open_data.main.dataset_row = (function dcs$prototype_6$view$easier_open_data$main$dataset_row(p__39953){
-var map__39954 = p__39953;
-var map__39954__$1 = cljs.core.__destructure_map(map__39954);
-var name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__39954__$1,new cljs.core.Keyword(null,"name","name",1843675177));
-var description = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__39954__$1,new cljs.core.Keyword(null,"description","description",-1428560544));
-var creator = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__39954__$1,new cljs.core.Keyword(null,"creator","creator",-1069241724));
-var supplier = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__39954__$1,new cljs.core.Keyword(null,"supplier","supplier",18255489));
-var supply_url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__39954__$1,new cljs.core.Keyword(null,"supply-url","supply-url",1883899933));
-var licence = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__39954__$1,new cljs.core.Keyword(null,"licence","licence",-492278701));
-var licence_url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__39954__$1,new cljs.core.Keyword(null,"licence-url","licence-url",-365994599));
+dcs.prototype_6.view.easier_open_data.main.dataset_row = (function dcs$prototype_6$view$easier_open_data$main$dataset_row(p__36039){
+var map__36040 = p__36039;
+var map__36040__$1 = cljs.core.__destructure_map(map__36040);
+var name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__36040__$1,new cljs.core.Keyword(null,"name","name",1843675177));
+var description = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__36040__$1,new cljs.core.Keyword(null,"description","description",-1428560544));
+var creator = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__36040__$1,new cljs.core.Keyword(null,"creator","creator",-1069241724));
+var supplier = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__36040__$1,new cljs.core.Keyword(null,"supplier","supplier",18255489));
+var supply_url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__36040__$1,new cljs.core.Keyword(null,"supply-url","supply-url",1883899933));
+var licence = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__36040__$1,new cljs.core.Keyword(null,"licence","licence",-492278701));
+var licence_url = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__36040__$1,new cljs.core.Keyword(null,"licence-url","licence-url",-365994599));
 return new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"id","id",-1388402092),name], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a","a",-2123407586),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"href","href",-793805698),reitit.frontend.easy.href.cljs$core$IFn$_invoke$arity$3(new cljs.core.Keyword("dcs.prototype-6.router","data-view","dcs.prototype-6.router/data-view",1255890014),null,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"target","target",253001721),name], null))], null),name], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),description], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),creator], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a","a",-2123407586),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"href","href",-793805698),supply_url,new cljs.core.Keyword(null,"target","target",253001721),"_blank"], null),supplier], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a","a",-2123407586),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"href","href",-793805698),licence_url,new cljs.core.Keyword(null,"target","target",253001721),"_blank"], null),licence], null)], null)], null);
 });
 dcs.prototype_6.view.easier_open_data.main.ele = (function dcs$prototype_6$view$easier_open_data$main$ele(route,metas){
-var target = (function (){var G__39955 = route;
-var G__39955__$1 = (((G__39955 == null))?null:new cljs.core.Keyword(null,"parameters","parameters",-1229919748).cljs$core$IFn$_invoke$arity$1(G__39955));
-var G__39955__$2 = (((G__39955__$1 == null))?null:new cljs.core.Keyword(null,"query","query",-1288509510).cljs$core$IFn$_invoke$arity$1(G__39955__$1));
-if((G__39955__$2 == null)){
+var target = (function (){var G__36041 = route;
+var G__36041__$1 = (((G__36041 == null))?null:new cljs.core.Keyword(null,"parameters","parameters",-1229919748).cljs$core$IFn$_invoke$arity$1(G__36041));
+var G__36041__$2 = (((G__36041__$1 == null))?null:new cljs.core.Keyword(null,"query","query",-1288509510).cljs$core$IFn$_invoke$arity$1(G__36041__$1));
+if((G__36041__$2 == null)){
 return null;
 } else {
-return new cljs.core.Keyword(null,"target","target",253001721).cljs$core$IFn$_invoke$arity$1(G__39955__$2);
+return new cljs.core.Keyword(null,"target","target",253001721).cljs$core$IFn$_invoke$arity$1(G__36041__$2);
 }
 })();
 if(cljs.core.truth_(target)){
