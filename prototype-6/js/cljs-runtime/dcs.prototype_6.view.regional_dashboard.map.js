@@ -5,7 +5,7 @@ dcs.prototype_6.view.regional_dashboard.map.init_lng = -3.7;
 dcs.prototype_6.view.regional_dashboard.map.init_zoom = (6);
 dcs.prototype_6.view.regional_dashboard.map.basemap_url = "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 dcs.prototype_6.view.regional_dashboard.map.basemap_maxzoom = (18);
-dcs.prototype_6.view.regional_dashboard.map.basemap_attribution = "<a href='https://data-commons-scotland.github.io/dcs-wcs-prototype-3/pages-output/data/about/'>Data</a>";
+dcs.prototype_6.view.regional_dashboard.map.basemap_attribution = "<a href='/#/data'>Attributions</a>";
 dcs.prototype_6.view.regional_dashboard.map.component_holder = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(null);
 dcs.prototype_6.view.regional_dashboard.map.geojson_layer_holder = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(null);
 dcs.prototype_6.view.regional_dashboard.map.x_for_region_holder = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(null);
