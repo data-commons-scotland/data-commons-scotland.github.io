@@ -5,11 +5,11 @@ return cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"encod
 });
 dcs.prototype_6.view.regional_dashboard.household_waste_derivation_percent_recycled.explain_scotGovTarget_percentageRecycled = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),"By 2025, the Scottish Government aims to recycle 70% of waste."], null);
 dcs.prototype_6.view.regional_dashboard.household_waste_derivation_percent_recycled.chart = (function dcs$prototype_6$view$regional_dashboard$household_waste_derivation_percent_recycled$chart(region,household_waste_derivation_percent_recycled){
-var household_waste_derivation_percent_recycled_SINGLEQUOTE_ = cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__35904_SHARP_){
-return cljs.core.contains_QMARK_(cljs.core.PersistentHashSet.createAsIfByAssoc(["Scotland","Scot gov target",region]),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__35904_SHARP_));
+var household_waste_derivation_percent_recycled_SINGLEQUOTE_ = cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__35014_SHARP_){
+return cljs.core.contains_QMARK_(cljs.core.PersistentHashSet.createAsIfByAssoc(["Scotland","Scot gov target",region]),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__35014_SHARP_));
 }),household_waste_derivation_percent_recycled);
-var household_waste_derivation_percent_recycled_SINGLEQUOTE__SINGLEQUOTE_ = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__35905_SHARP_){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__35905_SHARP_,new cljs.core.Keyword(null,"year","year",335913393),cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__35905_SHARP_)));
+var household_waste_derivation_percent_recycled_SINGLEQUOTE__SINGLEQUOTE_ = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__35015_SHARP_){
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__35015_SHARP_,new cljs.core.Keyword(null,"year","year",335913393),cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__35015_SHARP_)));
 }),household_waste_derivation_percent_recycled_SINGLEQUOTE_);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [oz.core.vega_lite,dcs.prototype_6.view.regional_dashboard.household_waste_derivation_percent_recycled.chart_spec("% recycled",region,household_waste_derivation_percent_recycled_SINGLEQUOTE__SINGLEQUOTE_),dcs.prototype_6.util.vega_embed_opts], null)], null);
 });
