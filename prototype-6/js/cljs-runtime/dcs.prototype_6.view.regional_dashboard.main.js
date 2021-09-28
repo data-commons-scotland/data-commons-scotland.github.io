@@ -1,14 +1,12 @@
 goog.provide('dcs.prototype_6.view.regional_dashboard.main');
 dcs.prototype_6.view.regional_dashboard.main.root = (function dcs$prototype_6$view$regional_dashboard$main$root(route){
-reagent.core.after_render(dcs.prototype_6.util.scroll_fn.cljs$core$IFn$_invoke$arity$0());
-
-var region = (function (){var G__33379 = route;
-var G__33379__$1 = (((G__33379 == null))?null:new cljs.core.Keyword(null,"parameters","parameters",-1229919748).cljs$core$IFn$_invoke$arity$1(G__33379));
-var G__33379__$2 = (((G__33379__$1 == null))?null:new cljs.core.Keyword(null,"query","query",-1288509510).cljs$core$IFn$_invoke$arity$1(G__33379__$1));
-if((G__33379__$2 == null)){
+var region = (function (){var G__33323 = route;
+var G__33323__$1 = (((G__33323 == null))?null:new cljs.core.Keyword(null,"parameters","parameters",-1229919748).cljs$core$IFn$_invoke$arity$1(G__33323));
+var G__33323__$2 = (((G__33323__$1 == null))?null:new cljs.core.Keyword(null,"query","query",-1288509510).cljs$core$IFn$_invoke$arity$1(G__33323__$1));
+if((G__33323__$2 == null)){
 return null;
 } else {
-return new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(G__33379__$2);
+return new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(G__33323__$2);
 }
 })();
 cljs.core.reset_BANG_(dcs.prototype_6.state.region_cursor,region);
