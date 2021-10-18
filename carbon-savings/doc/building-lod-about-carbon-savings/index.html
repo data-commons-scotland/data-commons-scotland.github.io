@@ -497,10 +497,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#gen">3.4. Generating an RDF graph</a></li>
 </ul>
 </li>
-<li><a href="#_using_the_linked_data">4. Using the linked data</a></li>
-<li><a href="#_next">5. Next?</a>
-<ul class="sectlevel4">
-<li><a href="#_todos">TODOs</a></li>
+<li><a href="#_using_the_linked_data">4. Using the linked data</a>
+<ul class="sectlevel2">
+<li><a href="#_todo">4.1. TODO</a></li>
+</ul>
+</li>
+<li><a href="#_concluding_remarks">5. Concluding remarks</a>
+<ul class="sectlevel2">
+<li><a href="#_vocabularies_naming_and_structuring">5.1. Vocabularies, naming and structuring</a></li>
+<li><a href="#_be_careful_when_comparing">5.2. Be careful when comparing</a></li>
+<li><a href="#_support_needed_for_composition_revision_and_provenance">5.3. Support needed for composition, revision and provenance</a></li>
+<li><a href="#_future">5.4. Future?</a></li>
 </ul>
 </li>
 <li><a href="#_references">References</a></li>
@@ -655,7 +662,7 @@ Here&#8217;s a snippet of data from that file:</p>
 <ol class="lowerroman" type="i">
 <li>
 <p>mapping text values into controlled, canonical <em>code lists</em>
-(e.g. the Scottish Carbon Metric&#8217;s list of <code>materials</code>;
+(e.g. the Scottish Carbon Metric&#8217;s <a href="#carbon-metric">[carbon-metric]</a> list of <code>materials</code>;
 and our list of carbon-savings <code>enabler</code> organisations)</p>
 </li>
 <li>
@@ -683,7 +690,7 @@ and our list of carbon-savings <code>enabler</code> organisations)</p>
 </td>
 <td class="content">
 Our process is basically: messy data → <em>tidy</em> CSV data.<br>
-The <a href="https://vita.had.co.nz/papers/tidy-data.html">Tidy Data</a> paper provides
+The Tidy Data paper <a href="#tidy-data">[tidy-data]</a> provides
 good rationale for and examples of this process, generalised.
 </td>
 </tr>
@@ -695,7 +702,7 @@ good rationale for and examples of this process, generalised.
 <div class="ulist">
 <ul>
 <li>
-<p>Use The Scottish Carbon Metric as the basis for measuring carbon savings.
+<p>Use The Scottish Carbon Metric <a href="#carbon-metric">[carbon-metric]</a> as the basis for measuring carbon savings.
 This is refered to via the <code>scottish-carbon-metric-material</code> column; and we will discuss it
 further in section <a href="#r-data"> 2</a>.</p>
 </li>
@@ -733,12 +740,12 @@ outlining some per-source specifics.</p>
 </div>
 </div>
 <div class="paragraph">
-<p><a href="https://ace.scot/">Alloa Community Enterprises</a>' (ACE)
+<p><a href="https://ace.scot/" target="_blank" rel="noopener">Alloa Community Enterprises</a>' (ACE)
 furniture reuse initiative has been running since 1984, helping prevent furniture from becoming waste.</p>
 </div>
 <div class="paragraph">
 <p>ACE is in the process of publishing its data as open data.
-The following examples of measurement data have been taken from a <strong>draft</strong> of that work.</p>
+The following <strong>samples</strong> of measurement data have been taken from a draft of that work.</p>
 </div>
 <div class="paragraph">
 <p>Here&#8217;s a snipped image of ACE&#8217;s measurement data:</p>
@@ -865,12 +872,12 @@ Here&#8217;s a snippet of data from that file:</p>
 </div>
 </div>
 <div class="paragraph">
-<p><a href="https://www.transitionstirling.org.uk/community-food">Stirling Community Food</a>
+<p><a href="https://www.transitionstirling.org.uk/community-food" target="_blank" rel="noopener">Stirling Community Food</a>
  is a project that helps to reduce food waste in Stirling by collecting (from supermarkets &amp; aggregators) excess and near-sell-by-date food, routing it away from waste bins, and making it available (for free) to the community.</p>
 </div>
 <div class="paragraph">
 <p>Stirling Community Food is in the process of publishing its data as open data.
-The following examples of measurement data have been taken from a <strong>draft</strong> of that work.</p>
+The following <strong>samples</strong> of measurement data have been taken from a draft of that work.</p>
 </div>
 <div class="paragraph">
 <p>Here&#8217;s a snipped image of Stirling Community Food&#8217;s measurement data:</p>
@@ -993,10 +1000,10 @@ Here&#8217;s the data from that file:</p>
 </div>
 </div>
 <div class="paragraph">
-<p><a href="https://stirling.gov.uk/council-democracy/access-to-information/open-data/">Stirling Council</a> set a precedent by being the first (and still only) Scottish local authority to have published open data about their <a href="https://data.stirling.gov.uk/dataset/waste-management">bin collection of household waste</a>.</p>
+<p><a href="https://stirling.gov.uk/council-democracy/access-to-information/open-data/" target="_blank" rel="noopener">Stirling Council</a> set a precedent by being the first (and still only) Scottish local authority to have published open data about their <a href="https://data.stirling.gov.uk/dataset/waste-management" target="_blank" rel="noopener">bin collection of household waste</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following examples of measurement data have been taken from that published data.</p>
+<p>The following <strong>samples</strong> of measurement data have been taken from that published data.</p>
 </div>
 <div class="paragraph">
 <p>Here&#8217;s a snipped image of Stirling Council&#8217;s measurement data:</p>
@@ -1116,11 +1123,11 @@ Here&#8217;s a snippet of data from that file:</p>
 </div>
 </div>
 <div class="paragraph">
-<p><a href="https://www.stirlingstudentsunion.com/sustainability/fairshare/">The Fair Share</a> is a university based, reuse store. It accepts donations of second-hand books, clothes, kitchenware, electricals, etc. and sells these to students.</p>
+<p><a href="https://www.stirlingstudentsunion.com/sustainability/fairshare/" target="_blank" rel="noopener">The Fair Share</a> is a university based, reuse store. It accepts donations of second-hand books, clothes, kitchenware, electricals, etc. and sells these to students.</p>
 </div>
 <div class="paragraph">
 <p>The Fair Share is in the process of publishing its data as open data.
-The following examples of measurement data have been taken from a <strong>draft</strong> of that work.</p>
+The following <strong>samples</strong> of measurement data have been taken from a draft of that work.</p>
 </div>
 <div class="paragraph">
 <p>Here&#8217;s a snipped image of The fair Share&#8217;s measurement data:</p>
@@ -1261,13 +1268,13 @@ Here&#8217;s a snippet of data from that file:</p>
 <h2 id="r-data">2. Reference data → CSVs</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this section we walk-through building our two reference data CSVs.</p>
+<p>In this section we walk-through building our two reference (<em>axiomatic</em>) data CSVs.</p>
 </div>
 <div class="sect2">
 <h3 id="_carbon_metric">2.1. Carbon metric</h3>
 <div class="paragraph">
 <p>The <em>carbon impact</em> is a measure devised by
-<a href="https://www.zerowastescotland.org.uk/">Zero Waste Scotland</a> (ZWS),
+<a href="https://www.zerowastescotland.org.uk/" target="_blank" rel="noopener">Zero Waste Scotland</a> (ZWS),
 to convey the whole-life carbon impact of waste, from resource extraction and manufacturing emissions, right through to waste management emissions.
 Its unit-of-measure is <em>tonnes of carbon dioxide equivalent</em> (CO<sub>2</sub>eT).</p>
 </div>
@@ -1276,7 +1283,7 @@ Its unit-of-measure is <em>tonnes of carbon dioxide equivalent</em> (CO<sub>2</s
 </div>
 <div class="paragraph">
 <p>It is defined in
-<a href="https://www.zerowastescotland.org.uk/sites/default/files/The%20Scottish%20Carbon%20Metric.pdf" target="_blank" rel="noopener">The Scottish Carbon Metric</a> document.
+The Scottish Carbon Metric document <a href="#carbon-metric">[carbon-metric]</a>.
 For our purpose, its key data is in table 6.2.
 This contains per-material weight-multipliers that can be used to calaculate CO<sub>2</sub>eT amounts.</p>
 </div>
@@ -1296,7 +1303,7 @@ This contains per-material weight-multipliers that can be used to calaculate CO<
 </td>
 <td class="content">
 This table&#8217;s data has been published as linked open data by our project, in previous work.
-See the <code>co2e-multiplier</code> files in <a href="https://github.com/data-commons-scotland/dcs-easier-open-data">this repo</a>. But we will redo that work here so that that we can provide an explanatory walk-through.
+See the <code>co2e-multiplier</code> files in <a href="https://github.com/data-commons-scotland/dcs-easier-open-data" target="_blank" rel="noopener">this Git repo</a>. But we will redo that work here so that that we can provide an explanatory walk-through.
 </td>
 </tr>
 </table>
@@ -1477,7 +1484,7 @@ for publication as <strong>open data</strong> without further augmentation.</p>
 </div>
 <div class="paragraph">
 <p>For a standalone case study, this may be good enough
-but, for our data to become part of the global linked data graph,
+but, for our data to become part of the global linked data graph <a href="#linked-data">[linked-data]</a>,
 we need to define its semantics <em>explicitly</em>, in standardised way.
 I.e. we need to describe our data using standard <em>linked data vocabularies</em>,
 to explain to everyone how to interpret our data and how it is linked to other data.</p>
@@ -1486,12 +1493,12 @@ to explain to everyone how to interpret our data and how it is linked to other d
 <div class="sect2">
 <h3 id="_using_csvw">3.3. Using CSVW</h3>
 <div class="paragraph">
-<p><a href="http://www.w3.org/TR/tabular-data-primer/">CSV on the Web</a> (CSVW)
+<p>CSV on the Web (CSVW) <a href="#CSVW">[CSVW]</a>
 is a standardised mechanism for associating linked data semantics/<em>metadata</em> with CSV files.</p>
 </div>
 <div class="paragraph">
 <p>It is nice because it allows us to keep our existing CSVs simple: unadulterated by
-linked data complications. (Although the CSVs must be of the <a href="#tidy">tidy</a> kind,
+linked data complications. (Although the CSVs must be of the <em>tidy</em> kind <a href="#tidy-data">[tidy-data]</a>,
 as output from sections <a href="#r-data"> 2</a> &amp; <a href="#m-data"> 1</a>.)</p>
 </div>
 <div class="paragraph">
@@ -1538,11 +1545,11 @@ contains the CSVW that gives linked data semantics to the
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Assign standard (<a href="https://www.w3.org/2001/XMLSchema">XMLSchema</a>) data types to each of the CSV&#8217;s columns.</td>
+<td>Assign standard (<a href="https://www.w3.org/2001/XMLSchema" target="_blank" rel="noopener">XMLSchema</a>) data types to each of the CSV&#8217;s columns.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Define a new RDF <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate">predicate</a> for each of the CSV&#8217;s columns.</td>
+<td>Define a new RDF <a href="https://www.w3.org/TR/rdf11-concepts/#dfn-predicate" target="_blank" rel="noopener">predicate</a> for each of the CSV&#8217;s columns.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
@@ -1550,7 +1557,7 @@ contains the CSVW that gives linked data semantics to the
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
-<td>Define the <em>virtual</em>, standard predicate <a href="https://www.w3.org/TR/rdf-schema/#ch_type">rdf:type</a> to say what <em>class</em> these rows are.</td>
+<td>Define the <em>virtual</em>, standard predicate <a href="https://www.w3.org/TR/rdf-schema/#ch_type" target="_blank" rel="noopener">rdf:type</a> to say what <em>class</em> these rows are.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="5"></i><b>5</b></td>
@@ -1558,7 +1565,7 @@ contains the CSVW that gives linked data semantics to the
 </tr>
 <tr>
 <td><i class="conum" data-value="6"></i><b>6</b></td>
-<td>Define how to construct the <a href="https://www.w3.org/TR/rdf-concepts/#section-Graph-URIref">URI</a> (unique identifier) for each of the CSV&#8217;s rows.</td>
+<td>Define how to construct the <a href="https://www.w3.org/TR/rdf-concepts/#section-Graph-URIref" target="_blank" rel="noopener">URI</a> (unique identifier) for each of the CSV&#8217;s rows.</td>
 </tr>
 </table>
 </div>
@@ -1701,8 +1708,8 @@ additional level of granularity.</td>
 <div class="sect2">
 <h3 id="gen">3.4. Generating an RDF graph</h3>
 <div class="paragraph">
-<p>We use <a href="https://www.swirrl.com">Swirrl</a>'s useful
-<a href="https://github.com/Swirrl/csv2rdf">csv2rdf</a> tool to generate a linked data/RDF graph of our data:</p>
+<p>We use <a href="https://www.swirrl.com" target="_blank" rel="noopener">Swirrl</a>'s useful
+<a href="https://github.com/Swirrl/csv2rdf" target="_blank" rel="noopener">csv2rdf</a> tool to generate a linked data/RDF graph of our data:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1750,7 +1757,7 @@ carbon-metric.ttl	carbon-savings.ttl	enablers.ttl <i class="conum" data-value="3
 <div class="paragraph">
 <p>The linked data/RDF graph is defined by the Turtle files that we generated in section <a href="#gen"> 3.4</a>.
 To help us examine and query the RDF graph, we use the
-<a href="https://github.com/blazegraph/database">Blazegraph</a> tool.</p>
+<a href="https://github.com/blazegraph/database" target="_blank" rel="noopener">Blazegraph</a> tool.</p>
 </div>
 <div class="paragraph">
 <p>First we load our Turtle files into Blazegraph&#8217;s data store:</p>
@@ -1799,61 +1806,136 @@ Go to http://192.168.1.106:9999/blazegraph/ to get started.</code></pre>
 </tr>
 </table>
 </div>
+<div class="sect2">
+<h3 id="_todo">4.1. TODO</h3>
+<div class="paragraph">
+<p>Provide 2 usage examples that are based on larger samples of our datasets:</p>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_next">5. Next?</h2>
-<div class="sectionbody">
-<div class="sect4">
-<h5 id="_todos">TODOs</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Add other dimensions such as geographic region (sourced from? given to?)</p>
+<p>A SPARQL inference example</p>
 </li>
 <li>
-<p>Adopt other vocabs? (statistical vocabs?)</p>
+<p>A graph for each source, depicting carbon savings in terms of cars/planes journeys/etc.</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/usage-placeholder-fairshare.png" alt="A placeholder graph for how the carbon savings information can be used" width="50%">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_concluding_remarks">5. Concluding remarks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We finish with some open questions, points of interest arising, and ideas for future development.</p>
+</div>
+<div class="sect2">
+<h3 id="_vocabularies_naming_and_structuring">5.1. Vocabularies, naming and structuring</h3>
+<div class="paragraph">
+<p>Since we&#8217;re dealing with measurement data, should we adopt <em>statistical</em> RDF vocabularities
+such as <a href="https://www.w3.org/TR/vocab-data-cube/" target="_blank" rel="noopener">Data Cube</a>
+and <a href="https://sdmx.org/?page_id=2555/" target="_blank" rel="noopener">SDMX</a>? We could use these to descibe additonal aspects
+of our data (e.g. to assocate <code>material</code> with the exact concept of SDMX&#8217;s code list; to explicitly differentiate between identification and measurement dimension; to say more about our unit of measure). However, these would complicate the data model
+and, for our purpose, be more of a hinderance than a help.</p>
+</div>
+<div class="paragraph">
+<p>CSVW <em>bakes in</em> support for vocabularies such as
+<a href="http://dublincore.org/documents/dcmi-terms/" target="_blank" rel="noopener">Dublin Core</a>
+and <a href="http://schema.org/" target="_blank" rel="noopener">schema.org</a>.
+This makes it convenient to add
+<code>dc:description</code> and <code>schema:latitude</code> annotations/explanations to the data but,
+we haven&#8217;t made use of this.</p>
+</div>
+<div class="paragraph">
+<p>Should the class <code>carbon-metric</code> have been named <code>co2e-multipler</code>
+to reflect the more specific purpose of its data?
+And then, its <code>hasMaterial</code> property be redefined as <code>rdfs:label</code>?
+Naming and structuring the data is very important but,
+it isn&#8217;t the focus of this piece of work,
+so we didn&#8217;t <em>go all round the houses</em> to get it right here.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_be_careful_when_comparing">5.2. Be careful when comparing</h3>
+<div class="paragraph">
+<p>This work is exploratory and uses small, non-comparable samples of data.
+If it were to be put into practice and based on fuller operational data
+then this approach could be used both to highlight and, to very roughly compare the
+carbon savings aspect of the <code>enabler</code> organisations.
+When used of the latter purpose - comparison - care should be exercised
+because of the dissimilar sizes of the <code>enabler</code> organisations and,
+dissimilar types of reuse materials.
+(Remember the laudable intent of the <code>enabler</code> organisations in their reuse work!)</p>
+</div>
+<div class="paragraph">
+<p>On a more specific note about comparing:
+The <code>carbon-savings</code> records report on different time intervals
+so be careful to calculate comparable (say, per-day) amounts from the records.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_support_needed_for_composition_revision_and_provenance">5.3. Support needed for composition, revision and provenance</h3>
+<div class="paragraph">
+<p>As data becomes available, it should be possible to <em>compose</em> it into an
+<em>accumulation</em> of open linked data about carbon savings.</p>
+</div>
+<div class="paragraph">
+<p><em>Compose</em> scenarios include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>New data becoming available out-of-order.</p>
 </li>
 <li>
-<p>Annotations like dc:title ?</p>
+<p>New data revising old data.</p>
 </li>
 <li>
-<p>say something about naming and structure&#8230;&#8203; important.
-Should carbon-metric have been co2e-multipler
-with its hasMaterial property being rdfs:label ?</p>
+<p>New data conflicting with old data, where new and old have different provenances.</p>
 </li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There are many approaches (temporal databases, distributed ledgers, linked data event streams) and interesting solutions
+(<a href="https://flur.ee" target="_blank" rel="noopener">Fluree</a>;
+<a href="https://tree.linkeddatafragments.org" target="_blank" rel="noopener">TREE</a>;
+even <a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F" target="_blank" rel="noopener">Git</a> to some extent),
+that claim to support those <em>compose</em> scenarios and their related concerns (including ordering, durability, availablity, identity, consensus, and branching).</p>
+</div>
+<div class="paragraph">
+<p>However, using any of them would be future work.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_future">5.4. Future?</h3>
+<div class="paragraph">
+<p>Would it be useful to build on this?</p>
+</div>
+<div class="paragraph">
+<p>Basis for an <em>app</em>?</p>
+</div>
+<div class="paragraph">
+<p>If we develop a prototype <em>app</em> for collecting and publishing carbon savings data
+(along the lines of this exploratory walk through)
+then&#8230;&#8203;</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p>this is allows us to very-roughly compare the carbon-saving aspect of the responsible-entities</p>
-</li>
-<li>
-<p>hmmm, like any tool, it can be/drive/build good and bad. Hopefully good in today&#8217;s context. But for now, this is just an exploratory exercise.</p>
-</li>
-<li>
-<p>publishing it as open data (e.g. on GitHub)</p>
-</li>
-<li>
-<p>data revision?
-fact retraction and upsert</p>
-</li>
-<li>
-<p>cardinality, extra granularity, appending to amounts as the data comes in</p>
-</li>
-<li>
-<p>be careful to calculate comparable (say, per-day) amounts from records that report on
-different time intervals.</p>
+<p>publishing it as open data (e.g. on GitHub) - dump vs API</p>
 </li>
 <li>
 <p>Support upload by enablers (upload &#8594; validate &#8594; add to the published LoD)</p>
 </li>
 <li>
-<p>some aspects of 'provenance' - storer id and timestamps - might be best left to the
-comms &amp; storage environment (e.g. Git, Fluree, etc.).</p>
-</li>
-<li>
-<p>Context: COP26 etc.</p>
-</li>
-<li>
-<p>a "proper" bibliography?</p>
+<p>Of interest to people given this century&#8217;s environmental concerns
+and the COP26 climate conference in Scotland?</p>
 </li>
 </ul>
 </div>
@@ -1867,13 +1949,16 @@ comms &amp; storage environment (e.g. Git, Fluree, etc.).</p>
 <ul class="bibliography">
 <li>
 <p><a id="carbon-metric"></a>[carbon-metric] Zero Waste Scotland.
-<a href="https://www.zerowastescotland.org.uk/sites/default/files/The%20Scottish%20Carbon%20Metric.pdf">The Scottish Carbon Metric</a>. 2011.</p>
+<a href="https://www.zerowastescotland.org.uk/sites/default/files/The%20Scottish%20Carbon%20Metric.pdf" target="_blank" rel="noopener">The Scottish Carbon Metric</a>. 2011.</p>
 </li>
 <li>
-<p><a id="linked-data"></a>[linked-data] W3C. <a href="https://www.w3.org/TR/REC-rdf-syntax/">RDF/XML Syntax Specification</a>. 2004.</p>
+<p><a id="tidy-data"></a>[tidy-data] Hadley Wickham. <a href="https://vita.had.co.nz/papers/tidy-data.html" target="_blank" rel="noopener">Tidy data</a>. 2014.</p>
 </li>
 <li>
-<p><a id="CSVW"></a>[CSVW] W3C. <a href="https://www.w3.org/TR/tabular-data-primer">CSV on the Web: A Primer</a>. 2016.</p>
+<p><a id="linked-data"></a>[linked-data] Tim Berners-Lee. <a href="https://www.w3.org/DesignIssues/LinkedData.html/" target="_blank" rel="noopener">Linked Data</a>. 2006.</p>
+</li>
+<li>
+<p><a id="CSVW"></a>[CSVW] W3C. <a href="https://www.w3.org/TR/tabular-data-primer" target="_blank" rel="noopener">CSV on the Web: A Primer</a>. 2016.</p>
 </li>
 </ul>
 </div>
@@ -1882,7 +1967,7 @@ comms &amp; storage environment (e.g. Git, Fluree, etc.).</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-10-15 15:10:57 +0100
+Last updated 2021-10-18 16:26:14 +0100
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
