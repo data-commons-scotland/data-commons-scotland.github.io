@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.16">
-<meta name="keywords" content="LoD, OD, linked open data, CSVW, RDF, charty, 3rd sector, Scottish, Scotland, waste, reuse, recycle, carbon impact, carbon saving, CO2e, carbon metric, COP26, Swirrl, Blazegraph, Vega-lite, Clojure">
+<meta name="keywords" content="waste, reuse, recycle, carbon impact, carbon saving, CO2e, carbon metric, 3rd sector, Scottish, Scotland, linked data, open data, CSVW, RDF, Swirrl, Vega, Clojure">
 <meta name="author" content="The Data Commons Scotland project, Greg Singh, Anna Wilson, Hannah Hamilton, Ashley McClenaghan">
 <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 <title>Building linked open data about carbon savings</title>
@@ -499,7 +499,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_using_the_linked_data">4. Using the linked data</a>
 <ul class="sectlevel2">
-<li><a href="#_todo">4.1. TODO</a></li>
+<li><a href="#_a_straightforward_query">4.1. A straightforward query</a></li>
+<li><a href="#_inferenced_information">4.2. Inferenced information</a></li>
+<li><a href="#_generating_graphs">4.3. Generating graphs</a></li>
 </ul>
 </li>
 <li><a href="#_concluding_remarks">5. Concluding remarks</a>
@@ -507,7 +509,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_vocabularies_naming_and_structuring">5.1. Vocabularies, naming and structuring</a></li>
 <li><a href="#_be_careful_when_comparing">5.2. Be careful when comparing</a></li>
 <li><a href="#_support_needed_for_composition_revision_and_provenance">5.3. Support needed for composition, revision and provenance</a></li>
-<li><a href="#_future">5.4. Future?</a></li>
+<li><a href="#_future_development">5.4. Future development?</a></li>
 </ul>
 </li>
 <li><a href="#_references">References</a></li>
@@ -575,7 +577,7 @@ This is a <em>walk-through</em> of how we can build <strong>linked open data</st
 <div class="ulist">
 <ul>
 <li>
-<p>3rd sector reporting <em>vs.</em> local government reporting</p>
+<p>3<sup>rd</sup> sector reporting <em>vs.</em> local government reporting</p>
 </li>
 <li>
 <p>emailed Excel files <em>vs.</em> CKAN hosted CSV files</p>
@@ -1754,6 +1756,8 @@ carbon-metric.ttl	carbon-savings.ttl	enablers.ttl <i class="conum" data-value="3
 <div class="sect1">
 <h2 id="_using_the_linked_data">4. Using the linked data</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_a_straightforward_query">4.1. A straightforward query</h3>
 <div class="paragraph">
 <p>The linked data/RDF graph is defined by the Turtle files that we generated in section <a href="#gen"> 3.4</a>.
 To help us examine and query the RDF graph, we use the
@@ -1806,26 +1810,38 @@ Go to http://192.168.1.106:9999/blazegraph/ to get started.</code></pre>
 </tr>
 </table>
 </div>
+</div>
 <div class="sect2">
-<h3 id="_todo">4.1. TODO</h3>
+<h3 id="_inferenced_information">4.2. Inferenced information</h3>
 <div class="paragraph">
-<p>Provide 2 usage examples that are based on larger samples of our datasets:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A SPARQL inference example</p>
-</li>
-<li>
-<p>A graph for each source, depicting carbon savings in terms of cars/planes journeys/etc.</p>
-<div class="imageblock">
-<div class="content">
-<img src="img/usage-placeholder-fairshare.png" alt="A placeholder graph for how the carbon savings information can be used" width="50%">
+<p>TODO: an example that is based on larger samples of our datasets.
+A SPARQL inference example</p>
 </div>
 </div>
-</li>
-</ul>
+<div class="sect2">
+<h3 id="_generating_graphs">4.3. Generating graphs</h3>
+<div class="paragraph">
+<p>TODO: an example that is based on larger samples of our datasets.
+A graph for each source, depicting carbon savings in terms of cars/planes journeys/etc.</p>
 </div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<div class="title">The amounts of CO2e that has been avoided in terms of cars</div>
+<p><span class="image"><img src="img/usage-placeholder-fairshare.png" alt="A placeholder graph (The Fair Share) for how the carbon savings information can be used"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<div class="title">The amounts of CO2e that has been avoided in terms of flights</div>
+<p><span class="image"><img src="img/usage-placeholder-ace.png" alt="A placeholder graph (ACE )for how the carbon savings information can be used"></span></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -1870,8 +1886,13 @@ then this approach could be used both to highlight and, to very roughly compare 
 carbon savings aspect of the <code>enabler</code> organisations.
 When used of the latter purpose - comparison - care should be exercised
 because of the dissimilar sizes of the <code>enabler</code> organisations and,
-dissimilar types of reuse materials.
-(Remember the laudable intent of the <code>enabler</code> organisations in their reuse work!)</p>
+dissimilar types of reuse materials.</p>
+</div>
+<div class="paragraph">
+<p>Remember too that the 3<sup>rd</sup> sector <code>enabler</code> organisations are not working
+towards the single contractual objective of reuse
+but have additional laudable social objectives such as
+supportive employment, alleviating poverty, and promoting the local community.</p>
 </div>
 <div class="paragraph">
 <p>On a more specific note about comparing:
@@ -1913,31 +1934,23 @@ that claim to support those <em>compose</em> scenarios and their related concern
 </div>
 </div>
 <div class="sect2">
-<h3 id="_future">5.4. Future?</h3>
+<h3 id="_future_development">5.4. Future development?</h3>
 <div class="paragraph">
-<p>Would it be useful to build on this?</p>
+<p>Would it be useful to develop the ideas from this exploratory walk through,
+into a prototype <em>app</em> for collecting and publishing carbon savings data?
+Maybe &#8230;&#8203;if the focus were to be on 3<sup>rd</sup> sector and other non-government organisations
+- since government organisations already have outlets which publish their reuse data, such as
+<a href="https://www.environment.gov.scot/data/data-analysis/household-waste" target="_blank" rel="noopener">SEPA</a>,
+<a href="http://statistics.gov.scot/data/household-waste" target="_blank" rel="noopener">statistics.gov.scot</a>
+and council websites.</p>
 </div>
 <div class="paragraph">
-<p>Basis for an <em>app</em>?</p>
-</div>
-<div class="paragraph">
-<p>If we develop a prototype <em>app</em> for collecting and publishing carbon savings data
-(along the lines of this exploratory walk through)
-then&#8230;&#8203;</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>publishing it as open data (e.g. on GitHub) - dump vs API</p>
-</li>
-<li>
-<p>Support upload by enablers (upload &#8594; validate &#8594; add to the published LoD)</p>
-</li>
-<li>
-<p>Of interest to people given this century&#8217;s environmental concerns
-and the COP26 climate conference in Scotland?</p>
-</li>
-</ul>
+<p>We might build a (prototype) <em>app</em> which will allow organisations to:
+upload their carbon savings data; validate it; <em>compose</em> and <em>accumulate</em> it;
+and publish it as open linked data.
+The drivers of this work would be two-fold:
+Firstly, to highlight the carbon savings achievements (and other facets) of 3<sup>rd</sup> sector reuse orgs. Secondly (and more academically), to explore how linked open data concepts
+and technology can be practically applied to a (worthy) case-study.</p>
 </div>
 </div>
 </div>
@@ -1967,7 +1980,7 @@ and the COP26 climate conference in Scotland?</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-10-18 16:26:14 +0100
+Last updated 2021-10-19 10:15:09 +0100
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
