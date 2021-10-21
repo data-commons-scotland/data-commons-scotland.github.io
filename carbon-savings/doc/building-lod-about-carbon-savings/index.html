@@ -5,8 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.16">
-<meta name="keywords" content="waste, reuse, recycle, carbon impact, carbon saving, CO2e, carbon metric, 3rd sector, Scottish, Scotland, linked data, open data, CSVW, RDF, Swirrl, Vega, Clojure">
-<meta name="author" content="The Data Commons Scotland project, Greg Singh, Anna Wilson, Hannah Hamilton, Ashley McClenaghan">
+<meta name="description" content="This is a walk-through of how we can build linked open data about carbon savings from dissimilar data sources.">
+<meta name="keywords" content="open data, linked data, carbon savings, waste, reuse, recycling, carbon impact, CO2e, carbon metric, 3rd sector, Scottish, Scotland, CSVW, RDF, Swirrl">
+<meta name="author" content="The Data Commons Scotland project | Greg Singh, Anna Wilson, Hannah Hamilton, Ashley McClenaghan | October 2021">
 <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 <title>Building linked open data about carbon savings</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -451,15 +452,42 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>Building linked open data about carbon savings</h1>
 <div class="details">
-<span id="author" class="author">The Data Commons Scotland project</span><br>
-<span id="author2" class="author">Greg Singh</span><br>
-<span id="author3" class="author">Anna Wilson</span><br>
-<span id="author4" class="author">Hannah Hamilton</span><br>
-<span id="author5" class="author">Ashley McClenaghan</span><br>
-<span id="revdate">October 2021</span>
+<span id="author" class="author">The Data Commons Scotland project | Greg Singh</span><br>
+<span id="author2" class="author">Anna Wilson</span><br>
+<span id="author3" class="author">Hannah Hamilton</span><br>
+<span id="author4" class="author">Ashley McClenaghan | October 2021</span><br>
 </div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="openblock float-group">
+<div class="content">
+<div class="paragraph right">
+<p><a href="building-lod-about-carbon-savings.pdf">PDF version</a></p>
+</div>
+</div>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>This is a <em>walk-through</em> of how we can build <strong>linked open data</strong> (LoD) about <strong>carbon savings</strong> from dissimilar data sources.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="img/lod-for-carbon-savings.png" alt="Building linked open data about carbon savings - logo" width="60%">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
+<div id="toctitle" class="title">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#m-data">1. Measurement data → CSV</a>
 <ul class="sectlevel2">
@@ -469,7 +497,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_design_decisions">1.4. Design decisions</a></li>
 <li><a href="#_per_source_walk_throughs">1.5. Per-source <em>walk-throughs</em></a>
 <ul class="sectlevel3">
-<li><a href="#_alloa_community_enterprises_reused_furniture">1.5.1. Alloa Community Enterprises - reused furniture</a></li>
+<li><a href="#m-data-ace">1.5.1. Alloa Community Enterprises - reused furniture</a></li>
 <li><a href="#_stirling_community_food_redistributed_food">1.5.2. Stirling Community Food - redistributed food</a></li>
 <li><a href="#_stirling_council_household_recycling_bins">1.5.3. Stirling Council - household recycling bins</a></li>
 <li><a href="#_the_fair_share_reused_student_oriented_items">1.5.4. The Fair Share - reused, student-oriented items</a></li>
@@ -499,9 +527,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_using_the_linked_data">4. Using the linked data</a>
 <ul class="sectlevel2">
-<li><a href="#_a_straightforward_query">4.1. A straightforward query</a></li>
-<li><a href="#_inferenced_information">4.2. Inferenced information</a></li>
-<li><a href="#_generating_graphs">4.3. Generating graphs</a></li>
+<li><a href="#_running_a_straightforward_sparql_query_against_the_linked_data">4.1. Running a straightforward (SPARQL) query against the linked data</a></li>
+<li><a href="#_powering_graphs_with_the_linked_data">4.2. Powering graphs with the linked data</a>
+<ul class="sectlevel3">
+<li><a href="#_the_fair_share_its_carbon_savings_in_terms_of_cars">4.2.1. The Fair Share - its carbon savings in terms of cars</a></li>
+<li><a href="#_alloa_community_enterprises_its_carbon_savings_in_terms_of_plane_flights">4.2.2. Alloa Community Enterprises - its carbon savings in terms of plane flights</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_concluding_remarks">5. Concluding remarks</a>
@@ -513,34 +545,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_references">References</a></li>
+<li><a href="#_tidy_csv_files">Appendix A: Tidy CSV files</a></li>
+<li><a href="#_mapping_files">Appendix B: Mapping files</a></li>
+<li><a href="#_csvw_files">Appendix C: CSVW files</a></li>
+<li><a href="#_rdf_files">Appendix D: RDF files</a></li>
 </ul>
-</div>
-</div>
-<div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="sidebarblock">
-<div class="content">
-<div class="title">DRAFT</div>
-<div class="paragraph text-center">
-<p>An incomplete, early draft - still lots of TODOs.</p>
-</div>
-</div>
-</div>
-<div class="openblock float-group">
-<div class="content">
-<div class="imageblock right">
-<div class="content">
-<img src="img/lod-for-carbon-savings.png" alt="Building linked open data about carbon savings - logo" width="40%">
-</div>
-</div>
-<div class="paragraph indent">
-<p>&#160;<br>
-&#160;<br>
-&#160;<br>
-This is a <em>walk-through</em> of how we can build <strong>linked open data</strong> (LoD) about <strong>carbon savings</strong> from dissimilar data sources.</p>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -595,9 +604,7 @@ This is a <em>walk-through</em> of how we can build <strong>linked open data</st
 </div>
 <div class="paragraph">
 <p>&#8230;&#8203;but our end goal is to derive the same information from each of them.
-This information can be seen in the CSV file that contains the results of our efforts
-in this section: <a href="data/carbon-savings.csv">carbon-savings.csv</a>.
-Here&#8217;s a snippet of data from that file:</p>
+This information can be seen in the <a href="#carbon-savings-csv"><code>carbon-savings.csv</code></a> CSV file that contains the results of our efforts. Here&#8217;s a snippet of data from that file:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -706,7 +713,7 @@ good rationale for and examples of this process, generalised.
 <li>
 <p>Use The Scottish Carbon Metric <a href="#carbon-metric">[carbon-metric]</a> as the basis for measuring carbon savings.
 This is refered to via the <code>scottish-carbon-metric-material</code> column; and we will discuss it
-further in section <a href="#r-data"> 2</a>.</p>
+further in <a href="#r-data">Section 2</a>.</p>
 </li>
 <li>
 <p>Accounting &amp; reporting procedures often batch into a single carbon-savings record,
@@ -735,16 +742,26 @@ within some (significant-for-use) duration.</p>
 outlining some per-source specifics.</p>
 </div>
 <div class="sect3">
-<h4 id="_alloa_community_enterprises_reused_furniture">1.5.1. Alloa Community Enterprises - reused furniture</h4>
-<div class="imageblock right text-center">
+<h4 id="m-data-ace">1.5.1. Alloa Community Enterprises - reused furniture</h4>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><a href="https://ace.scot/" target="_blank" rel="noopener">Alloa Community Enterprises</a>' (ACE)
+furniture reuse initiative has been running since 1984, helping prevent furniture from becoming waste.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="imageblock">
 <div class="content">
 <img src="https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/ace-furniture.png" alt="Alloa Community Enterprises logo" width="60%">
 </div>
-</div>
-<div class="paragraph">
-<p><a href="https://ace.scot/" target="_blank" rel="noopener">Alloa Community Enterprises</a>' (ACE)
-furniture reuse initiative has been running since 1984, helping prevent furniture from becoming waste.</p>
-</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>ACE is in the process of publishing its data as open data.
 The following <strong>samples</strong> of measurement data have been taken from a draft of that work.</p>
@@ -771,7 +788,7 @@ The following <strong>samples</strong> of measurement data have been taken from 
 <ol class="lowerroman" type="i">
 <li>
 <p>We map each pair of <code>Category</code> &amp; <code>Items</code> values, to a <code>scottish-carbon-metric-material</code> value.
-We build this mapping table as a CSV file: <a href="mapping/ace-to-carbon-metric.csv">ace-to-carbon-metric.csv</a>.
+We build this mapping table as the <a href="#ace-to-carbon-metric-csv"><code>ace-to-carbon-metric.csv</code></a> CSV file.
 Here&#8217;s a snippet of data from that file:</p>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -868,15 +885,25 @@ Here&#8217;s a snippet of data from that file:</p>
 </div>
 <div class="sect3">
 <h4 id="_stirling_community_food_redistributed_food">1.5.2. Stirling Community Food - redistributed food</h4>
-<div class="imageblock right text-center">
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><a href="https://www.transitionstirling.org.uk/community-food" target="_blank" rel="noopener">Stirling Community Food</a>
+ is a project that helps to reduce food waste in Stirling by collecting (from supermarkets &amp; aggregators) excess and near-sell-by-date food, routing it away from waste bins, and making it available (for free) to the community.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="imageblock">
 <div class="content">
 <img src="https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/stirling-community-food.png" alt="Stirling Community Food logo" width="60%">
 </div>
-</div>
-<div class="paragraph">
-<p><a href="https://www.transitionstirling.org.uk/community-food" target="_blank" rel="noopener">Stirling Community Food</a>
- is a project that helps to reduce food waste in Stirling by collecting (from supermarkets &amp; aggregators) excess and near-sell-by-date food, routing it away from waste bins, and making it available (for free) to the community.</p>
-</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Stirling Community Food is in the process of publishing its data as open data.
 The following <strong>samples</strong> of measurement data have been taken from a draft of that work.</p>
@@ -903,7 +930,7 @@ The following <strong>samples</strong> of measurement data have been taken from 
 <ol class="lowerroman" type="i">
 <li>
 <p>We map the 'outcomes' (i.e. how the food material got used) to a <code>scottish-carbon-metric-material</code> value.
-We build this mapping table as a CSV file: <a href="mapping/stirling-community-food-to-carbon-metric.csv">stirling-community-food-to-carbon-metric.csv</a>.
+We build this mapping table as the <a href="#stirling-community-food-to-carbon-metric-csv"><code>stirling-community-food-to-carbon-metric.csv</code></a> CSV file.
 Here&#8217;s the data from that file:</p>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -996,14 +1023,24 @@ Here&#8217;s the data from that file:</p>
 </div>
 <div class="sect3">
 <h4 id="_stirling_council_household_recycling_bins">1.5.3. Stirling Council - household recycling bins</h4>
-<div class="imageblock right text-center">
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><a href="https://stirling.gov.uk/council-democracy/access-to-information/open-data/" target="_blank" rel="noopener">Stirling Council</a> set a precedent by being the first (and still only) Scottish local authority to have published open data about their <a href="https://data.stirling.gov.uk/dataset/waste-management" target="_blank" rel="noopener">bin collection of household waste</a>.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="imageblock">
 <div class="content">
 <img src="https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/looking-at-bin-collections.jpeg" alt="Stirling Council logo" width="60%">
 </div>
-</div>
-<div class="paragraph">
-<p><a href="https://stirling.gov.uk/council-democracy/access-to-information/open-data/" target="_blank" rel="noopener">Stirling Council</a> set a precedent by being the first (and still only) Scottish local authority to have published open data about their <a href="https://data.stirling.gov.uk/dataset/waste-management" target="_blank" rel="noopener">bin collection of household waste</a>.</p>
-</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>The following <strong>samples</strong> of measurement data have been taken from that published data.</p>
 </div>
@@ -1029,7 +1066,7 @@ Here&#8217;s the data from that file:</p>
 <ol class="lowerroman" type="i">
 <li>
 <p>We map column <code>E</code> to to a <code>scottish-carbon-metric-material</code> value.
-We build this mapping table as a CSV file: <a href="mapping/stirling-council-to-carbon-metric.csv">stirling-council-to-carbon-metric.csv</a>.
+We build this mapping table as the <a href="#stirling-council-to-carbon-metric-csv"><code>stirling-council-to-carbon-metric.csv</code></a> CSV file.
 Here&#8217;s a snippet of data from that file:</p>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1119,14 +1156,24 @@ Here&#8217;s a snippet of data from that file:</p>
 </div>
 <div class="sect3">
 <h4 id="_the_fair_share_reused_student_oriented_items">1.5.4. The Fair Share - reused, student-oriented items</h4>
-<div class="imageblock right text-center">
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><a href="https://www.stirlingstudentsunion.com/sustainability/fairshare/" target="_blank" rel="noopener">The Fair Share</a> is a university based, reuse store. It accepts donations of second-hand books, clothes, kitchenware, electricals, etc. and sells these to students.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="imageblock">
 <div class="content">
 <img src="https://raw.githubusercontent.com/data-commons-scotland/dcs-prototype-6/v1.5-beta/public/img/fairshare.png" alt="The Fair Share logo" width="60%">
 </div>
-</div>
-<div class="paragraph">
-<p><a href="https://www.stirlingstudentsunion.com/sustainability/fairshare/" target="_blank" rel="noopener">The Fair Share</a> is a university based, reuse store. It accepts donations of second-hand books, clothes, kitchenware, electricals, etc. and sells these to students.</p>
-</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>The Fair Share is in the process of publishing its data as open data.
 The following <strong>samples</strong> of measurement data have been taken from a draft of that work.</p>
@@ -1153,7 +1200,7 @@ The following <strong>samples</strong> of measurement data have been taken from 
 <ol class="lowerroman" type="i">
 <li>
 <p>We map column <code>B</code> to to a <code>scottish-carbon-metric-material</code> value.
-We build this mapping table as a CSV file: <a href="mapping/the-fair-share-to-carbon-metric.csv">the-fair-share-to-carbon-metric.csv</a>.
+We build this mapping table as the <a href="#the-fair-share-to-carbon-metric-csv"><code>the-fair-share-to-carbon-metric.csv</code></a> CSV file.
 Here&#8217;s a snippet of data from that file:</p>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1311,8 +1358,8 @@ See the <code>co2e-multiplier</code> files in <a href="https://github.com/data-c
 </table>
 </div>
 <div class="paragraph">
-<p>We copy the table&#8217;s data from its original PDF format into a more tractable,
-CSV file: <a href="data/carbon-metric.csv">carbon-metric.csv</a>.
+<p>We copy the table&#8217;s data from its original PDF format into the more
+tractable <a href="#carbon-metric-csv"><code>carbon-metric.csv</code></a> CSV file.
 Here&#8217;s a snippet of data from that file:</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 50%;">
@@ -1363,7 +1410,7 @@ Here&#8217;s a snippet of data from that file:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="data/carbon-metric.csv">carbon-metric.csv</a> will be referenced as the basis for calculations.</p>
+<p><a href="#carbon-metric-csv"><code>carbon-metric.csv</code></a> will be referenced as the basis for calculations.</p>
 </li>
 <li>
 <p>CO<sub>2</sub>eT will be used as the primary unit-of-measure</p>
@@ -1410,7 +1457,7 @@ The term <em>carbon saving</em> is a little misleading. A better name for it mig
 <div class="sect2">
 <h3 id="_enabler_organisations">2.2. Enabler organisations</h3>
 <div class="paragraph">
-<p>We describe the <code>enabler</code> organisations in <a href="data/enablers.csv">enablers.csv</a>.
+<p>We describe the <code>enabler</code> organisations in <a href="#enablers-csv"><code>enablers.csv</code></a>.
 Here&#8217;s the data from that file:</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 75%;">
@@ -1458,7 +1505,7 @@ Here&#8217;s the data from that file:</p>
 <div class="sect2">
 <h3 id="_csvs_may_be_good_enough">3.1. CSVs may be good enough</h3>
 <div class="paragraph">
-<p>In sections <a href="#r-data"> 2</a> &amp; <a href="#m-data"> 1</a>
+<p>In <a href="#m-data">Section 1</a> and <a href="#r-data">Section 2</a>
 we <em>re-worked</em> the source data into CSV files
 with inconsistences rectified, text values mapped to cannocical code lists,
 and numeric &amp; date values standardised.
@@ -1501,7 +1548,7 @@ is a standardised mechanism for associating linked data semantics/<em>metadata</
 <div class="paragraph">
 <p>It is nice because it allows us to keep our existing CSVs simple: unadulterated by
 linked data complications. (Although the CSVs must be of the <em>tidy</em> kind <a href="#tidy-data">[tidy-data]</a>,
-as output from sections <a href="#r-data"> 2</a> &amp; <a href="#m-data"> 1</a>.)</p>
+as output from <a href="#m-data">Section 1</a> and <a href="#r-data">Section 2</a>.)</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s create CSVW files to give our CSVs linked data semantics.</p>
@@ -1509,9 +1556,9 @@ as output from sections <a href="#r-data"> 2</a> &amp; <a href="#m-data"> 1</a>.
 <div class="sect3">
 <h4 id="_csvw_for_the_carbon_metric_reference_data">3.3.1. CSVW for the <code>carbon-metric</code> reference data</h4>
 <div class="paragraph">
-<p><a href="csvw/carbon-metric-metadata.json">carbon-metric-metadata.json</a>
+<p><a href="#carbon-metric-metadata-json"><code>carbon-metric-metadata.json</code></a>
 contains the CSVW that gives linked data semantics to the
-<a href="data/carbon-metric.csv">carbon-metric.csv</a> reference data.</p>
+<a href="#carbon-metric-csv"><code>carbon-metric.csv</code></a> reference data.</p>
 </div>
 <div class="paragraph">
 <p>Its features of interest are described below.</p>
@@ -1575,9 +1622,9 @@ contains the CSVW that gives linked data semantics to the
 <div class="sect3">
 <h4 id="_csvw_for_the_enablers_reference_data">3.3.2. CSVW for the <code>enablers</code> reference data</h4>
 <div class="paragraph">
-<p><a href="csvw/enablers-metadata.json">enablers-metadata.json</a>
+<p><a href="#enablers-metadata-json"><code>enablers-metadata.json</code></a>
 contains the CSVW that gives linked data semantics to the
-<a href="data/enablers.csv">enablers.csv</a> reference data.</p>
+<a href="#enablers-csv"><code>enablers.csv</code></a> reference data.</p>
 </div>
 <div class="paragraph">
 <p>Its new (not previously discussed) features of interest are described below.</p>
@@ -1625,9 +1672,9 @@ contains the CSVW that gives linked data semantics to the
 <div class="sect3">
 <h4 id="_csvw_for_the_carbon_savings_measurement_data">3.3.3. CSVW for the <code>carbon-savings</code> measurement data</h4>
 <div class="paragraph">
-<p><a href="csvw/carbon-savings-metadata.json">carbon-savings-metadata.json</a>
+<p><a href="#carbon-savings-metadata-json"><code>carbon-savings-metadata.json</code></a>
 contains the CSVW that gives linked data semantics to the
-<a href="data/arbon-savings.csv">carbon-savings.csv</a> measurement data.</p>
+<a href="#carbon-savings-csv"><code>carbon-savings.csv</code></a> measurement data.</p>
 </div>
 <div class="paragraph">
 <p>Its new (not previously discussed) features of interest are described below.</p>
@@ -1744,9 +1791,9 @@ carbon-metric.ttl	carbon-savings.ttl	enablers.ttl <i class="conum" data-value="3
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
 <td>The output: Turtle (<code>.ttl</code>) files which define an RDF graph of our data:<br>
-&#160;&#160;&#160;&#160; <a href="rdf/carbon-savings.ttl">carbon-savings.ttl</a><br>
-&#160;&#160;&#160;&#160; <a href="rdf/carbon-metric.ttl">carbon-metric.ttl</a><br>
-&#160;&#160;&#160;&#160; <a href="rdf/enablers.ttl">enablers.ttl</a></td>
+&#160;&#160;&#160;&#160; <a href="#carbon-savings-ttl"><code>carbon-savings.ttl</code></a><br>
+&#160;&#160;&#160;&#160; <a href="#carbon-metric-ttl"><code>carbon-metric.ttl</code></a><br>
+&#160;&#160;&#160;&#160; <a href="#enablers-ttl"><code>enablers.ttl</code></a></td>
 </tr>
 </table>
 </div>
@@ -1757,23 +1804,24 @@ carbon-metric.ttl	carbon-savings.ttl	enablers.ttl <i class="conum" data-value="3
 <h2 id="_using_the_linked_data">4. Using the linked data</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_a_straightforward_query">4.1. A straightforward query</h3>
+<h3 id="_running_a_straightforward_sparql_query_against_the_linked_data">4.1. Running a straightforward (SPARQL) query against the linked data</h3>
 <div class="paragraph">
-<p>The linked data/RDF graph is defined by the Turtle files that we generated in section <a href="#gen"> 3.4</a>.
-To help us examine and query the RDF graph, we use the
-<a href="https://github.com/blazegraph/database" target="_blank" rel="noopener">Blazegraph</a> tool.</p>
+<p>The linked data/RDF graph is defined by the Turtle files that we generated in <a href="#gen">Section 3.4</a>.
+To help us examine and query that RDF graph,
+we load it into a <em>graph engine</em> (<a href="https://github.com/blazegraph/database" target="_blank" rel="noopener">Blazegraph</a>)
+that supports <a href="https://www.w3.org/TR/rdf-sparql-query/">SPARQL</a> queries.</p>
 </div>
 <div class="paragraph">
 <p>First we load our Turtle files into Blazegraph&#8217;s data store:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ java -cp blazegraph.jar com.bigdata.rdf.store.DataLoader journal.properties rdfdir/*.ttl
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ java -cp blazegraph.jar com.bigdata.rdf.store.DataLoader journal.properties *.ttl
 ...
 Reading properties: journal.properties
-Will load from: rdf/carbon-metric.ttl
-Will load from: rdf/carbon-savings.ttl
-Will load from: rdf/enablers.ttl
+Will load from: carbon-metric.ttl
+Will load from: carbon-savings.ttl
+Will load from: enablers.ttl
 ...
 Load: 223 stmts added in 0.251 secs, rate= 888, commitLatency=0ms, {failSet=0,goodSet=3}</code></pre>
 </div>
@@ -1812,18 +1860,18 @@ Go to http://192.168.1.106:9999/blazegraph/ to get started.</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_inferenced_information">4.2. Inferenced information</h3>
+<h3 id="_powering_graphs_with_the_linked_data">4.2. Powering graphs with the linked data</h3>
 <div class="paragraph">
-<p>TODO: an example that is based on larger samples of our datasets.
-A SPARQL inference example</p>
+<p>Our <a href="https://data-commons-scotland.github.io/prototype-6/#/fairshare">prototype-6</a>
+Waste Matters Scotland webapp
+is powered by linked open data which was generated from
+larger samples of the datasets that were described in <a href="#m-data">Section 1</a>.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_generating_graphs">4.3. Generating graphs</h3>
 <div class="paragraph">
-<p>TODO: an example that is based on larger samples of our datasets.
-A graph for each source, depicting carbon savings in terms of cars/planes journeys/etc.</p>
+<p>Let&#8217;s take a look at two of the its linked data backed graphs about carbon savings.</p>
 </div>
+<div class="sect3">
+<h4 id="_the_fair_share_its_carbon_savings_in_terms_of_cars">4.2.1. The Fair Share - its carbon savings in terms of cars</h4>
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -1832,16 +1880,74 @@ A graph for each source, depicting carbon savings in terms of cars/planes journe
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<div class="title">The amounts of CO2e that has been avoided in terms of cars</div>
-<p><span class="image"><img src="img/usage-placeholder-fairshare.png" alt="A placeholder graph (The Fair Share) for how the carbon savings information can be used"></span></p>
+<p><span class="image"><img src="img/the-fair-share-graph.png" alt="Carbon savings by The Fair Share"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>The reuse work by this small store has yielded impressive carbon savings.</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<div class="title">The amounts of CO2e that has been avoided in terms of flights</div>
-<p><span class="image"><img src="img/usage-placeholder-ace.png" alt="A placeholder graph (ACE )for how the carbon savings information can be used"></span></p>
+<p>Each book, bowl, duvet, etc. reused through
+<a href="https://www.stirlingstudentsunion.com/sustainability/fairshare/">The Fair Share</a>,
+is an item that has avoided becoming waste/pollution, and this is often estimated
+in terms of CO<sub>2</sub>e (the carbon savings unit-of-measure).</p>
+</div>
+<div class="paragraph">
+<p>But by themselves, CO<sub>2</sub>e values can be difficult to relate to so we convert them into in a more relatable measure: cars worth of CO<sub>2</sub>e.</p>
+</div>
+<div class="paragraph">
+<p>The average cost of using one car for one year is 4.1 tonnes of CO<sub>2</sub>e. This incorporates as exhaust emissions, fuel supply chain and amortised car material for the average UK car.
+(This is a rough approximation based on figures from
+<a href="https://www.brusselsblog.co.uk/carbon-emissions-in-the-lifetimes-of-cars/">Carbon emissions in the lifetimes of cars</a>
+and <a href="https://www.ovoenergy.com/ovo-newsroom/press-releases/2019/november/think-before-you-thank-if-every-brit-sent-one-less-thank-you-email-a-day-we-would-save-16433-tonnes-of-carbon-a-year-the-same-as-81152-flights-to-madrid.html">OVO Energy</a>.)</p>
+</div>
+<div class="paragraph">
+<p>So, we divide The Fair Share&#8217;s carbon savings values by 4.1 to yield our cars worth of CO<sub>2</sub>e values then use these to plot this graph.</p>
+</div>
+<div class="paragraph">
+<p>(The 2014 spike was caused by an unusually large donation of textiles (duvet covers, sheets, pillowcases) from the student halls of residence.)</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect3">
+<h4 id="_alloa_community_enterprises_its_carbon_savings_in_terms_of_plane_flights">4.2.2. Alloa Community Enterprises - its carbon savings in terms of plane flights</h4>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 66.6666%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="img/ace-graph.png" alt="Carbon savings (Mar 2017 - Aug 2019) by Alloa Community Enterprises"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>The reuse of soft furniture (sofas, armchairs, matresses, etc.) alone
+(and during the short period sampled)
+has resulted in carbon savings
+equivalent to almost 5000 flights.</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Each piece of furniture that is reused through the
+<a href="https://ace.scot/">ACE</a> initative,
+is an item that has avoided becoming waste/pollution.
+This is often estimated
+in terms of CO<sub>2</sub>e (the carbon savings unit-of-measure).</p>
+</div>
+<div class="paragraph">
+<p>In <a href="#m-data-ace">Section 1.5.1</a> we
+described how to estimate the CO<sub>2</sub>e values for ACE by multipling the total weight of the items in each furniture category by an appropriate multiplier. These multipliers can be found in the <a href="#carbon-metric-csv"><code>carbon-metric.csv</code></a> reference data file. Also, we have to map ACE&#8217;s furniture categories to those multiplier records, and this is done via the <a href="#ace-to-carbon-metric-csv"><code>ace-to-carbon-metric.csv</code></a> mapping file.</p>
+</div>
+<div class="paragraph">
+<p>But by themselves, CO<sub>2</sub>e values can be difficult to relate to so we convert them into in a more relatable measure: flights worth of CO2e. The average cost of taking a one-way flight from Glasgow to Berlin is 202.5 kgs of CO<sub>2</sub>e. (This was derived from these
+<a href="https://www.ovoenergy.com/ovo-newsroom/press-releases/2019/november/think-before-you-thank-if-every-brit-sent-one-less-thank-you-email-a-day-we-would-save-16433-tonnes-of-carbon-a-year-the-same-as-81152-flights-to-madrid.html">OVO Energy estimations</a>
+which incorporate a plane&#8217;s fuel use but not its build material.) We divide ACE&#8217;s CO<sub>2</sub>e values by 202.5 to yield our flights worth of CO<sub>2</sub>e values then use these to plot this graph.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -1977,10 +2083,765 @@ and technology can be practically applied to a (worthy) case-study.</p>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_tidy_csv_files">Appendix A: Tidy CSV files</h2>
+<div class="sectionbody">
+<h3 id="carbon-savings-csv" class="discrete"><code>carbon-savings.csv</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csv hljs" data-lang="csv">occurrence-date,scottish-carbon-metric-material,tonnes-weight,enabler,enabler-specific
+2018-02-28,Wood,0.385,"Alloa Community Enterprises","55 items of Furniture (Chair, Kitchen, Dining or Wooden)"
+2018-02-28,Wood,0.574,"Alloa Community Enterprises","82 items of Furniture (Chair, Kitchen, Dining or Wooden)"
+2019-02-28,"Textiles and Footwear",0.147,"Alloa Community Enterprises","7 items of Soft Furniture (Mattress, single)"
+2019-02-28,"Textiles and Footwear",0.168,"Alloa Community Enterprises","8 items of Soft Furniture (Mattress, single)"
+2021-01-28,"Food and Drink Waste (wet AD)",0.08761,"Stirling Comunity Food","Used for human-food, bio-etc &amp; sanctuary"
+2021-01-28,"Food and Drink Waste (Composting)",0.00048,"Stirling Comunity Food","Used for compost-indiv"
+2021-01-29,"Food and Drink Waste (wet AD)",0.28012,"Stirling Comunity Food","Used for human-food, bio-etc &amp; sanctuary"
+2021-01-29,"Food and Drink Waste (Composting)",0.008,"Stirling Comunity Food","Used for compost-indiv"
+2021-01-03,"Glass (mixed colours)",3.5,"Stirling Council","Balfron"
+2021-01-04,"Average Plastics",1.86,"Stirling Council","Bridge of Allan"
+2021-01-10,"Mixed paper and board",0.24,"Stirling Council","Killearn"
+2019-12-31,"Textiles &amp; Footwear",0.57644,"The Fair Share","autumn semester"
+2019-12-31,Books,0.12203,"The Fair Share","autumn semester"
+2019-12-31,"Aggregates (Rubble)",0.05345,"The Fair Share","autumn semester"
+2019-12-31,"Glass (mixed colours)",0.02328,"The Fair Share","autumn semester"
+2019-12-31,"Food and Drink Waste (wet AD)",0.0187,"The Fair Share","autumn semester"</code></pre>
+</div>
+</div>
+<h3 id="carbon-metric-csv" class="discrete"><code>carbon-metric.csv</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csv hljs" data-lang="csv">material,multiplier
+"Textiles",100.00
+"Textiles and Footwear",84.70
+"Aluminium cans and foil",65.87
+"Footwear",31.17
+"Mixed Cans",27.80
+"Scrap Metal",16.07
+"Steel Cans",12.25
+"PET (including forming)",12.12
+"WEEE - Small",10.54
+"WEEE - Mixed",9.77
+"WEEE - Large",9.00
+"PS (including forming)",8.81
+"Wood",8.70
+"Average Plastics",8.57
+"Average plastic rigid (including bottles)",8.56
+"HDPE (including forming)",8.25
+"LDPE and LLDPE (including forming)",7.80
+"Average plastic film (including bags)",7.65
+"PP (including forming)",6.74
+"PVC (including forming)",6.31
+"Board",5.83
+"Mixed paper and board",5.68
+"Paper",5.23
+"Books",5.23
+"Mineral Oil",5.15
+"WEEE - Fridges and Freezers",4.66
+"Food and Drink Waste (wet AD)",4.35
+"Food and Drink Waste (Composting)",3.48
+"Batteries (Post Consumer Non Automotive)",3.46
+"Glass (colour separated)",2.78
+"Mixed Food and Garden Waste (dry AD)",2.70
+"Garden Waste (dry AD)",2.35
+"Mixed Food and Garden Waste (Composting)",2.10
+"Garden Waste Composting",1.81
+"Glass (mixed colours)",1.58
+"Plasterboard",0.99
+"Aggregates (Rubble)",0.03</code></pre>
+</div>
+</div>
+<h3 id="enablers-csv" class="discrete"><code>enablers.csv</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csv hljs" data-lang="csv">name,latitude,longitude
+"Alloa Community Enterprises",56.122913,-3.781621
+"Stirling Comunity Food",56.115672,-3.936217
+"Stirling Council",56.113345,-3.936807
+"The Fair Share",56.146389,-3.919833</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mapping_files">Appendix B: Mapping files</h2>
+<div class="sectionbody">
+<h3 id="ace-to-carbon-metric-csv" class="discrete"><code>ace-to-carbon-metric.csv</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csv hljs" data-lang="csv">category,item,material
+Furniture ,"Bedside unit, cabinet or table",Wood
+Furniture ,"Bench, kitchen or garden, solid wood",Wood
+Furniture ,"Blanket box, Ottoman",Wood
+Furniture ,Bookcase / Shelving Unit,Wood
+Furniture ,"Cabinet (display &amp; kitchen), Bureau",Wood
+Furniture ,"Chair, Kitchen, Dining or Wooden",Wood
+Furniture ,"Chest-of-Drawers, Tallboy",Wood
+Furniture ,"Small Desk, Computer Table",Wood
+Furniture ,Large Desk,Wood
+Furniture ,Dressing table ,Wood
+Furniture ,Fire surround ,Wood
+Furniture ,Grandfather clock ,Wood
+Furniture ,Headboard unit (with built-in bedside cabinets) ,Wood
+Furniture ,Headboard,Wood
+Furniture ,TV / Hi-fi unit ,Wood
+Furniture ,Piano,Wood
+Furniture ,"Sideboard, not large ",Wood
+Furniture ,"Table small eg. Cane, coffee, occassional, nest of ",Wood
+Furniture ,"Table, large e.g. dining",Wood
+Furniture ,"Table, medium e.g. kitchen",Wood
+Furniture ,Wall unit,Wood
+Furniture ,"Wardrobe, double ",Wood
+Furniture ,"Wardrobe, single ",Wood
+Furniture ,Welsh Dresser ,Wood
+Home Office Furniture ,"Cabinet, large",Scrap Metal
+Home Office Furniture ,"Filing cabinet, large ",Scrap Metal
+Home Office Furniture ,"Cabinet or filing cabinet, small",Scrap Metal
+Home Office Furniture ,Office Chair ,Wood
+Home Office Furniture ,Office Desk ,Wood
+Soft Furniture ,2 seater sofa,Textiles and Footwear
+Soft Furniture ,3 seater sofa,Textiles and Footwear
+Soft Furniture ,Armchair ,Textiles and Footwear
+Soft Furniture ,Recliner,Textiles and Footwear
+Soft Furniture ,"Bed, single complete (base, mattress + headboard) ",Textiles and Footwear
+Soft Furniture ,"Bed, double complete (base, mattress + headboard) ",Textiles and Footwear
+Soft Furniture ,"Bed, king-size complete (base, mattress + headboard) ",Textiles and Footwear
+Soft Furniture ,"Bed base, single wood / divan / folding / Z bed ",Wood
+Soft Furniture ,"Bed base, double wood / divan / folding / Z bed ",Wood
+Soft Furniture ,"Bed base, king-size wood, divan or double metal ",Wood
+Soft Furniture ,Bunk bed / cabin bed ,Wood
+Soft Furniture ,"Cane chair, bookcase",Wood
+Soft Furniture ,"Chair, easy, fireside, lounge, rocking",Wood
+Soft Furniture ,Chaise Longue ,Wood
+Soft Furniture ,Futon / Sofabed (wooden base with mattress) ,Textiles and Footwear
+Soft Furniture ,"Mattress, single ",Textiles and Footwear
+Soft Furniture ,"Mattress, double ",Textiles and Footwear
+Soft Furniture ,"Mattress, king-size ",Textiles and Footwear
+Soft Furniture ,Pouffe / Stool,Textiles and Footwear
+Soft Furniture ,"Sofa bed, foam flop out ",Textiles and Footwear
+Soft Furniture ,"Sofa bed, metal frame ",Scrap Metal
+Soft Furniture ,"Sofa, cane / conservatory (normally with cushions) ",Wood
+Bric-a-Brac,Bric-a-Brac (small packet) ,Average Plastics
+Bric-a-Brac,Bric-a-Brac (box) ,Scrap Metal
+Children's Items,Cot ,Wood
+Children's Items,High Chair,Wood
+Children's Items,Pram,Scrap Metal
+Children's Items,Pushchair,Scrap Metal
+Children's Items,Stairgate,Average Plastics
+Children's Items,"Toys, box",Average Plastics
+Leisure,"Bike, adult",Scrap Metal
+Leisure,"Bike, child",Scrap Metal
+Miscellaneous,"Small misc, eg scales, saucepans, shoe racks, pedal bin, picture, magazine rack, fireguard, CD stand, picture frame, curtain pole, lampshade, suitcase, wine rack, Christmas tree",Wood
+Miscellaneous,"Medium misc, eg tea trolley, ironing board, plant stand, coat or hat stand, small mirror, clothes horse, ",Wood
+Miscellaneous,"Large misc, eg carpet cleaner, large mirror, ladder, laundry basket, loose shelves",Wood
+Flooring,"Carpet tiles, lino,  carpet, flooring or underlay for standard room 12'x12'",Textiles and Footwear
+Flooring,Small rug 3'x6',Textiles and Footwear
+Bedding &amp; window dressings,"Pillow, pillow case",Textiles
+Bedding &amp; window dressings,Sheet,Textiles
+Bedding &amp; window dressings,"Blanket, towel, throw, duvet cover",Textiles
+Bedding &amp; window dressings,"Blinds (fabric), light or mid weight curtains",Textiles
+Bedding &amp; window dressings,"Blinds (wood, metal), curtains (thick, lined)",Textiles
+Bathroom Items ,Bath (metal) ,Scrap Metal
+Bathroom Items ,Bath (non-metal) ,Average plastic rigid (including bottles)
+Bathroom Items ,Bathroom Cabinet /Shower Screen,Average plastic rigid (including bottles)
+Bathroom Items ,Cistern ,Plasterboard
+Bathroom Items ,Shower equipment/tray ,Plasterboard
+Bathroom Items ,Sink (ceramic) ,Plasterboard
+Bathroom Items ,Sink (metal) ,Scrap Metal
+Bathroom Items ,Toilet ,Plasterboard
+Bathroom Items ,"Vanity Unit, including sink ",Wood
+DIY,Door (pvc),PVC (including forming)
+DIY,Door (wood) ,Wood
+DIY,Gate (metal) ,Scrap Metal
+DIY,Gate (wood),Wood
+DIY,Paint  (5l),Batteries (Post Consumer Non Automotive)
+DIY,Patio door,PVC (including forming)
+DIY,"Tiles (ceramic), per square metre",Plasterboard
+DIY,Window (wood),Wood
+DIY,Window (glazed),PVC (including forming)
+DIY,Worktop (kitchen) ,Wood
+Garden,BBQ,Scrap Metal
+Garden,"Chair (metal, plastic or wood)",PVC (including forming)
+Garden,Lounger ,PVC (including forming)
+Garden,Rotary Drier ,Scrap Metal
+Garden,"Table (metal, plastic or wood)",PVC (including forming)
+Garden,"Tool (large) i.e. spade, fork",Scrap Metal
+Garden,Tool (small) i.e. trowel,Scrap Metal
+Garden,Waterbutt,PVC (including forming)
+Garden,Wheelbarrow ,Scrap Metal
+Gas Appliances,"Cooker, gas",WEEE - Large
+Gas Appliances,"Hob, gas",WEEE - Large
+Gas Appliances,"Fire, gas",WEEE - Large
+Cat 1 - Large Household Appliances,"Baby belling, counter top cooker, hostess trolley ",WEEE - Large
+Cat 1 - Large Household Appliances,Cooker hood,WEEE - Large
+Cat 1 - Large Household Appliances,"Cooker, electric ",WEEE - Large
+Cat 1 - Large Household Appliances,Dishwasher ,WEEE - Large
+Cat 1 - Large Household Appliances,Spin-Dryer ,WEEE - Large
+Cat 1 - Large Household Appliances,Tumble-Dryer ,WEEE - Large
+Cat 1 - Large Household Appliances,Twin-tub ,WEEE - Large
+Cat 1 - Large Household Appliances,Washer Drier,WEEE - Large
+Cat 1 - Large Household Appliances,Washing Machine ,WEEE - Large
+Cat 2 - Small Household Appliances,Electric sewing maching,WEEE - Small
+Cat 2 - Small Household Appliances,Fan (electric) ,WEEE - Small
+Cat 2 - Small Household Appliances,Fan heater,WEEE - Small
+Cat 2 - Small Household Appliances,Fire,WEEE - Small
+Cat 2 - Small Household Appliances,"Hair &amp; Beauty Elec  i.e. hair dryer, foot massager, hair curlers, hair straighteners",WEEE - Small
+Cat 2 - Small Household Appliances,"Hob, electric",WEEE - Small
+Cat 2 - Small Household Appliances,"Medium elec - bread machine, video camera, trouser press",WEEE - Small
+Cat 2 - Small Household Appliances,Microwave ,WEEE - Small
+Cat 2 - Small Household Appliances,Radiator,WEEE - Small
+Cat 2 - Small Household Appliances,"Small elec - kettle, toaster, clock, sandwich maker,coffee maker, juicer, rice cooker ,steamer, iron, food mixer",WEEE - Small
+Cat 2 - Small Household Appliances,Vacuum ,WEEE - Small
+Cat 3 - IT &amp; Telecommunications,"Computer, base unit",WEEE - Mixed
+Cat 3 - IT &amp; Telecommunications,Laptop,WEEE - Mixed
+Cat 3 - IT &amp; Telecommunications,"Mobile Phone &amp; Accessories (hands free kit, charger)",WEEE - Mixed
+Cat 3 - IT &amp; Telecommunications,"PC Accessories (keyboard, mouse)",WEEE - Mixed
+Cat 3 - IT &amp; Telecommunications,"PC Printers, Scanners, Shredder",WEEE - Mixed
+Cat 3 - IT &amp; Telecommunications,Photocopier ,WEEE - Mixed
+Cat 3 - IT &amp; Telecommunications,Telecommunications equipment,WEEE - Mixed
+Cat 3 - IT &amp; Telecommunications,"Wordprocessor, Electric Typewriter",WEEE - Mixed
+Cat 4 - Consumer Equipment,"Hi-fi, integrated",WEEE - Mixed
+Cat 4 - Consumer Equipment,"Hi-fi, separates (amplifier, cassette deck, CD player, radio, speakers)",WEEE - Mixed
+Cat 4 - Consumer Equipment,"Video, DVD, Games Consoles, Digiboxes",WEEE - Mixed
+Cat 5 - Lighting Equipment,Lamp / Light,WEEE - Mixed
+Cat 6 - Electrical &amp; Electronic Tools,"Garden tools, electrical (small) i.e. strimmer, hedge cutter, garden vac",WEEE - Mixed
+Cat 6 - Electrical &amp; Electronic Tools,"Garden tools, electrical (large) i.e. lawnmower, shredder",WEEE - Mixed
+Cat 6 - Electrical &amp; Electronic Tools,"Power Tools i.e. drill, electric screwdriver",WEEE - Mixed
+"Cat 7 - Toys, leisure &amp; sports","Musical Instruments i.e. keyboard, organ",WEEE - Mixed
+"Cat 7 - Toys, leisure &amp; sports",Sunbed,WEEE - Large
+Cat 8 - Medical devices,Electric Armchair,WEEE - Large
+Cat 8 - Medical devices,"Electric Bed, double",WEEE - Large
+Cat 8 - Medical devices,"Electric Bed, single",WEEE - Large
+Cat 8 - Medical devices,Electric Wheelchair,WEEE - Large
+Cat 11 - Display Equipment,"CRT-Monitor &lt;14"" ",WEEE - Mixed
+Cat 11 - Display Equipment,"CRT-Monitor 14"" ",WEEE - Mixed
+Cat 11 - Display Equipment,"CRT-Monitor 15"" ",WEEE - Mixed
+Cat 11 - Display Equipment,"CRT-Monitor 17"" ",WEEE - Mixed
+Cat 11 - Display Equipment,"CRT-Monitor 19"" ",WEEE - Mixed
+Cat 11 - Display Equipment,"CRT-Monitor 21"" ",WEEE - Mixed
+Cat 11 - Display Equipment,TV Portable or TV Combi,WEEE - Mixed
+Cat 11 - Display Equipment,"Flat screen display 15-17""",WEEE - Mixed
+Cat 11 - Display Equipment,"Flat screen display 19-20""",WEEE - Mixed
+Cat 11 - Display Equipment,"Flat screen display 22-24""",WEEE - Mixed
+Cat 11 - Display Equipment,"Flat screen display 26-30""",WEEE - Mixed
+Cat 11 - Display Equipment,"Flat screen display 32-37""",WEEE - Mixed
+Cat 11 - Display Equipment,"Flat screen display 40-46""",WEEE - Mixed
+Cat 12 - Cooling Appliances containing refrigeration,"Air Conditioner, Dehumidifier",WEEE - Mixed
+Cat 12 - Cooling Appliances containing refrigeration,"Freezer, chest ",WEEE - Fridges and Freezers
+Cat 12 - Cooling Appliances containing refrigeration,"Freezer, free standing",WEEE - Fridges and Freezers
+Cat 12 - Cooling Appliances containing refrigeration,"Freezer / Fridge, table top",WEEE - Fridges and Freezers
+Cat 12 - Cooling Appliances containing refrigeration,"Freezer, undercounter",WEEE - Fridges and Freezers
+Cat 12 - Cooling Appliances containing refrigeration,"Fridge, free standing",WEEE - Fridges and Freezers
+Cat 12 - Cooling Appliances containing refrigeration,"Fridge, undercounter",WEEE - Fridges and Freezers
+Cat 12 - Cooling Appliances containing refrigeration,Fridge-Freezer ,WEEE - Fridges and Freezers</code></pre>
+</div>
+</div>
+<h3 id="stirling-community-food-to-carbon-metric-csv" class="discrete"><code>stirling-community-food-to-carbon-metric.csv</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csv hljs" data-lang="csv">outcome,material
+"human-food, bio-etc &amp; sanctuary","Food and Drink Waste (wet AD)"
+compost-indiv,"Food and Drink Waste (Composting)"</code></pre>
+</div>
+</div>
+<h3 id="stirling-council-to-carbon-metric-csv" class="discrete"><code>stirling-council-to-carbon-metric.csv</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csv hljs" data-lang="csv">"Waste Collected",material
+"02 Garden Waste","Mixed Food and Garden Waste (Composting)"
+"105 Mixed Paper","Paper"
+"106 Fibre (Paper &amp; Card)","Mixed paper and board"
+"107 Containers Stream","Average Plastics"
+"108 Comingled Organic","Mixed Food and Garden Waste (dry AD)"
+"17 Cardboard","Mixed paper and board"
+"72 Mixed Glass","Glass (mixed colours)"</code></pre>
+</div>
+</div>
+<h3 id="the-fair-share-to-carbon-metric-csv" class="discrete"><code>the-fair-share-to-carbon-metric.csv</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csv hljs" data-lang="csv">"(The Fair Share's) Material",material
+"Textiles &amp; Footwear","Textiles &amp; Footwear"
+Books,Books
+Aggregates,"Aggregates (Rubble)"
+Glass,"Glass (mixed colours)"
+"Food &amp; Drink","Food and Drink Waste (wet AD)"</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_csvw_files">Appendix C: CSVW files</h2>
+<div class="sectionbody">
+<h3 id="carbon-savings-metadata-json" class="discrete"><code>carbon-savings-metadata.json</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "@context": "http://www.w3.org/ns/csvw",
+  "tableSchema": {
+    "columns": [{
+      "name": "occurrenceDate",
+      "titles": "occurrence-date",
+      "datatype": "date",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate"
+    }, {
+      "name": "material",
+      "titles": "scottish-carbon-metric-material",
+      "datatype": "string",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasMaterial",
+      "valueUrl": "http://datacommonsscotland.org/linked-data/entity/carbon-metric/{material}"
+    }, {
+      "name": "tonnesWeight",
+      "titles": "tonnes-weight",
+      "datatype": "decimal",
+      "required": true,
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasTonnesWeight"
+    }, {
+      "name": "enabler",
+      "titles": "enabler",
+      "datatype": "string",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasEnabler",
+      "valueUrl": "http://datacommonsscotland.org/linked-data/entity/enablers/{enabler}"
+    }, {
+      "name": "enablerSpecific",
+      "titles": "enabler-specific",
+      "datatype": "string",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific"
+    }, {
+      "virtual": true,
+      "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "valueUrl": "http://datacommonsscotland.org/linked-data/class/carbon-savings"
+    }],
+    "primaryKey": ["occurrenceDate", "material", "enabler", "enablerSpecific"],
+    "foreignKeys": [{
+      "columnReference": "material",
+      "reference": {
+        "resource": "carbon-metric.csv",
+        "columnReference": "material"
+      }
+    }, {
+      "columnReference": "enabler",
+      "reference": {
+        "resource": "enablers.csv",
+        "columnReference": "name"
+      }
+    }],
+    "aboutUrl": "http://datacommonsscotland.org/linked-data/entity/carbon-savings/{occurrenceDate}/{material}/{enabler}/{enablerSpecific}"
+  }
+}</code></pre>
+</div>
+</div>
+<h3 id="carbon-metric-metadata-json" class="discrete"><code>carbon-metric-metadata.json</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "@context": "http://www.w3.org/ns/csvw",
+  "tableSchema": {
+    "columns": [{
+      "name": "material",
+      "titles": "material",
+      "datatype": "string",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasMaterial"
+    }, {
+      "name": "multiplier",
+      "titles": "multiplier",
+      "datatype": "decimal",
+      "required": true,
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasMultiplier"
+    }, {
+      "virtual": true,
+      "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "valueUrl": "http://datacommonsscotland.org/linked-data/class/carbon-metric"
+    }],
+    "primaryKey": "material",
+    "aboutUrl": "http://datacommonsscotland.org/linked-data/entity/carbon-metric/{material}"
+  }
+}</code></pre>
+</div>
+</div>
+<h3 id="enablers-metadata-json" class="discrete"><code>enablers-metadata.json</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "@context": "http://www.w3.org/ns/csvw",
+  "tableSchema": {
+    "columns": [{
+      "name": "name",
+      "titles": "name",
+      "datatype": "string",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasName"
+    }, {
+      "name": "latitude",
+      "titles": "latitude",
+      "datatype": "decimal",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasLatitude"
+    }, {
+      "name": "longitude",
+      "titles": "longitude",
+      "datatype": "decimal",
+      "propertyUrl": "http://datacommonsscotland.org/linked-data/property/hasLongitude"
+    }, {
+      "virtual": true,
+      "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "valueUrl": "http://datacommonsscotland.org/linked-data/class/enablers"
+    }],
+    "primaryKey": "name",
+    "aboutUrl": "http://datacommonsscotland.org/linked-data/entity/enablers/{name}"
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rdf_files">Appendix D: RDF files</h2>
+<div class="sectionbody">
+<h3 id="carbon-savings-ttl" class="discrete"><code>carbon-savings.ttl</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2018-02-28/Wood/Alloa%20Community%20Enterprises/55%20items%20of%20Furniture%20%28Chair%2C%20Kitchen%2C%20Dining%20or%20Wooden%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/Alloa%20Community%20Enterprises&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "55 items of Furniture (Chair, Kitchen, Dining or Wooden)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Wood&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2018-02-28"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 0.385 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2018-02-28/Wood/Alloa%20Community%20Enterprises/82%20items%20of%20Furniture%20%28Chair%2C%20Kitchen%2C%20Dining%20or%20Wooden%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/Alloa%20Community%20Enterprises&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "82 items of Furniture (Chair, Kitchen, Dining or Wooden)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Wood&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2018-02-28"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 0.574 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2019-02-28/Textiles%20and%20Footwear/Alloa%20Community%20Enterprises/7%20items%20of%20Soft%20Furniture%20%28Mattress%2C%20single%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/Alloa%20Community%20Enterprises&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "7 items of Soft Furniture (Mattress, single)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Textiles%20and%20Footwear&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2019-02-28"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 0.147 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2019-02-28/Textiles%20and%20Footwear/Alloa%20Community%20Enterprises/8%20items%20of%20Soft%20Furniture%20%28Mattress%2C%20single%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/Alloa%20Community%20Enterprises&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "8 items of Soft Furniture (Mattress, single)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Textiles%20and%20Footwear&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2019-02-28"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 0.168 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2021-01-28/Food%20and%20Drink%20Waste%20%28wet%20AD%29/Stirling%20Comunity%20Food/Used%20for%20human-food%2C%20bio-etc%20%26%20sanctuary&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Comunity%20Food&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "Used for human-food, bio-etc &amp; sanctuary";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Food%20and%20Drink%20Waste%20%28wet%20AD%29&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2021-01-28"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 0.08761 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2021-01-28/Food%20and%20Drink%20Waste%20%28Composting%29/Stirling%20Comunity%20Food/Used%20for%20compost-indiv&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Comunity%20Food&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "Used for compost-indiv";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Food%20and%20Drink%20Waste%20%28Composting%29&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2021-01-28"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 0.00048 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2021-01-29/Food%20and%20Drink%20Waste%20%28wet%20AD%29/Stirling%20Comunity%20Food/Used%20for%20human-food%2C%20bio-etc%20%26%20sanctuary&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Comunity%20Food&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "Used for human-food, bio-etc &amp; sanctuary";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Food%20and%20Drink%20Waste%20%28wet%20AD%29&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2021-01-29"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 0.28012 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2021-01-29/Food%20and%20Drink%20Waste%20%28Composting%29/Stirling%20Comunity%20Food/Used%20for%20compost-indiv&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Comunity%20Food&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "Used for compost-indiv";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Food%20and%20Drink%20Waste%20%28Composting%29&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2021-01-29"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 0.008 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2021-01-03/Glass%20%28mixed%20colours%29/Stirling%20Council/Balfron&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Council&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "Balfron";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Glass%20%28mixed%20colours%29&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2021-01-03"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 3.5 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2021-01-04/Average%20Plastics/Stirling%20Council/Bridge%20of%20Allan&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Council&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "Bridge of Allan";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Average%20Plastics&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2021-01-04"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 1.86 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2021-01-10/Mixed%20paper%20and%20board/Stirling%20Council/Killearn&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Council&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "Killearn";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Mixed%20paper%20and%20board&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2021-01-10"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 0.24 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2019-12-31/Textiles%20%26%20Footwear/The%20Fair%20Share/autumn%20semester&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/The%20Fair%20Share&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "autumn semester";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Textiles%20%26%20Footwear&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2019-12-31"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 0.57644 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2019-12-31/Books/The%20Fair%20Share/autumn%20semester&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/The%20Fair%20Share&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "autumn semester";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Books&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2019-12-31"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 0.12203 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2019-12-31/Aggregates%20%28Rubble%29/The%20Fair%20Share/autumn%20semester&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/The%20Fair%20Share&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "autumn semester";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Aggregates%20%28Rubble%29&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2019-12-31"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 0.05345 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2019-12-31/Glass%20%28mixed%20colours%29/The%20Fair%20Share/autumn%20semester&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/The%20Fair%20Share&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "autumn semester";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Glass%20%28mixed%20colours%29&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2019-12-31"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 0.02328 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-savings/2019-12-31/Food%20and%20Drink%20Waste%20%28wet%20AD%29/The%20Fair%20Share/autumn%20semester&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-savings&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnabler&gt; &lt;http://datacommonsscotland.org/linked-data/entity/enablers/The%20Fair%20Share&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasEnablerSpecific&gt; "autumn semester";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; &lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Food%20and%20Drink%20Waste%20%28wet%20AD%29&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasOccurrenceDate&gt; "2019-12-31"^^&lt;http://www.w3.org/2001/XMLSchema#date&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasTonnesWeight&gt; 0.0187 .</code></pre>
+</div>
+</div>
+<h3 id="carbon-metric-ttl" class="discrete"><code>carbon-metric.ttl</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Textiles&gt; a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Textiles";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 100.0 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Textiles%20and%20Footwear&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Textiles and Footwear";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 84.7 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Aluminium%20cans%20and%20foil&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Aluminium cans and foil";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 65.87 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Footwear&gt; a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Footwear";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 31.17 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Mixed%20Cans&gt; a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Mixed Cans";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 27.8 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Scrap%20Metal&gt; a
+    &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Scrap Metal";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 16.07 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Steel%20Cans&gt; a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Steel Cans";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 12.25 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/PET%20%28including%20forming%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "PET (including forming)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 12.12 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/WEEE%20-%20Small&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "WEEE - Small";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 10.54 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/WEEE%20-%20Mixed&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "WEEE - Mixed";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 9.77 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/WEEE%20-%20Large&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "WEEE - Large";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 9.0 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/PS%20%28including%20forming%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "PS (including forming)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 8.81 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Wood&gt; a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Wood";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 8.7 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Average%20Plastics&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Average Plastics";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 8.57 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Average%20plastic%20rigid%20%28including%20bottles%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Average plastic rigid (including bottles)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 8.56 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/HDPE%20%28including%20forming%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "HDPE (including forming)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 8.25 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/LDPE%20and%20LLDPE%20%28including%20forming%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "LDPE and LLDPE (including forming)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 7.8 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Average%20plastic%20film%20%28including%20bags%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Average plastic film (including bags)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 7.65 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/PP%20%28including%20forming%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "PP (including forming)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 6.74 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/PVC%20%28including%20forming%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "PVC (including forming)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 6.31 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Board&gt; a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Board";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 5.83 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Mixed%20paper%20and%20board&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Mixed paper and board";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 5.68 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Paper&gt; a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Paper";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 5.23 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Books&gt; a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Books";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 5.23 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Mineral%20Oil&gt; a
+    &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Mineral Oil";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 5.15 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/WEEE%20-%20Fridges%20and%20Freezers&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "WEEE - Fridges and Freezers";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 4.66 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Food%20and%20Drink%20Waste%20%28wet%20AD%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Food and Drink Waste (wet AD)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 4.35 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Food%20and%20Drink%20Waste%20%28Composting%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Food and Drink Waste (Composting)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 3.48 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Batteries%20%28Post%20Consumer%20Non%20Automotive%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Batteries (Post Consumer Non Automotive)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 3.46 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Glass%20%28colour%20separated%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Glass (colour separated)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 2.78 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Mixed%20Food%20and%20Garden%20Waste%20%28dry%20AD%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Mixed Food and Garden Waste (dry AD)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 2.7 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Garden%20Waste%20%28dry%20AD%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Garden Waste (dry AD)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 2.35 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Mixed%20Food%20and%20Garden%20Waste%20%28Composting%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Mixed Food and Garden Waste (Composting)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 2.1 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Garden%20Waste%20Composting&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Garden Waste Composting";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 1.81 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Glass%20%28mixed%20colours%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Glass (mixed colours)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 1.58 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Plasterboard&gt; a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Plasterboard";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 0.99 .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/carbon-metric/Aggregates%20%28Rubble%29&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/carbon-metric&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMaterial&gt; "Aggregates (Rubble)";
+  &lt;http://datacommonsscotland.org/linked-data/property/hasMultiplier&gt; 0.03 .</code></pre>
+</div>
+</div>
+<h3 id="enablers-ttl" class="discrete"><code>enablers.ttl</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">&lt;http://datacommonsscotland.org/linked-data/entity/enablers/Alloa%20Community%20Enterprises&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/enablers&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasLatitude&gt; 56.122913;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasLongitude&gt; -3.781621;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasName&gt; "Alloa Community Enterprises" .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Comunity%20Food&gt;
+  a &lt;http://datacommonsscotland.org/linked-data/class/enablers&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasLatitude&gt; 56.115672;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasLongitude&gt; -3.936217;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasName&gt; "Stirling Comunity Food" .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/enablers/Stirling%20Council&gt; a
+    &lt;http://datacommonsscotland.org/linked-data/class/enablers&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasLatitude&gt; 56.113345;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasLongitude&gt; -3.936807;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasName&gt; "Stirling Council" .
+
+&lt;http://datacommonsscotland.org/linked-data/entity/enablers/The%20Fair%20Share&gt; a
+    &lt;http://datacommonsscotland.org/linked-data/class/enablers&gt;;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasLatitude&gt; 56.146389;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasLongitude&gt; -3.919833;
+  &lt;http://datacommonsscotland.org/linked-data/property/hasName&gt; "The Fair Share" .</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-10-19 10:15:09 +0100
+Last updated 2021-10-21 11:12:17 +0100
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
