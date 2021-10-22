@@ -11,6 +11,6 @@ To access them via your web browser, use the following hyperlinks:
 * https://data-commons-scotland.github.io/waste-quants-thru-time-on-a-map/index.html
 * https://data-commons-scotland.github.io/cluster-map-of-materials-incoming/
 * https://data-commons-scotland.github.io/prototype-6
-* https://data-commons-scotland.github.io/carbon-savings/doc/basis/draft.html
+* https://data-commons-scotland.github.io/carbon-savings/doc/building-lod-about-carbon-savings/
 
 (`prototype-1` is not served from here but from Heroku’s cloud at https://waste-commons-scotland.herokuapp.com)
