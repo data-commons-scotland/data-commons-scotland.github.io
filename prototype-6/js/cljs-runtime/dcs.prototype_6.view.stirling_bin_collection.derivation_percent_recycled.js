@@ -5,39 +5,39 @@ return new cljs.core.PersistentArrayMap(null, 8, [new cljs.core.Keyword(null,"sc
 });
 dcs.prototype_6.view.stirling_bin_collection.derivation_percent_recycled.chart = (function dcs$prototype_6$view$stirling_bin_collection$derivation_percent_recycled$chart(stirling_bin_collection_derivation_percent_recycled,household_waste_derivation_percent_recycled){
 var ctx_min_year = (cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.min,cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"year","year",335913393),stirling_bin_collection_derivation_percent_recycled)) - (1));
-var household_waste_derivation_percent_recycled_SINGLEQUOTE_ = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__33383_SHARP_){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__33383_SHARP_,new cljs.core.Keyword(null,"region","region",270415120),[cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__33383_SHARP_))," (recycled overall)"].join(''));
-}),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__33382_SHARP_){
-return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Stirling",null,"Scotland",null], null), null),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__33382_SHARP_));
-}),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__33381_SHARP_){
-return (new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__33381_SHARP_) >= ctx_min_year);
+var household_waste_derivation_percent_recycled_SINGLEQUOTE_ = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__44822_SHARP_){
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__44822_SHARP_,new cljs.core.Keyword(null,"region","region",270415120),[cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__44822_SHARP_))," (recycled overall)"].join(''));
+}),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__44821_SHARP_){
+return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Stirling",null,"Scotland",null], null), null),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__44821_SHARP_));
+}),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__44820_SHARP_){
+return (new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__44820_SHARP_) >= ctx_min_year);
 }),household_waste_derivation_percent_recycled)));
-var household_waste_derivation_percent_recycled_SINGLEQUOTE__SINGLEQUOTE_ = cljs.core.flatten(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__33386){
-var map__33387 = p__33386;
-var map__33387__$1 = cljs.core.__destructure_map(map__33387);
-var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__33387__$1,new cljs.core.Keyword(null,"region","region",270415120));
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__33387__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var percentage = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__33387__$1,new cljs.core.Keyword(null,"percentage","percentage",-1610213650));
+var household_waste_derivation_percent_recycled_SINGLEQUOTE__SINGLEQUOTE_ = cljs.core.flatten(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__44832){
+var map__44833 = p__44832;
+var map__44833__$1 = cljs.core.__destructure_map(map__44833);
+var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44833__$1,new cljs.core.Keyword(null,"region","region",270415120));
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44833__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var percentage = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44833__$1,new cljs.core.Keyword(null,"percentage","percentage",-1610213650));
 var quarterly_percentage = percentage;
-var iter__4564__auto__ = (function dcs$prototype_6$view$stirling_bin_collection$derivation_percent_recycled$chart_$_iter__33388(s__33389){
+var iter__4564__auto__ = (function dcs$prototype_6$view$stirling_bin_collection$derivation_percent_recycled$chart_$_iter__44834(s__44835){
 return (new cljs.core.LazySeq(null,(function (){
-var s__33389__$1 = s__33389;
+var s__44835__$1 = s__44835;
 while(true){
-var temp__5735__auto__ = cljs.core.seq(s__33389__$1);
+var temp__5735__auto__ = cljs.core.seq(s__44835__$1);
 if(temp__5735__auto__){
-var s__33389__$2 = temp__5735__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__33389__$2)){
-var c__4562__auto__ = cljs.core.chunk_first(s__33389__$2);
+var s__44835__$2 = temp__5735__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__44835__$2)){
+var c__4562__auto__ = cljs.core.chunk_first(s__44835__$2);
 var size__4563__auto__ = cljs.core.count(c__4562__auto__);
-var b__33391 = cljs.core.chunk_buffer(size__4563__auto__);
-if((function (){var i__33390 = (0);
+var b__44837 = cljs.core.chunk_buffer(size__4563__auto__);
+if((function (){var i__44836 = (0);
 while(true){
-if((i__33390 < size__4563__auto__)){
-var quarter = cljs.core._nth(c__4562__auto__,i__33390);
-cljs.core.chunk_append(b__33391,new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"quarter","quarter",-508147616),quarter,new cljs.core.Keyword(null,"percentage","percentage",-1610213650),quarterly_percentage], null));
+if((i__44836 < size__4563__auto__)){
+var quarter = cljs.core._nth(c__4562__auto__,i__44836);
+cljs.core.chunk_append(b__44837,new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"quarter","quarter",-508147616),quarter,new cljs.core.Keyword(null,"percentage","percentage",-1610213650),quarterly_percentage], null));
 
-var G__33392 = (i__33390 + (1));
-i__33390 = G__33392;
+var G__44845 = (i__44836 + (1));
+i__44836 = G__44845;
 continue;
 } else {
 return true;
@@ -45,13 +45,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__33391),dcs$prototype_6$view$stirling_bin_collection$derivation_percent_recycled$chart_$_iter__33388(cljs.core.chunk_rest(s__33389__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__44837),dcs$prototype_6$view$stirling_bin_collection$derivation_percent_recycled$chart_$_iter__44834(cljs.core.chunk_rest(s__44835__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__33391),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__44837),null);
 }
 } else {
-var quarter = cljs.core.first(s__33389__$2);
-return cljs.core.cons(new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"quarter","quarter",-508147616),quarter,new cljs.core.Keyword(null,"percentage","percentage",-1610213650),quarterly_percentage], null),dcs$prototype_6$view$stirling_bin_collection$derivation_percent_recycled$chart_$_iter__33388(cljs.core.rest(s__33389__$2)));
+var quarter = cljs.core.first(s__44835__$2);
+return cljs.core.cons(new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"quarter","quarter",-508147616),quarter,new cljs.core.Keyword(null,"percentage","percentage",-1610213650),quarterly_percentage], null),dcs$prototype_6$view$stirling_bin_collection$derivation_percent_recycled$chart_$_iter__44834(cljs.core.rest(s__44835__$2)));
 }
 } else {
 return null;
@@ -62,12 +62,12 @@ break;
 });
 return iter__4564__auto__(new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [(1),(2),(3),(4)], null));
 }),household_waste_derivation_percent_recycled_SINGLEQUOTE_));
-var stirling_bin_collection_derivation_percent_recycled_SINGLEQUOTE_ = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__33384_SHARP_){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__33384_SHARP_,new cljs.core.Keyword(null,"region","region",270415120),"Stirling (recycling bin collection)");
+var stirling_bin_collection_derivation_percent_recycled_SINGLEQUOTE_ = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__44823_SHARP_){
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__44823_SHARP_,new cljs.core.Keyword(null,"region","region",270415120),"Stirling (recycling bin collection)");
 }),stirling_bin_collection_derivation_percent_recycled);
 var derivation_percent_recycled_SINGLEQUOTE_ = cljs.core.concat.cljs$core$IFn$_invoke$arity$2(stirling_bin_collection_derivation_percent_recycled_SINGLEQUOTE_,household_waste_derivation_percent_recycled_SINGLEQUOTE__SINGLEQUOTE_);
-var derivation_percent_recycled_SINGLEQUOTE__SINGLEQUOTE_ = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__33385_SHARP_){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__33385_SHARP_,new cljs.core.Keyword(null,"date","date",-1463434462),dcs.prototype_6.util.date_str(new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__33385_SHARP_),new cljs.core.Keyword(null,"quarter","quarter",-508147616).cljs$core$IFn$_invoke$arity$1(p1__33385_SHARP_)));
+var derivation_percent_recycled_SINGLEQUOTE__SINGLEQUOTE_ = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__44824_SHARP_){
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__44824_SHARP_,new cljs.core.Keyword(null,"date","date",-1463434462),dcs.prototype_6.util.date_str(new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__44824_SHARP_),new cljs.core.Keyword(null,"quarter","quarter",-508147616).cljs$core$IFn$_invoke$arity$1(p1__44824_SHARP_)));
 }),derivation_percent_recycled_SINGLEQUOTE_);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [oz.core.vega_lite,dcs.prototype_6.view.stirling_bin_collection.derivation_percent_recycled.chart_spec("% for the recycling bin collection",derivation_percent_recycled_SINGLEQUOTE__SINGLEQUOTE_),dcs.prototype_6.util.vega_embed_opts], null)], null);
 });
