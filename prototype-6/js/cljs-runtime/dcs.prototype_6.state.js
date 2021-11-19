@@ -199,5 +199,9 @@ if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (
 } else {
 dcs.prototype_6.state.household_waste_analysis_annotations_holder = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(null);
 }
+if((typeof dcs !== 'undefined') && (typeof dcs.prototype_6 !== 'undefined') && (typeof dcs.prototype_6.state !== 'undefined') && (typeof dcs.prototype_6.state.fairshare_annotations_holder !== 'undefined')){
+} else {
+dcs.prototype_6.state.fairshare_annotations_holder = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(null);
+}
 
 //# sourceMappingURL=dcs.prototype_6.state.js.map

@@ -13,38 +13,38 @@ var population_for_lookup = cljs.core.group_by(cljs.core.juxt.cljs$core$IFn$_inv
 var lookup_population = (function (region,year){
 return new cljs.core.Keyword(null,"count","count",2139924085).cljs$core$IFn$_invoke$arity$1(cljs.core.first(cljs.core.get.cljs$core$IFn$_invoke$arity$2(population_for_lookup,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [region,year], null))));
 });
-var household_waste_derivation_generation = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__44668){
-var map__44671 = p__44668;
-var map__44671__$1 = cljs.core.__destructure_map(map__44671);
-var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44671__$1,new cljs.core.Keyword(null,"region","region",270415120));
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44671__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44671__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
+var household_waste_derivation_generation = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__38649){
+var map__38650 = p__38649;
+var map__38650__$1 = cljs.core.__destructure_map(map__38650);
+var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38650__$1,new cljs.core.Keyword(null,"region","region",270415120));
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38650__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38650__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),(tonnes / lookup_population(region,year))], null);
 }),household_waste_derivation_generation0);
-var household_waste_derivation_management = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__44673){
-var map__44674 = p__44673;
-var map__44674__$1 = cljs.core.__destructure_map(map__44674);
-var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44674__$1,new cljs.core.Keyword(null,"region","region",270415120));
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44674__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var management = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44674__$1,new cljs.core.Keyword(null,"management","management",-516161795));
-var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44674__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
+var household_waste_derivation_management = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__38651){
+var map__38652 = p__38651;
+var map__38652__$1 = cljs.core.__destructure_map(map__38652);
+var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38652__$1,new cljs.core.Keyword(null,"region","region",270415120));
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38652__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var management = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38652__$1,new cljs.core.Keyword(null,"management","management",-516161795));
+var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38652__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
 return new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"management","management",-516161795),management,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),(tonnes / lookup_population(region,year))], null);
 }),household_waste_derivation_management0);
-var household_waste_derivation_composition = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__44675){
-var map__44676 = p__44675;
-var map__44676__$1 = cljs.core.__destructure_map(map__44676);
-var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44676__$1,new cljs.core.Keyword(null,"region","region",270415120));
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44676__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var material = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44676__$1,new cljs.core.Keyword(null,"material","material",460118677));
-var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44676__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
+var household_waste_derivation_composition = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__38654){
+var map__38655 = p__38654;
+var map__38655__$1 = cljs.core.__destructure_map(map__38655);
+var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38655__$1,new cljs.core.Keyword(null,"region","region",270415120));
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38655__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var material = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38655__$1,new cljs.core.Keyword(null,"material","material",460118677));
+var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38655__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
 return new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"material","material",460118677),material,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),(tonnes / lookup_population(region,year))], null);
 }),household_waste_derivation_composition0);
-var household_waste_derivation_percent_recycled = (function (){var household_waste_SINGLEQUOTE_ = cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__44607_SHARP_){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("Scot gov target",new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__44607_SHARP_));
+var household_waste_derivation_percent_recycled = (function (){var household_waste_SINGLEQUOTE_ = cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__38588_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("Scot gov target",new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__38588_SHARP_));
 }),household_waste);
 var regions_and_scotland = dcs.prototype_6.data_shaping.calc_household_waste_percentage_recycled(household_waste_SINGLEQUOTE_);
-var household_waste_percentage_recycled_scotland = cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__44608_SHARP_){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("Scotland",new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__44608_SHARP_));
+var household_waste_percentage_recycled_scotland = cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__38589_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("Scotland",new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__38589_SHARP_));
 }),regions_and_scotland);
 var scotGovTarget = dcs.prototype_6.data_shaping.calc_scotGovTarget_for_household_waste_percentage_recycled(household_waste_percentage_recycled_scotland);
 return cljs.core.concat.cljs$core$IFn$_invoke$arity$2(regions_and_scotland,scotGovTarget);
@@ -52,39 +52,39 @@ return cljs.core.concat.cljs$core$IFn$_invoke$arity$2(regions_and_scotland,scotG
 var latest_year = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.max,cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"year","year",335913393),household_waste));
 var household_waste_derivation_generation_positions = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"latest-positions","latest-positions",1854267729),cljs.core.map_indexed.cljs$core$IFn$_invoke$arity$2((function (ix,m){
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(m),new cljs.core.Keyword(null,"position","position",-2011731912),(ix + (1)),new cljs.core.Keyword(null,"year","year",335913393),latest_year], null);
-}),cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__44610_SHARP_){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(latest_year,new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__44610_SHARP_));
-}),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__44609_SHARP_){
-return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Scotland",null,"Scot gov target",null], null), null),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__44609_SHARP_));
+}),cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__38591_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(latest_year,new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__38591_SHARP_));
+}),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__38590_SHARP_){
+return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Scotland",null,"Scot gov target",null], null), null),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__38590_SHARP_));
 }),household_waste_derivation_generation)))),new cljs.core.Keyword(null,"trend-positions","trend-positions",254538292),cljs.core.map_indexed.cljs$core$IFn$_invoke$arity$2((function (ix,m){
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(m),new cljs.core.Keyword(null,"position","position",-2011731912),(ix + (1)),new cljs.core.Keyword(null,"trend","trend",54563841),new cljs.core.Keyword(null,"trend","trend",54563841).cljs$core$IFn$_invoke$arity$1(dcs.prototype_6.data_shaping.trend)], null);
-}),cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"trend","trend",54563841),cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__44683){
-var vec__44684 = p__44683;
-var region = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44684,(0),null);
-var coll = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44684,(1),null);
-return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"trend","trend",54563841),dcs.prototype_6.data_shaping.trend(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__44612_SHARP_){
-return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__44612_SHARP_),new cljs.core.Keyword(null,"tonnes","tonnes",-913468653).cljs$core$IFn$_invoke$arity$1(p1__44612_SHARP_)],null));
+}),cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"trend","trend",54563841),cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__38662){
+var vec__38669 = p__38662;
+var region = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38669,(0),null);
+var coll = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38669,(1),null);
+return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"trend","trend",54563841),dcs.prototype_6.data_shaping.trend(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__38593_SHARP_){
+return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__38593_SHARP_),new cljs.core.Keyword(null,"tonnes","tonnes",-913468653).cljs$core$IFn$_invoke$arity$1(p1__38593_SHARP_)],null));
 }),coll))], null);
-}),cljs.core.group_by(new cljs.core.Keyword(null,"region","region",270415120),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__44611_SHARP_){
-return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Scotland",null,"Scot gov target",null], null), null),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__44611_SHARP_));
+}),cljs.core.group_by(new cljs.core.Keyword(null,"region","region",270415120),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__38592_SHARP_){
+return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Scotland",null,"Scot gov target",null], null), null),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__38592_SHARP_));
 }),household_waste_derivation_generation)))))], null);
 var household_waste_derivation_percent_recycled_positions = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"latest-positions","latest-positions",1854267729),cljs.core.map_indexed.cljs$core$IFn$_invoke$arity$2((function (ix,m){
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(m),new cljs.core.Keyword(null,"position","position",-2011731912),(ix + (1)),new cljs.core.Keyword(null,"year","year",335913393),latest_year], null);
-}),cljs.core.reverse(cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"percentage","percentage",-1610213650),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__44614_SHARP_){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(latest_year,new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__44614_SHARP_));
-}),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__44613_SHARP_){
-return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Scotland",null,"Scot gov target",null], null), null),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__44613_SHARP_));
+}),cljs.core.reverse(cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"percentage","percentage",-1610213650),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__38595_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(latest_year,new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__38595_SHARP_));
+}),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__38594_SHARP_){
+return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Scotland",null,"Scot gov target",null], null), null),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__38594_SHARP_));
 }),household_waste_derivation_percent_recycled))))),new cljs.core.Keyword(null,"trend-positions","trend-positions",254538292),cljs.core.map_indexed.cljs$core$IFn$_invoke$arity$2((function (ix,m){
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(m),new cljs.core.Keyword(null,"position","position",-2011731912),(ix + (1)),new cljs.core.Keyword(null,"trend","trend",54563841),new cljs.core.Keyword(null,"trend","trend",54563841).cljs$core$IFn$_invoke$arity$1(dcs.prototype_6.data_shaping.trend)], null);
-}),cljs.core.reverse(cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"trend","trend",54563841),cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__44717){
-var vec__44718 = p__44717;
-var region = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44718,(0),null);
-var coll = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44718,(1),null);
-return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"trend","trend",54563841),dcs.prototype_6.data_shaping.trend(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__44625_SHARP_){
-return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__44625_SHARP_),new cljs.core.Keyword(null,"percentage","percentage",-1610213650).cljs$core$IFn$_invoke$arity$1(p1__44625_SHARP_)],null));
+}),cljs.core.reverse(cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"trend","trend",54563841),cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__38693){
+var vec__38694 = p__38693;
+var region = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38694,(0),null);
+var coll = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38694,(1),null);
+return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"trend","trend",54563841),dcs.prototype_6.data_shaping.trend(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__38597_SHARP_){
+return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__38597_SHARP_),new cljs.core.Keyword(null,"percentage","percentage",-1610213650).cljs$core$IFn$_invoke$arity$1(p1__38597_SHARP_)],null));
 }),coll))], null);
-}),cljs.core.group_by(new cljs.core.Keyword(null,"region","region",270415120),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__44624_SHARP_){
-return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Scotland",null,"Scot gov target",null], null), null),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__44624_SHARP_));
+}),cljs.core.group_by(new cljs.core.Keyword(null,"region","region",270415120),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__38596_SHARP_){
+return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Scotland",null,"Scot gov target",null], null), null),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__38596_SHARP_));
 }),household_waste_derivation_percent_recycled))))))], null);
 cljs.core.reset_BANG_(dcs.prototype_6.state.household_waste_derivation_generation_cursor,household_waste_derivation_generation);
 
@@ -114,32 +114,32 @@ var population_for_lookup = cljs.core.group_by(cljs.core.juxt.cljs$core$IFn$_inv
 var lookup_population = (function (region,year){
 return new cljs.core.Keyword(null,"count","count",2139924085).cljs$core$IFn$_invoke$arity$1(cljs.core.first(cljs.core.get.cljs$core$IFn$_invoke$arity$2(population_for_lookup,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [region,year], null))));
 });
-var household_co2e_derivation_generation = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__44727){
-var map__44730 = p__44727;
-var map__44730__$1 = cljs.core.__destructure_map(map__44730);
-var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44730__$1,new cljs.core.Keyword(null,"region","region",270415120));
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44730__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44730__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
+var household_co2e_derivation_generation = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__38722){
+var map__38723 = p__38722;
+var map__38723__$1 = cljs.core.__destructure_map(map__38723);
+var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38723__$1,new cljs.core.Keyword(null,"region","region",270415120));
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38723__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38723__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),(tonnes / lookup_population(region,year))], null);
 }),household_co2e);
 var latest_year = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.max,cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"year","year",335913393),household_co2e));
 var household_co2e_derivation_generation_positions = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"latest-positions","latest-positions",1854267729),cljs.core.map_indexed.cljs$core$IFn$_invoke$arity$2((function (ix,m){
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(m),new cljs.core.Keyword(null,"position","position",-2011731912),(ix + (1)),new cljs.core.Keyword(null,"year","year",335913393),latest_year], null);
-}),cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__44722_SHARP_){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(latest_year,new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__44722_SHARP_));
-}),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__44721_SHARP_){
-return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Scotland",null,"Scot gov target",null], null), null),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__44721_SHARP_));
+}),cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__38711_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(latest_year,new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__38711_SHARP_));
+}),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__38710_SHARP_){
+return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Scotland",null,"Scot gov target",null], null), null),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__38710_SHARP_));
 }),household_co2e_derivation_generation)))),new cljs.core.Keyword(null,"trend-positions","trend-positions",254538292),cljs.core.map_indexed.cljs$core$IFn$_invoke$arity$2((function (ix,m){
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(m),new cljs.core.Keyword(null,"position","position",-2011731912),(ix + (1)),new cljs.core.Keyword(null,"trend","trend",54563841),new cljs.core.Keyword(null,"trend","trend",54563841).cljs$core$IFn$_invoke$arity$1(dcs.prototype_6.data_shaping.trend)], null);
-}),cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"trend","trend",54563841),cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__44731){
-var vec__44732 = p__44731;
-var region = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44732,(0),null);
-var coll = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44732,(1),null);
-return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"trend","trend",54563841),dcs.prototype_6.data_shaping.trend(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__44725_SHARP_){
-return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__44725_SHARP_),new cljs.core.Keyword(null,"tonnes","tonnes",-913468653).cljs$core$IFn$_invoke$arity$1(p1__44725_SHARP_)],null));
+}),cljs.core.sort_by.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"trend","trend",54563841),cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__38735){
+var vec__38737 = p__38735;
+var region = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38737,(0),null);
+var coll = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38737,(1),null);
+return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"trend","trend",54563841),dcs.prototype_6.data_shaping.trend(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__38714_SHARP_){
+return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[new cljs.core.Keyword(null,"year","year",335913393).cljs$core$IFn$_invoke$arity$1(p1__38714_SHARP_),new cljs.core.Keyword(null,"tonnes","tonnes",-913468653).cljs$core$IFn$_invoke$arity$1(p1__38714_SHARP_)],null));
 }),coll))], null);
-}),cljs.core.group_by(new cljs.core.Keyword(null,"region","region",270415120),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__44723_SHARP_){
-return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Scotland",null,"Scot gov target",null], null), null),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__44723_SHARP_));
+}),cljs.core.group_by(new cljs.core.Keyword(null,"region","region",270415120),cljs.core.remove.cljs$core$IFn$_invoke$arity$2((function (p1__38713_SHARP_){
+return cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Scotland",null,"Scot gov target",null], null), null),new cljs.core.Keyword(null,"region","region",270415120).cljs$core$IFn$_invoke$arity$1(p1__38713_SHARP_));
 }),household_co2e_derivation_generation)))))], null);
 cljs.core.reset_BANG_(dcs.prototype_6.state.household_co2e_derivation_generation_cursor,household_co2e_derivation_generation);
 
@@ -158,13 +158,13 @@ console.log("Calculating business-waste-by-region-derivations");
 var start_time = dcs.prototype_6.util.now();
 var region_count = cljs.core.count(cljs.core.distinct.cljs$core$IFn$_invoke$arity$1(cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"region","region",270415120),business_waste_by_region)));
 var business_waste_by_region_derivation_generation0 = dcs.prototype_6.data_shaping.rollup_business_waste_by_region_materials(business_waste_by_region);
-var business_waste_by_region_derivation_generation = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__44740){
-var map__44741 = p__44740;
-var map__44741__$1 = cljs.core.__destructure_map(map__44741);
-var original = map__44741__$1;
-var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44741__$1,new cljs.core.Keyword(null,"region","region",270415120));
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44741__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44741__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
+var business_waste_by_region_derivation_generation = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__38759){
+var map__38760 = p__38759;
+var map__38760__$1 = cljs.core.__destructure_map(map__38760);
+var original = map__38760__$1;
+var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38760__$1,new cljs.core.Keyword(null,"region","region",270415120));
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38760__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38760__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
 if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, ["Scotland",null,"Scot gov target",null], null), null),region)){
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"region","region",270415120),((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2("Scotland",region))?"Scotland average":"Scot gov target"),new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),(tonnes / region_count)], null);
 } else {
@@ -205,12 +205,12 @@ var start_time = dcs.prototype_6.util.now();
 var derivation_generation0 = dcs.prototype_6.data_shaping.rollup_stirling_bin_collection_ma_re_mi(stirling_bin_collection);
 var derivation_composition0 = dcs.prototype_6.data_shaping.rollup_stirling_bin_collection_re_mi(stirling_bin_collection);
 var derivation_percent_recycled = dcs.prototype_6.data_shaping.calc_stirling_bin_collection_percentage_recycled(stirling_bin_collection);
-var derivation_missed = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__44755){
-var vec__44756 = p__44755;
-var vec__44759 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44756,(0),null);
-var year = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44759,(0),null);
-var quarter = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44759,(1),null);
-var coll = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44756,(1),null);
+var derivation_missed = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__38770){
+var vec__38771 = p__38770;
+var vec__38774 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38771,(0),null);
+var year = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38774,(0),null);
+var quarter = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38774,(1),null);
+var coll = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38771,(1),null);
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"quarter","quarter",-508147616),quarter,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core._PLUS_,cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),coll))], null);
 }),cljs.core.group_by(cljs.core.juxt.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"year","year",335913393),new cljs.core.Keyword(null,"quarter","quarter",-508147616)),cljs.core.filter.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"missed-bin?","missed-bin?",-238072209),stirling_bin_collection)));
 var population_max_year = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.max,cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"year","year",335913393),population));
@@ -221,23 +221,23 @@ var y__4253__auto__ = population_max_year;
 return ((x__4252__auto__ < y__4253__auto__) ? x__4252__auto__ : y__4253__auto__);
 })()], null))));
 });
-var derivation_generation = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__44762){
-var map__44763 = p__44762;
-var map__44763__$1 = cljs.core.__destructure_map(map__44763);
-var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44763__$1,new cljs.core.Keyword(null,"region","region",270415120));
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44763__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var quarter = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44763__$1,new cljs.core.Keyword(null,"quarter","quarter",-508147616));
-var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44763__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
+var derivation_generation = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__38777){
+var map__38778 = p__38777;
+var map__38778__$1 = cljs.core.__destructure_map(map__38778);
+var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38778__$1,new cljs.core.Keyword(null,"region","region",270415120));
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38778__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var quarter = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38778__$1,new cljs.core.Keyword(null,"quarter","quarter",-508147616));
+var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38778__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
 return new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"quarter","quarter",-508147616),quarter,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),(tonnes / lookup_population(region,year))], null);
 }),derivation_generation0);
-var derivation_composition = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__44764){
-var map__44765 = p__44764;
-var map__44765__$1 = cljs.core.__destructure_map(map__44765);
-var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44765__$1,new cljs.core.Keyword(null,"region","region",270415120));
-var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44765__$1,new cljs.core.Keyword(null,"year","year",335913393));
-var quarter = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44765__$1,new cljs.core.Keyword(null,"quarter","quarter",-508147616));
-var material = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44765__$1,new cljs.core.Keyword(null,"material","material",460118677));
-var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44765__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
+var derivation_composition = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__38779){
+var map__38780 = p__38779;
+var map__38780__$1 = cljs.core.__destructure_map(map__38780);
+var region = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38780__$1,new cljs.core.Keyword(null,"region","region",270415120));
+var year = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38780__$1,new cljs.core.Keyword(null,"year","year",335913393));
+var quarter = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38780__$1,new cljs.core.Keyword(null,"quarter","quarter",-508147616));
+var material = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38780__$1,new cljs.core.Keyword(null,"material","material",460118677));
+var tonnes = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38780__$1,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653));
 return new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"region","region",270415120),region,new cljs.core.Keyword(null,"year","year",335913393),year,new cljs.core.Keyword(null,"quarter","quarter",-508147616),quarter,new cljs.core.Keyword(null,"material","material",460118677),material,new cljs.core.Keyword(null,"tonnes","tonnes",-913468653),(tonnes / lookup_population(region,year))], null);
 }),derivation_composition0);
 cljs.core.reset_BANG_(dcs.prototype_6.state.stirling_bin_collection_derivation_generation_cursor,derivation_generation);
@@ -314,25 +314,25 @@ if((((!((counts == null)))) && ((!((avg_weights == null)))) && ((!((furniture_to
 console.log("Calculating ace-furniture-derivations");
 
 var start_time = dcs.prototype_6.util.now();
-var vec__44770 = dcs.prototype_6.data_shaping.calc_ace_furniture_trends(counts);
-var category_trends = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44770,(0),null);
-var item_trends = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44770,(1),null);
+var vec__38794 = dcs.prototype_6.data_shaping.calc_ace_furniture_trends(counts);
+var category_trends = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38794,(0),null);
+var item_trends = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38794,(1),null);
 var avg_weights_lookup_map = cljs.core.group_by(cljs.core.juxt.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"category","category",-593092832),new cljs.core.Keyword(null,"item","item",249373802)),avg_weights);
 var lookup_avg_weight = (function (category,item){
 return new cljs.core.Keyword(null,"avg-kg","avg-kg",1937253584).cljs$core$IFn$_invoke$arity$1(cljs.core.first(cljs.core.get.cljs$core$IFn$_invoke$arity$2(avg_weights_lookup_map,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [category,item], null))));
 });
-var weights = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__44784){
-var map__44786 = p__44784;
-var map__44786__$1 = cljs.core.__destructure_map(map__44786);
-var m = map__44786__$1;
-var category = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44786__$1,new cljs.core.Keyword(null,"category","category",-593092832));
-var item = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44786__$1,new cljs.core.Keyword(null,"item","item",249373802));
-var count = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__44786__$1,new cljs.core.Keyword(null,"count","count",2139924085));
+var weights = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__38800){
+var map__38801 = p__38800;
+var map__38801__$1 = cljs.core.__destructure_map(map__38801);
+var m = map__38801__$1;
+var category = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38801__$1,new cljs.core.Keyword(null,"category","category",-593092832));
+var item = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38801__$1,new cljs.core.Keyword(null,"item","item",249373802));
+var count = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__38801__$1,new cljs.core.Keyword(null,"count","count",2139924085));
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(m,new cljs.core.Keyword(null,"weight","weight",-1262796205),(lookup_avg_weight(category,item) * count));
 }),counts);
-var vec__44773 = dcs.prototype_6.data_shaping.calc_ace_furniture_flights_worth(weights,furniture_to_scottishCarbonMetric,co2e_multiplier);
-var flights_per_category = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44773,(0),null);
-var flights_per_item = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44773,(1),null);
+var vec__38797 = dcs.prototype_6.data_shaping.calc_ace_furniture_flights_worth(weights,furniture_to_scottishCarbonMetric,co2e_multiplier);
+var flights_per_category = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38797,(0),null);
+var flights_per_item = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38797,(1),null);
 cljs.core.reset_BANG_(dcs.prototype_6.state.ace_furniture_derivation_count_cursor,counts);
 
 cljs.core.reset_BANG_(dcs.prototype_6.state.ace_furniture_derivation_category_trends_cursor,category_trends);
@@ -381,60 +381,61 @@ return null;
 dcs.prototype_6.deriver.maybe_calc_annotations_derivations = (function dcs$prototype_6$deriver$maybe_calc_annotations_derivations(){
 var regional_dashboard_annotations = cljs.core.deref(dcs.prototype_6.state.regional_dashboard_annotations_holder);
 var household_waste_analysis_annotations = cljs.core.deref(dcs.prototype_6.state.household_waste_analysis_annotations_holder);
-if((((!((regional_dashboard_annotations == null)))) && ((!((household_waste_analysis_annotations == null)))))){
+var fairshare_annotations = cljs.core.deref(dcs.prototype_6.state.fairshare_annotations_holder);
+if((((!((regional_dashboard_annotations == null)))) && ((!((household_waste_analysis_annotations == null)))) && ((!((fairshare_annotations == null)))))){
 console.log("Calculating annotations-derivations");
 
 var start_time = dcs.prototype_6.util.now();
-var derivation = cljs.core.flatten((function (){var iter__4564__auto__ = (function dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__44805(s__44806){
+var derivation = cljs.core.flatten((function (){var iter__4564__auto__ = (function dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__38803(s__38804){
 return (new cljs.core.LazySeq(null,(function (){
-var s__44806__$1 = s__44806;
+var s__38804__$1 = s__38804;
 while(true){
-var temp__5735__auto__ = cljs.core.seq(s__44806__$1);
+var temp__5735__auto__ = cljs.core.seq(s__38804__$1);
 if(temp__5735__auto__){
-var s__44806__$2 = temp__5735__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__44806__$2)){
-var c__4562__auto__ = cljs.core.chunk_first(s__44806__$2);
+var s__38804__$2 = temp__5735__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__38804__$2)){
+var c__4562__auto__ = cljs.core.chunk_first(s__38804__$2);
 var size__4563__auto__ = cljs.core.count(c__4562__auto__);
-var b__44808 = cljs.core.chunk_buffer(size__4563__auto__);
-if((function (){var i__44807 = (0);
+var b__38806 = cljs.core.chunk_buffer(size__4563__auto__);
+if((function (){var i__38805 = (0);
 while(true){
-if((i__44807 < size__4563__auto__)){
-var annotations_rows = cljs.core._nth(c__4562__auto__,i__44807);
-cljs.core.chunk_append(b__44808,(function (){var ks = cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.keyword,cljs.core.first(annotations_rows));
-return cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (i__44807,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__44808,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations){
+if((i__38805 < size__4563__auto__)){
+var annotations_rows = cljs.core._nth(c__4562__auto__,i__38805);
+cljs.core.chunk_append(b__38806,(function (){var ks = cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.keyword,cljs.core.first(annotations_rows));
+return cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (i__38805,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__38806,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations){
 return (function (m){
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(m,new cljs.core.Keyword(null,"record-type","record-type",-997952932),cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"record-type","record-type",-997952932).cljs$core$IFn$_invoke$arity$1(m)));
-});})(i__44807,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__44808,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations))
-,cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (i__44807,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__44808,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations){
+});})(i__38805,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__38806,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations))
+,cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (i__38805,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__38806,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations){
 return (function (m){
-return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(cljs.core.dissoc,m,(function (){var iter__4564__auto__ = ((function (i__44807,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__44808,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations){
-return (function dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__44805_$_iter__44813(s__44814){
-return (new cljs.core.LazySeq(null,((function (i__44807,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__44808,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations){
+return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(cljs.core.dissoc,m,(function (){var iter__4564__auto__ = ((function (i__38805,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__38806,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations){
+return (function dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__38803_$_iter__38807(s__38808){
+return (new cljs.core.LazySeq(null,((function (i__38805,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__38806,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations){
 return (function (){
-var s__44814__$1 = s__44814;
+var s__38808__$1 = s__38808;
 while(true){
-var temp__5735__auto____$1 = cljs.core.seq(s__44814__$1);
+var temp__5735__auto____$1 = cljs.core.seq(s__38808__$1);
 if(temp__5735__auto____$1){
-var s__44814__$2 = temp__5735__auto____$1;
-if(cljs.core.chunked_seq_QMARK_(s__44814__$2)){
-var c__4562__auto____$1 = cljs.core.chunk_first(s__44814__$2);
+var s__38808__$2 = temp__5735__auto____$1;
+if(cljs.core.chunked_seq_QMARK_(s__38808__$2)){
+var c__4562__auto____$1 = cljs.core.chunk_first(s__38808__$2);
 var size__4563__auto____$1 = cljs.core.count(c__4562__auto____$1);
-var b__44816 = cljs.core.chunk_buffer(size__4563__auto____$1);
-if((function (){var i__44815 = (0);
+var b__38810 = cljs.core.chunk_buffer(size__4563__auto____$1);
+if((function (){var i__38809 = (0);
 while(true){
-if((i__44815 < size__4563__auto____$1)){
-var vec__44817 = cljs.core._nth(c__4562__auto____$1,i__44815);
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44817,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44817,(1),null);
+if((i__38809 < size__4563__auto____$1)){
+var vec__38811 = cljs.core._nth(c__4562__auto____$1,i__38809);
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38811,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38811,(1),null);
 if(clojure.string.blank_QMARK_(v)){
-cljs.core.chunk_append(b__44816,k);
+cljs.core.chunk_append(b__38810,k);
 
-var G__44862 = (i__44815 + (1));
-i__44815 = G__44862;
+var G__38835 = (i__38809 + (1));
+i__38809 = G__38835;
 continue;
 } else {
-var G__44863 = (i__44815 + (1));
-i__44815 = G__44863;
+var G__38836 = (i__38809 + (1));
+i__38809 = G__38836;
 continue;
 }
 } else {
@@ -443,19 +444,19 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__44816),dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__44805_$_iter__44813(cljs.core.chunk_rest(s__44814__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__38810),dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__38803_$_iter__38807(cljs.core.chunk_rest(s__38808__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__44816),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__38810),null);
 }
 } else {
-var vec__44825 = cljs.core.first(s__44814__$2);
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44825,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44825,(1),null);
+var vec__38818 = cljs.core.first(s__38808__$2);
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38818,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38818,(1),null);
 if(clojure.string.blank_QMARK_(v)){
-return cljs.core.cons(k,dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__44805_$_iter__44813(cljs.core.rest(s__44814__$2)));
+return cljs.core.cons(k,dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__38803_$_iter__38807(cljs.core.rest(s__38808__$2)));
 } else {
-var G__44864 = cljs.core.rest(s__44814__$2);
-s__44814__$1 = G__44864;
+var G__38837 = cljs.core.rest(s__38808__$2);
+s__38808__$1 = G__38837;
 continue;
 }
 }
@@ -464,22 +465,22 @@ return null;
 }
 break;
 }
-});})(i__44807,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__44808,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations))
+});})(i__38805,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__38806,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations))
 ,null,null));
-});})(i__44807,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__44808,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations))
+});})(i__38805,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__38806,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations))
 ;
 return iter__4564__auto__(m);
 })());
-});})(i__44807,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__44808,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations))
-,cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (i__44807,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__44808,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations){
+});})(i__38805,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__38806,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations))
+,cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (i__38805,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__38806,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations){
 return (function (row){
 return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(cljs.core.assoc,cljs.core.PersistentArrayMap.EMPTY,cljs.core.interleave.cljs$core$IFn$_invoke$arity$2(ks,row));
-});})(i__44807,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__44808,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations))
+});})(i__38805,ks,annotations_rows,c__4562__auto__,size__4563__auto__,b__38806,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations))
 ,cljs.core.rest(annotations_rows))));
 })());
 
-var G__44865 = (i__44807 + (1));
-i__44807 = G__44865;
+var G__38838 = (i__38805 + (1));
+i__38805 = G__38838;
 continue;
 } else {
 return true;
@@ -487,45 +488,45 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__44808),dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__44805(cljs.core.chunk_rest(s__44806__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__38806),dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__38803(cljs.core.chunk_rest(s__38804__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__44808),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__38806),null);
 }
 } else {
-var annotations_rows = cljs.core.first(s__44806__$2);
+var annotations_rows = cljs.core.first(s__38804__$2);
 return cljs.core.cons((function (){var ks = cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.keyword,cljs.core.first(annotations_rows));
-return cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (ks,annotations_rows,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations){
+return cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (ks,annotations_rows,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations){
 return (function (m){
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(m,new cljs.core.Keyword(null,"record-type","record-type",-997952932),cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"record-type","record-type",-997952932).cljs$core$IFn$_invoke$arity$1(m)));
-});})(ks,annotations_rows,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations))
-,cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (ks,annotations_rows,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations){
+});})(ks,annotations_rows,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations))
+,cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (ks,annotations_rows,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations){
 return (function (m){
-return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(cljs.core.dissoc,m,(function (){var iter__4564__auto__ = (function dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__44805_$_iter__44828(s__44829){
+return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(cljs.core.dissoc,m,(function (){var iter__4564__auto__ = (function dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__38803_$_iter__38821(s__38822){
 return (new cljs.core.LazySeq(null,(function (){
-var s__44829__$1 = s__44829;
+var s__38822__$1 = s__38822;
 while(true){
-var temp__5735__auto____$1 = cljs.core.seq(s__44829__$1);
+var temp__5735__auto____$1 = cljs.core.seq(s__38822__$1);
 if(temp__5735__auto____$1){
-var s__44829__$2 = temp__5735__auto____$1;
-if(cljs.core.chunked_seq_QMARK_(s__44829__$2)){
-var c__4562__auto__ = cljs.core.chunk_first(s__44829__$2);
+var s__38822__$2 = temp__5735__auto____$1;
+if(cljs.core.chunked_seq_QMARK_(s__38822__$2)){
+var c__4562__auto__ = cljs.core.chunk_first(s__38822__$2);
 var size__4563__auto__ = cljs.core.count(c__4562__auto__);
-var b__44831 = cljs.core.chunk_buffer(size__4563__auto__);
-if((function (){var i__44830 = (0);
+var b__38824 = cljs.core.chunk_buffer(size__4563__auto__);
+if((function (){var i__38823 = (0);
 while(true){
-if((i__44830 < size__4563__auto__)){
-var vec__44838 = cljs.core._nth(c__4562__auto__,i__44830);
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44838,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44838,(1),null);
+if((i__38823 < size__4563__auto__)){
+var vec__38826 = cljs.core._nth(c__4562__auto__,i__38823);
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38826,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38826,(1),null);
 if(clojure.string.blank_QMARK_(v)){
-cljs.core.chunk_append(b__44831,k);
+cljs.core.chunk_append(b__38824,k);
 
-var G__44866 = (i__44830 + (1));
-i__44830 = G__44866;
+var G__38839 = (i__38823 + (1));
+i__38823 = G__38839;
 continue;
 } else {
-var G__44867 = (i__44830 + (1));
-i__44830 = G__44867;
+var G__38840 = (i__38823 + (1));
+i__38823 = G__38840;
 continue;
 }
 } else {
@@ -534,19 +535,19 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__44831),dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__44805_$_iter__44828(cljs.core.chunk_rest(s__44829__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__38824),dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__38803_$_iter__38821(cljs.core.chunk_rest(s__38822__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__44831),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__38824),null);
 }
 } else {
-var vec__44841 = cljs.core.first(s__44829__$2);
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44841,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__44841,(1),null);
+var vec__38832 = cljs.core.first(s__38822__$2);
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38832,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__38832,(1),null);
 if(clojure.string.blank_QMARK_(v)){
-return cljs.core.cons(k,dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__44805_$_iter__44828(cljs.core.rest(s__44829__$2)));
+return cljs.core.cons(k,dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__38803_$_iter__38821(cljs.core.rest(s__38822__$2)));
 } else {
-var G__44868 = cljs.core.rest(s__44829__$2);
-s__44829__$1 = G__44868;
+var G__38841 = cljs.core.rest(s__38822__$2);
+s__38822__$1 = G__38841;
 continue;
 }
 }
@@ -559,13 +560,13 @@ break;
 });
 return iter__4564__auto__(m);
 })());
-});})(ks,annotations_rows,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations))
-,cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (ks,annotations_rows,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations){
+});})(ks,annotations_rows,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations))
+,cljs.core.map.cljs$core$IFn$_invoke$arity$2(((function (ks,annotations_rows,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations){
 return (function (row){
 return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(cljs.core.assoc,cljs.core.PersistentArrayMap.EMPTY,cljs.core.interleave.cljs$core$IFn$_invoke$arity$2(ks,row));
-});})(ks,annotations_rows,s__44806__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations))
+});})(ks,annotations_rows,s__38804__$2,temp__5735__auto__,start_time,regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations))
 ,cljs.core.rest(annotations_rows))));
-})(),dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__44805(cljs.core.rest(s__44806__$2)));
+})(),dcs$prototype_6$deriver$maybe_calc_annotations_derivations_$_iter__38803(cljs.core.rest(s__38804__$2)));
 }
 } else {
 return null;
@@ -574,21 +575,8 @@ break;
 }
 }),null,null));
 });
-return iter__4564__auto__(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [regional_dashboard_annotations,household_waste_analysis_annotations], null));
+return iter__4564__auto__(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [regional_dashboard_annotations,household_waste_analysis_annotations,fairshare_annotations], null));
 })());
-var x_44869 = cljs.core.first(derivation);
-console.log("deriver x ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(x_44869));
-
-console.log("deriver x raw",x_44869);
-
-console.log("deriver x type",cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.type(x_44869)));
-
-console.log("deriver x :record-type",cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"record-type","record-type",-997952932).cljs$core$IFn$_invoke$arity$1(x_44869)));
-
-console.log("deriver x :text",cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"text","text",-1790561697).cljs$core$IFn$_invoke$arity$1(x_44869)));
-
-console.log("deriver x with :text dissoc",cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(x_44869,new cljs.core.Keyword(null,"text","text",-1790561697))));
-
 cljs.core.reset_BANG_(dcs.prototype_6.state.annotations_derivation_cursor,derivation);
 
 return console.log(["Calculating annotations-derivations: secs-taken=",cljs.core.str.cljs$core$IFn$_invoke$arity$1(dcs.prototype_6.util.secs_to_now(start_time))].join(''));
@@ -723,6 +711,13 @@ return null;
 }
 }));
 cljs.core.add_watch(dcs.prototype_6.state.household_waste_analysis_annotations_holder,new cljs.core.Keyword(null,"annotations-dependency","annotations-dependency",-278947983),(function (_key,_atom,_old_state,new_state){
+if(cljs.core.truth_(new_state)){
+return dcs.prototype_6.deriver.maybe_calc_annotations_derivations();
+} else {
+return null;
+}
+}));
+cljs.core.add_watch(dcs.prototype_6.state.fairshare_annotations_holder,new cljs.core.Keyword(null,"annotations-dependency","annotations-dependency",-278947983),(function (_key,_atom,_old_state,new_state){
 if(cljs.core.truth_(new_state)){
 return dcs.prototype_6.deriver.maybe_calc_annotations_derivations();
 } else {
